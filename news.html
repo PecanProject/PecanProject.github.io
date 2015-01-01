@@ -59,26 +59,7 @@ The PEcAn team will have a large presence at the North American Carbon Program's
 <div class="announcement">
 <h4><a href="/site/pecanworkflow/pecan_news/agu2014" dir="ltr">Presentations at AGU Fall Meeting 2014</a></h4>
 <span class="timestamp">
-<script type="text/javascript">
-      //<![CDATA[
-        function JOT_insertRelDate(timestamp, absTimeStr, isSiteLocale, dir) {
-          var relTimeStr = JOT_formatRelativeToNow(timestamp, isSiteLocale);
-          if (relTimeStr) {
-            if (isSiteLocale) {
-              document.write('<span timestamp="' + timestamp + '" issitelocale="' + isSiteLocale +
-                '" title="' + absTimeStr + '" dir="' + dir + '">' + relTimeStr + '<' + '/span>');
-            } else {
-              document.write('<span timestamp="' + timestamp + '" title="' + absTimeStr +
-              '" dir="' + dir + '">' + relTimeStr + '<' + '/span>');
-            }
-          } else {
-            document.write(absTimeStr);
-          }
-        }
-      //]]>
-</script>
-    
-  
+
   posted <span dir="ltr">Dec 12, 2014, 5:00 PM</span> by Michael Dietze
 
                     
@@ -219,6 +200,42 @@ Mike Dietze presented his tenure seminar errestrial Ecosystems: Past, Present, &
 </div>
 
 <div class="announcement">
+<h4><a>PEcAn 1.3.7 Released</a></h4>
+<span class="timestamp">
+<span dir="ltr">September 9, 2014</span> by Michael Dietze
+</span>
+<p>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+<h5>Overview</h5>
+<p>This version supports new model types better. BETY now allows to add new model types to the database. You can associate these model types with PFT's. Each model type will have a list of required and optional inputs associated. These inputs will be listed in &lt;run&gt;&lt;inputs&gt; tag.</p>
+
+<p>As always the latest VM can be downloaded from http://isda.ncsa.illinois.edu/download/index.php?project=PEcAn&sort=version</p>
+
+<h5>Support for DALEC</h5>
+<p>A new model has been added to this release, DALEC. BETY already has a modeltype DALEC in the database to support this model.</p>
+
+<h5>pecan.xml Changes</h5>
+<p>Using the new modeltypes we can now check the inputs specified in the pecan.xml file. All inputs should now be listed under the &lt;run&gt;&lt;inputs&gt;. The code will try and update your pecan.xml file to this new format. Any missing inputs that are required will quit the run, allowing you to quickly fix your pecan.xml file. For updated information see https://github.com/PecanProject/pecan/wiki/PEcAn-Configuration.</p>
+
+<h5>Database Changes</h5>
+
+<p>The database requires updates for the model types table. You will need to update BETY to be able to see this. This requires version 3.2 of BETYdb (https://github.com/PecanProject/bety/releases/tag/betydb_3.2).</p>
+
+<p>Sites now store their information as geometry objects. If you have custom queries that use the site.lat and site.lon information you will need to change this to ST_X(ST_CENTROID(geometry)) AS lon, ST_Y(ST_CENTROID(geometry)) AS lat.</p>
+
+<h5>Code Changes</h5>
+
+<p>One major change is to the function called get.trait.data(). This function now requires a model type as the second parameter. The model type is used to make sure we get the right PFT. This allows multiple PFTs to have the same name, but be distinguishable by the combination of name and model type.</p>
+
+<p></p>  
+</td></tr></tbody></table>
+</p>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+
+<div class="announcement">
 <h4><a>PEcAn 2 Proposal Submitted</a></h4>
 <span class="timestamp">
 <span dir="ltr">Aug 12, 2014</span> by Michael Dietze
@@ -266,6 +283,59 @@ involvement of the research community;</li>
 David LeBauer presented a talk entitled "Combining heterogeneous data and process understanding using the Predictive Ecosystem Analyzer" on Wednesday, August 13, 2014 in Symposium 11: Challenges and Advances in Statistical Software For Ecology. Shawn Serbin and Mike Dietze were co-authors on the presentation.
 </p>
 <p>Dietze also presented a talk entitled "Predicting phenology: A case-study in real-time ecological forecasting" on Monday, August 11, 2014 in Organized Oral Session 4: The National Ecological Observatory (NEON): Opportunities and models for building synergistic partnerships with the community to advance continental scale ecology.</p>
+<p></p>  
+</td></tr></tbody></table>
+</p>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+
+<div class="announcement">
+<h4><a>PEcAn 1.3.6 Released</a></h4>
+<span class="timestamp">
+<span dir="ltr">July 28, 2014</span> by Michael Dietze
+</span>
+<p>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+<p>This version focuses on more database updates.</p>
+
+<p>As always you can download the VM from:
+http://isda.ncsa.illinois.edu/download/index.php?project=PEcAn&sort=category</p>
+
+
+<h5>add sites/data</h5>
+
+<p>the script to add sites is now part of PEcAn. To add the sites data you can use pecan/scripts/add.data.sh
+the script to add models is updated and will setup the binaries and is called pecan/scripts/add.models.sh
+Both scripts can be called multiple times, but will only add the information to the database once.</p>
+
+<h5>pecan.xml:</h5>
+
+<p>In pecan.xml the database section now has 2 subsections, bety and fia. Any existing information that was in the database section in pecan.xml will need to be moved to the bety subsection, read.settings() will automatically update your pecan.xml to reflect this.
+The &lt;bety&gt;&lt;write&gt; option in the pecan.xml is now part of the &lt;database&gt;&lt;bety&gt; section, read.settings() will automatically update your pecan.xml to reflect this.
+The ED land use/soil/vegetation/thermal sums data files are now inputs in BETY that need to be specified as inputs.</p>
+<p>Action Required: add ED data files to database, see GitHub PEcAn Issue #120</p>
+
+<h5>SipNET</h5>
+
+<p>Support for meteorology conversion from netCDF CF standard to SipNET's .clim driver files
+PEcAn Web App</p>
+
+<h5>config.php now declares the fully qualified host name ($fqdn)</h5>
+<p>the config.php in pecan/web will have new database configuration parameters, please see config.example.php.
+no longer needed to specify vet/soil/ed_inputs in config.php, these are now stored as inputs in BETY.
+if the fia database is specified in config.php, the user can now select fia2ed from psscss selector.
+Action Required: update pecan/web/config.php, see pecan/web/config_example for latest settings.</p>
+
+<h5>BETY:</h5>
+
+<p>To update BETY database either download a new version or update the database.</p>
+
+<p>In the database there is now a link from a model to the dbfiles table. This allows you to have a single model, with binaries located in different places on different systems.
+Each PFT now stores the model type associated with it, the web application will use this to find the right pfts to display for the user, and read.settings will check to see if the PFT is compatible with the model.</p>
+<p>Action Required: add binaries to models, for example using the pecan/scripts/addmodels.sh.</p>
+<p>Action Required: the migration of the database will add the appropriate model_type to each PFT based on the prefix of the PFT.</p>
 <p></p>  
 </td></tr></tbody></table>
 </p>
@@ -323,6 +393,26 @@ David LeBauer presented a talk entitled "Combining heterogeneous data and proces
 <div class="postfooter">
 <p>
 </p>
+</div>
+</div>
+
+<div class="announcement">
+<h4><a>PEcAn 1.3.5 Released </a></h4>
+<span class="timestamp">
+<span dir="ltr">Aug 2014</span> by Michael Dietze
+</span>
+<p>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+<h5>Switch to PostgreSQL, enable distributed instances of BETYdb, maintaining local database changes</h5>
+
+<p>This version officially switches to postgreSQL. This allows for the script to enable to keep local changes to the PEcAn database.</p>
+
+<p>This enables multiple instances to run BETYdb, and for local changes to be exchanged across databases. Each installation has a reserved set of foreign key ids (e.g. Boston University has 1,000,000,000-1,999,999,999 reserved. Edits to existing records added on another server will not be preserved.</p>
+<p></p>  
+</td></tr></tbody></table>
+</p>
+<div class="postfooter">
+<p></p>
 </div>
 </div>
 
