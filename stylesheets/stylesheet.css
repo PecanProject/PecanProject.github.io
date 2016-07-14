@@ -274,6 +274,7 @@ Full-Width Styles
     background-position:center;
     width:1076px;
     height:618px;
+    position: relative;
 }
 
 #forkme_banner {
