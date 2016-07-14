@@ -269,6 +269,13 @@ Full-Width Styles
   margin: 0 auto;
 }
 
+container {
+    background-image:url(images/PNW.jpg);
+    background-position:center;
+    width:640px;
+    height:368px;
+}
+
 #forkme_banner {
   display: block;
   position: absolute;
