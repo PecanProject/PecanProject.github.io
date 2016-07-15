@@ -307,7 +307,7 @@ Full-Width Styles
 #project_title {
   margin: 0;
   color: #fff;
-  font-size: 42px;
+  font-size: 63px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
@@ -430,4 +430,6 @@ Small Device Styles
 }
 table, tr, td {
     border: none;
+    margin-left: auto;
+margin-right: auto;
 }
