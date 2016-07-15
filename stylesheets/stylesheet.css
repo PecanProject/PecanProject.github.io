@@ -272,8 +272,6 @@ Full-Width Styles
 #container {
     background-image:url(../images/PNW.jpg);
     background-position:center;
-    width:1076px;
-    height:618px;
     position: relative;
 }
 
