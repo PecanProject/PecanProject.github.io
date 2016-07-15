@@ -232,7 +232,7 @@ hr {
 }
 
 table {
-  border: 1px solid #373737;
+  border: none;
   margin-bottom: 20px;
   text-align: left;
  }
@@ -273,6 +273,7 @@ Full-Width Styles
     background-image:url(../images/PNW.jpg);
     background-position:center;
     position: relative;
+    background-repeat: no-repeat;
 }
 
 #forkme_banner {
@@ -426,4 +427,7 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+table, tr, td {
+    border: none;
 }
