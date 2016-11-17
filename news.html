@@ -37,6 +37,199 @@
       <section id="main_content" class="inner">
       
 <div class="announcement">
+<h4><a>PEcAn Open House at AGU</a></h4>
+<span class="timestamp">
+<span dir="ltr">Dec 12, 2016</span> 
+</span>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+<p>We will be holding an open house & social gathering for the PEcAn project on the Monday night of AGU</p>
+
+<p>When: Mon, Dec 12th from 6:45pm -10:30pm</p>
+<p>Where: The Garage SFO- Luxury Live/Work Warehouse. 951 Folsom St, San Francisco, CA 94107 
+(~2 blocks south of Moscone)</p>
+
+<p>There will not be any formal presentations, so feel free to come and go as it fits your schedule.</p>
+
+<p>We encourage you to:
+<ul>
+  <li>Come meet the PEcAn team</li>
+  <li>Get more information about current tools and training</li>
+  <li>Play with hands-on demos</li>
+  <li>Learn about new developments and what models, tools, and data partnerships are coming down the pipeline</li>
+  <li>Chat with other members of the measurement and modeling communities about ideas for new PEcAn-based analyses</li>
+  <li>Let us know what new tools and features you most want/need</li>
+</ul>
+</p>
+
+<p>Food and drinks will be provided. </p>
+
+<p>To help us with planning, we encourage you to fill out the following form if you are interested in joining us: <a href="https://goo.gl/forms/ZNwpEU5QadaYStnG3">RSVP</a> </p>
+
+<p></p>  
+</td></tr></tbody></table>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+      
+<div class="announcement">
+<h4><a>PEcAn at PalEON Summer Course</a></h4>
+<span class="timestamp">
+<span dir="ltr">August 14-20, 2016</span> 
+</span>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><p>
+Mike Dietze, Ann Raiho, and Christy Rollinson all taught at this year's PalEON summer course on assimilating paleo date into models. PEcAn post-doc Istem Fer was also there as a student. In this one week course students work through an exciting case study in how PEcAn accelerates our ability to assimilate data into models. Students started the week coring trees at the UNDERC field station, then prepped and read the cores. Within PEcAn students then did basic model runs with SIPNET for UNDERC and then sensitivity and uncertainty analyses to determine which parameters had the largest impact on NPP. Next, SIPNET was calibrated against the near-by Sylvania flux tower using PEcAn's parameter data assimilation tools. Finally, the tree ring data were assimilated into SIPNET using PEcAn's state data assimilation tools, accounting for a range of uncertainties estimated by the data.land and allometries modules. It's amazing to see students assimilate data they've just collected -- it's a great demonstration of the possibilities for near-real time model-data synthesis.
+</p>
+<p></p>  
+</td></tr></tbody></table>
+<div class="postfooter">
+<p></p>
+</div>
+</div>      
+
+
+<div class="announcement">
+<h4><a>PEcAn v1.4.8</a></h4>
+<span class="timestamp">
+<span dir="ltr">August 11, 2016</span> 
+</span>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+  <p><h4>Camp PEON: Assimilation, multi-site, soil params, Maespa, LPJ-GUESS, improvements to web & tutorials</h4></p>
+
+<p><b>State Data Assimilation (SDA)</b></p>
+
+<p>One of the main goals of this release was to re-generalize the EnKF and generalized ensemble filter that @araiho has been using with LINKAGES back to also working with SIPNET and to bring the design one step closer to working with many models. This is working (yeah!), but not yet fully generalized.</p>
+
+<p>The revised SDA tutorial has been migrated to documentation/tutorials/StateAssimilation and the gitbook updated to explain the use of SDA tags in the settings file and the main functions used.</p>
+
+<p><b>Multisite runs</b></p>
+
+<p>The basic PEcAn workflow was substantially re-organized to allow PEcAn to more easily run multiple sites at once (see Site Groups below). The core of the design is to split PEcAn’s settings object (what’s read from the XML) into a list of settings objects, one for each run, and applied to existing functions. Both Settings and SettingsList are now R classes. Within the settings file itself, there is now a <runs> block that can include any number of individual <run>. Where appropriate, PEcAn gathers information across runs — for example, the meta-analysis is performed on the set of PFTs extracted across all runs, rather than being done run-by-run. This change is the first step in a large plan to re-organize the PEcAn workflow to be more modular and also support multi-model runs.</p>
+
+<p>Note: Multisite/multimodel run SettingLists cannot yet be generated through the web interface.</p>
+
+<p><b>Parameter data assimilation</b></p>
+
+<p>Generalized to multiple PFTs</p>
+
+<p>Emulator now supports a range of additional features that can be controlled through the XML settings:
+<ul>
+<li>multiple chains</li>
+<li>extending chains (additional samples) starting from their latest state</li>
+<li>adding additional knots</li>
+<li>automated burnin detection</li>
+</ul>
+The revised PDA tutorial has been migrated to documentation/tutorials/ParameterAssimilation and the PDA vignette contains a more detailed explanation of how to use the new features.</p>
+
+<p><b>Non-PFT parameter constraint</b></p>
+
+<p>As an experiment in giving PEcAn control of non-PFT parameters, we've created a 'soil' PFT for SIPNET that contains soil biogeochemical parameters. If successful, we will extend this approach to other models. This change already improves model calibration and validation and has allowed us to assess the relative contribution of plant vs soil parameters to model output uncertainty.</p>
+
+<p><b>Models</b></p>
+
+<p>Maespa has basic functionality (thanks @mdekauwe for all the help!)
+LPJ-GUESS running, but without PEcAn controlling parameters</p>
+
+<p><b>Drivers</b></p>
+
+Fluxnet LaThuile
+
+<p><b>Web Interface</b></p>
+
+PEcAn landing page updated to be links to tools. Avoids confusion when users forget to add the /pecan, /bety, /rstudio, etc. to the web address.
+<br>
+Site groups has been populated with a number of major research networks: Ameriflux, Fluxnet, Fluxnet 2015 Tier 1 (open), LTER, NEON, ForestGEO, PalEON
+<br>
+Links to documentation, gitter, and bug reports from all pages
+<br>
+Additional mouseover text and links to model and variables tables
+<br>
+Legend in default plot, removed spline from Shiny plot
+
+<p><b>Camp PalEON</b></p>
+
+This is a special release for the PalEON summer course, and comes pre-installed with extra libraries and data for the course
+
+<p><b>Tutorials</b></p>
+
+In addition to migrating the PDA and SDA tutorials to RMarkdown, the model-data comparison at the end of Demo 1 has also been migrated to documentation/tutorials/AnalyzeOutput
+
+<p><b>Benchmarking</b></p>
+
+While still in alpha development, @bcow contributed a large chunk of code bringing us much closer to automated benchmark execution and a first pass at a Shiny page for benchmark visualization.
+
+<p><b>Bugfixes</b></p>
+
+C_stack bug in run.sensitivity.analysis: fixed on new VM but older users should upgrade gridExtra R package
+Units in figures and reading of model output #792 -- downstream applications/code should check for changes.
+<br>
+Can skip meta-analysis in pecan settings. May require updating old pecan.xml, particularly for integration tests.
+<br>
+Interface: met date checking
+<br>
+Misc: #906 #916 #919 #923 #948 #950 #951
+
+<p><b>Known Issues</b></p>
+
+This version of PEcAn is misconfigured and is using the wrong server for Brown Dog. The server that is used is the development server for Brown Dog and might result in no data being returned. During the Camp PEON the development server will be using the same code as the production server. If you want to use BrownDog after Camp PEON we highly encourage you to sign up with Brown Dog. We will at that point contact you and send you the instructions to modify your VM to use your new account and the production servers.
+
+<p></p>  
+</td></tr></tbody></table>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+  
+      
+<div class="announcement">
+<h4><a>PEcAn v1.4.7 Release</a></h4>
+<span class="timestamp">
+<span dir="ltr">July 13, 2016</span> 
+</span>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+
+<h4>CMIP5, Shiny, FLUXNET2015, Global Sensitivity</h4>
+
+<p><b>CMIP5:</b></p>
+
+<p>We’ve add support for running models into the future under climate change scenarios! This release adds support for grabbing GFDL runs for all four RCP scenarios multiple experiments. RCP4.5 is the ‘default’, but Advanced Edit can be used to change the model (CM3, ESM2M, ESM2G), scenario (rcp26, rcp45, rcp60, rcp85), or ensemble member (r1i1p1, r3i1p1, r5i1p1). We are working with Earth System Grid to provide support for other climate models in future PEcAn releases.</p>
+
+<p><b>Advanced Visualizations:</b></p>
+
+<p>We’ve added support for R Shiny visualizations in a way that we hope will allow users to easily add new Shiny apps to the catalog of PEcAn visualizations. Simply drop a new app into the pecan/shiny folder and it should go live. We’ve initially populated our Shiny catalog with two visualizations:</p>
+
+<p><u>workflowPlot:</u></p>
+
+<p>Similar to our current visualizations, which plots model output timeseries, but now shows output over all years and without a default 1-day time averaging.</p>
+
+<p><u>global-sensitivity:</u></p>
+
+<p>Displays results from our new Monte Carlo global sensitivity analysis. Select outputs by model parameter (all model outputs), by output variable (all model parameters), or dig down into individual parameter-by-output relationships.</p>
+
+<p><b>FLUXNET2015 and Ameriflux LBL:</b></p>
+
+<p>At the site-level we’ve added support for the new FLUXNET2015 synthesis product, extending PEcAn’s support for flux tower sites globally. For Ameriflux, we’ve also added support for data on the new Lawrence Berkeley server. Past support for data on the ORNL server will also continue so long as that site remains active, but LBL is the preferred server and will contain the most up-do-date data.</p>
+
+<p>Finally, in response to the above changes and feedback from users, we’ve tried to streamline the main PEcAn tutorial. The Parameter Data Assimilation (PDA) tutorial has also been updated to leverage emulator upgrades in the last release.</p>
+
+<p><b>Known issues:</b></p>
+
+<p>MAESPA, G’DAY, LPJ-GUESS not yet ready. JULES supported but not installed on VM, need to download and install yourself.</p>
+
+<p>Met processing bugs: code for extending the date range from previous runs has a bug. Current workaround through advanced edit: set new met output directory (See PDA demo). For CRUNCEP and GFDL, workflow gets tripped up when extending to a new model. Currently requires running met process code by hand in R. Bugfixes will be in next release (Aug 12).</p>
+
+<p><b>In the pipeline:</b></p>
+
+<p>Next release will focus on PalEON summer course (SDA, tree ring & allometry modules, hopefully alpha support for PalEON met and NEOTOMA database). Also hope to bring Benchmarking up to a functional beta version, add GLDAS & NLDAS met.</p>
+
+<p></p>  
+</td></tr></tbody></table>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+      
+<div class="announcement">
 <h4><a>PEcAn at Flux Course</a></h4>
 <span class="timestamp">
 <span dir="ltr">July 11-22, 2016</span> 
