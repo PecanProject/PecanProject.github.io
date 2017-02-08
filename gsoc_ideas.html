@@ -41,23 +41,41 @@
  <h1><a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>GSoC - PEcAn Project Ideas</h1>
  
 <p>Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute includes but not limited to:
-
-<li><a href="#Scientific visualization">Scientific visualization</a> – One of PEcAn's greatest strengths is that we provide accessible tools for a broader community. Help us develop powerful visualization tools and a well-built web API for a stronger information flow.</li>
-<li><i>High performance computing</i> – PEcAn takes the Bayesian approach in bringing ecosystem models and data together. Help us implement and optimize our algorithms for high performance computing environments.</li>
+<div>
+<li><a href="#Scientific_visualization">Scientific visualization</a> – One of PEcAn's greatest strengths is that we provide accessible tools for a broader community. Help us develop powerful visualization tools and a well-built web API for a stronger information flow.</li>
+<li><a href="#hpc">High performance computing</a> – PEcAn takes the Bayesian approach in bringing ecosystem models and data together. Help us implement and optimize our algorithms for high performance computing environments.</li>
 <li><i>Distributed computing</i> – PEcAn is growing: we incorporate more models, more data, more teams everyday. Help us design and maintain an intact cyber infrastructure.
 </li>
 <li><i>Linking databases</i> –  PEcAn develops tools to make predictions for the future, but we do not have data from the future (yet!) to validate our predictions. So, it seems like a good idea to predict the past using the same models and let data from the past inform us. Help PEcAn to talk to the databases from where we can pull this paleo data.</li>
 <li><i>Documentation</i> – Did we mention that one of PEcAn's greatest strengths is that we provide accessible tools for a broader community? Help us make it even more accessible by clean and clear documentation.</li>
+</div>
 </p> 
  
 
-<a name="Scientific visualization:"></a>
-Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for identifying patterns in model outputs and validation with data.
+<a name="Scientific_visualization">Scientific visualization</a>
+<p>Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for identifying patterns in model outputs and validation with data.</p>
 
-Expected outcome: A set of web-based tools for interactive visualization of model simulations and user-provided data, including the ability to plot results as time series, do pairwise comparisons of different variables, and apply statistical tests and transformations to the results.
-Prerequisites: Familiarity with web-based interactive visualization frameworks such as R’s Shiny or Javascript’s D3 is a requirement. Demonstrated proficiency with R, SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred.
-Related GitHub issues: #1245 - #921 
-Contact person: Alexey Shiklomanov <i>ashiklom@bu.edu</i>
+<div>
+<em>Expected outcome:</em> A set of web-based tools for interactive visualization of model simulations and user-provided data, including the ability to plot results as time series, do pairwise comparisons of different variables, and apply statistical tests and transformations to the results.
+<em>Prerequisites:</em> Familiarity with web-based interactive visualization frameworks such as R’s Shiny or Javascript’s D3 is a requirement. Demonstrated proficiency with R, SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred.
+<em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1245">#1245</a> - <a href="https://github.com/PecanProject/pecan/issues/921">#921</a> 
+<em>Contact person:</em> Alexey Shiklomanov ashiklom[at]bu.edu
+</div>
+
+<a name="hpc">High performance computing</a>
+<p>PEcAn provides a Bayesian data assimilation framework in order to synthesize the data with the models. However, Markov Chain Monte Carlo (MCMC) numerical techniques that are the backbone of Bayesian computation are computationally expensive. PEcAn's data assimilation module already has a Metropolis-Hastings MCMC algorithm natively implemented in R, and also supports external packages that provide other samplers. Our goal is to implement and optimize massively parallelizable MCMC algorithms using Graphics Processing Units (GPUs) that can further accelerate such scalable applications.</p>
+
+<div>
+PEcAn provides a Bayesian data assimilation framework in order to synthesize the data with the models. However, Markov Chain Monte Carlo (MCMC) numerical techniques that are the backbone of Bayesian computation are computationally expensive. PEcAn's data assimilation module already has a Metropolis-Hastings MCMC algorithm natively implemented in R, and also supports external packages that provide other samplers. Our goal is to implement and optimize massively parallelizable MCMC algorithms using Graphics Processing Units (GPUs) that can further accelerate such scalable applications.
+
+<em>Expected outcome:</em> Implementation of massively parallelizable MCMC algorithms in data assimilation module using GPU programming.
+<em>Prerequisites:</em>R and C/C++ experience, some Bayesian statistics background is desirable but not required.
+<em>Contact person:</em> Istem Fer istfer[at]bu.edu
+</div>
+
+
+
+
 
 
 
