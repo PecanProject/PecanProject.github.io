@@ -47,6 +47,9 @@
 <li><i>Distributed computing</i> – PEcAn is growing: we incorporate more models, more data, more teams everyday. Help us design and maintain an intact cyber infrastructure.
 </li>
 <li><a href="#linking_databases">Linking databases</a> –  PEcAn develops tools to make predictions for the future, but we do not have data from the future (yet!) to validate our predictions. So, it seems like a good idea to predict the past using the same models and let data from the past inform us. Help PEcAn to talk to the databases from where we can pull this paleo data.</li>
+<li><a href="#distributed_computing">Distributed computing</a> –  PEcAn is growing: we incorporate more models, more data, more teams everyday. Help us design and maintain an intact cyber infrastructure.</li>
+<li><a href="#instance_setup">New instance setup</a>  –  We want to see more teams in our network but we also want to make it as trouble-free as possible. Help us come up with a system that automatizes this process.</li>
+<li><a href="#dockerization">Dockerization</a>  –  We distribute PEcAn as a fully functional virtual application that runs on a wide range of operating systems, but we want even more flexibility! Help us employ a dockerized system.</li>
 <li><a href="#documentation">Documentation/Education</a> – Did we mention that one of PEcAn's greatest strengths is that we provide accessible tools for a broader community? Help us make it even more accessible by clean and clear documentation.</li>
 </p> 
  
@@ -75,6 +78,31 @@
 <p><em>Prerequisites:</em> Experience with database management systems and R is required.</p>
 <p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/492">#492</a> - <a href="https://github.com/PecanProject/pecan/issues/743">#743</a></p>
 <p><em>Contact person:</em> Istem Fer, istfer[at]bu.edu</p>
+
+<a name="distributed_computing">Distributed computing</a>
+<p>Currently the database that sits underneath PEcAn is build on top of postgresql. To allow any site to add new records, we have partitioned the database ids, where each site gets a billion records. This allows us to sync parts of the database. The biggest question is what to do with records that are owned by a remote site and you want to modify. The goal is for users to make changes on their local database and have the changes be distributed. We currently envision something like a git push and pull model, but are open to other solutions. This will need to work for cases where people are offline.</p>
+
+<p><em>Expected outcome:</em> For every site the ability to modify the database and have those records be pushed to other sites' databases.</p>
+<p><em>Prerequisites:</em> Database, PostgreSQL, experience with git is a plus.</p>
+<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu</p>
+
+
+<a name="instance_setup">New instance setup</a>
+<p>When the user creates a new instance of PEcAn it will start with a clean database with no users, or the default user. Adding the default user as admin is a security issue for those instances that are online. The thought is for a user to go to an admin page and register the new server and get a new ID, add an admin user to the database, setup database parameters etc. Currently most of these are done in the config.php. This can also help with backups, updates, etc.</p>
+
+<p><em>Expected outcome:</em> A wizard that will help a new PEcAn system to be setup, registering it with the other PEcAn servers, and setup a sync with the other servers.</p>
+<p><em>Prerequisites:</em> PHP is strongly recommended since this is currently used for the web ui.</p>
+<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1003">#1003</a> - <a href="https://github.com/PecanProject/pecan/issues/849">#849</a> - <a href="https://github.com/PecanProject/pecan/issues/758">#758</a></p>
+<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu</p>
+
+<a name="dockerization">Dockerization</a>
+<p>The software stack used for PEcAn is currently distributed as a virtual machine (VM) that runs on a user machine or on a VM server. When upgrading this VM the user will either need to download the new VM and copy the database and the files from the old VM to the new VM, or they can update the software on the VM. The software is already split in smaller modules, each which could become a docker container (database, web frontends, models). This will make it easier to deploy new versions of the software and add new models to the system.</p>
+
+<p><em>Expected outcome:</em> A complete docker stack that will run all the code that is currently distributed as a VM, with the ability to easily update the software and add new models.</p>
+<p><em>Prerequisites:</em> Experience with docker, or willingness to learn. R and linux is a plus.</p>
+<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1028">#1028</a>
+<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu</p>
+
 
 <a name="documentation">Documentation/Education</a>
 <p>Documentation is fundamental to developing. PEcAn documentation is unique in that it must provide instructions to both users and developers in a depth and breadth capable of reaching an audience with a variety of backgrounds. In conjunction, the PEcAn software is constantly evolving because it is open-source, requiring a flexible workflow. Documenting the project will require a multi-faceted approach to clearly communicate and train new users and developers. Beyond static text, we envision a suite of interactive tutorials, videos, and vignettes to accomplish this task.</p>
