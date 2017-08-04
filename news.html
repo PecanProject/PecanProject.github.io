@@ -37,9 +37,98 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        
+<div class="announcement">
+<h4><a>PEcAn at ESA 2017</a></h4>
+<span class="timestamp">
+<span dir="ltr">August 2017</span> 
+</span>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+
+Many of PEcAn and Dietze Lab members will be attending and presenting at this year's Ecological Society of America's conference in Portland Oregon. 
+
+<h5>Monday</h5>
+Tess McCabe <a href=https://eco.confex.com/eco/2017/webprogram/Paper68772.html>"Integrating invasive grasses into carbon cycle projections: Cogongrass spread in southern pine forests"</a> - Exhibit Hall, Oregon Convention Center
+
+<h5>Tuesday</h5>
+<p>Eliandro Tavares <a href=https://eco.confex.com/eco/2017/webprogram/Paper66944.html>"Benchmarking predictive models against long term ecological data"</a> - 8:00am: B113, Oregon Convention Center</p>
+
+<p>Mike Dietze <a href=https://eco.confex.com/eco/2017/webprogram/Paper63088.html>"On the nature of prediction in ecology"</a> - 1:50pm: Portland Blrm 256, Oregon Convention Center</p>
+
+<h5>Wednesday</h5>
+<p>Alexey Shiklomanov <a href=https://eco.confex.com/eco/2017/webprogram/Paper63273.html>"Applications of Bayesian radiative transfer model inversion to remote mapping plant functional traits"</a> - C124, Oregon Convention Center</p>
+
+<p>Elizabeth Cowdery <a href=https://eco.confex.com/eco/2017/webprogram/Paper68639.html>"Evaluating productivity predictions under elevated CO2 conditions: Multi-model benchmarking across FACE experiments"</a> - 11:10am: C122, Oregon Convention Center</p>
+
+<h5>Thursday</h5>
+Hannah Ditty  <a href=https://eco.confex.com/eco/2017/webprogram/Paper66467.html>"Fecundity estimates from eastern US temperate forests"</a> - 2:10 pm: B115, Oregon Convention Center
+
+<h5>Friday</h5>
+<p>Istem Fer <a href=https://eco.confex.com/eco/2017/webprogram/Paper67764.html>"Hierarchical Bayesian calibration of a dynamic vegetation model using inventory data" </a> - 9:00 am: Portland Blrm 256, Oregon Convention Center</p>
+
+<p>Ann Raiho <a href=https://eco.confex.com/eco/2017/webprogram/Paper62823.html>"Assimilating tree ring and fossil pollen data to improve understanding of unobservable forest processes"</a> - 9:20 am: Portland Blrm 256, Oregon Convention Center</p>
+
+
+<p></p>  
+</td></tr></tbody></table>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+  
+
+        
+<div class="announcement">
+<h4><a>PEcAn v1.5.0</a></h4>
+<span class="timestamp">
+<span dir="ltr">July 2017</span> 
+</span>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
+
+<p><u>Added</u></p>
+
+<li>PEcAn.utils::download.file() to allow for use of alternative FTP programs</li>
+<li>downloadAmeriflux and downloadNARR to make use of PEcAn.utils::download.file()</li>
+<li>-w flag to load.bety.sh script to specify the URL to fetch the data from</li>
+<li>new table sites_cultivars to betydb sync scripts (dump and load)</li>
+<li>docker container scrips (.yml) to create docker container for PEcAn</li>
+<li>the configuration edit page to allow easy modification of config via web interface</li>
+<li>Thredds server documentation and catlog generating script</li>
+
+<p><u>Changed</u></p>
+
+<li>upscale_met now accepts ~any valid CF file (not just full years), retains correct time units, and respects the previously ignored overwrite parameter</li>
+<li>Better date handling in BioCro functions</li>
+
+
+<p></p>  
+</td></tr></tbody></table>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+  
+  
+
 
 <div class="announcement">
-<h4><a>New Developer</a></h4>
+<h4><a>PEcAn at Flux Course 2017</a></h4>
+<span class="timestamp">
+<span dir="ltr">July 2017</span> 
+</span>
+<table cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><p>
+Mike Dietze, Ankur Desai, Betsy Cowdery, and James Simkins  are all returning to teach at this year's <a href="http://fluxcourse.org/">Flux Course</a>.
+</p>
+<p></p>  
+</td></tr></tbody></table>
+<div class="postfooter">
+<p></p>
+</div>
+</div>
+
+
+<div class="announcement">
+<h4><a>Summer Developers</a></h4>
 <span class="timestamp">
 <span dir="ltr">May2017</span> 
 </span>
@@ -47,9 +136,17 @@
 
 <h5>Shubham Agarwal</h5>
 
-<img border="0" src="https://avatars2.githubusercontent.com/u/7984532?v=3&s=460" width="150" align="middle"/>
-
 <p>Shubham graduated with an Integrated M.Tech in Mathematics and Computing'15 from IIT Delhi. He then worked as a Data Scientist for a year (2015-16) at TrulyMadly Matchmakers Pvt. Ltd, in the online dating domain. Shubham is currently enrolled in the one year, Masters (MSIAM) Data Science specialization program offered jointly by Universite Grenoble Alpes and Grenoble INP, Grenoble, France. He will be working on our GSoC project 'Scientific Visualization' over the summer, specifically responsible for our Shiny Dashboard visualization of our model endpoints.</p>
+
+<h5>Aman Kumar</h5>
+
+<p>	Aman Kumar graduated with a Bachelor of Engineering from BMS Institute of Technology & Management Bangalore, India. He has always been a tech enthusiast and web technologies, Offensive security, Distributed technologies, Big data interest him the most. Currently, he is working on replacing the current VM distributions technique with docker containers and modularizing it into smaller independent parts like PEcAn-Core, PEcAn-web, Postgresql & Bety so it will become easy to maintain.
+</p>
+
+<h5>Anne Thomas</h5>
+
+<p>	This summer, Anne Thomas will be contributing to the benchmarking module of PEcAn, putting together multi-model benchmarks for semi-arid and arid ecosystems as well as working on the overall benchmarking workflow. A lifelong nature lover and a growing programming nerd, Anne is studying Conservation Biology and Bioinformatics at Brigham Young University. After she completes her undergraduate degree she plans to pursue a PhD in computational ecology with the goal of addressing conservation challenges like climate change with programming power.
+</p>
 
 <p></p>  
 </td></tr></tbody></table>
