@@ -42,76 +42,96 @@
  
 <p>Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute includes but not limited to:</p>
 <p class="tab">
-<li><a href="#Scientific_visualization">Scientific visualization</a> – One of PEcAn's greatest strengths is that we provide accessible tools for a broader community. Help us develop powerful visualization tools and a well-built web API for a stronger information flow.</li>
-<li><a href="#hpc">High performance computing</a> – PEcAn takes the Bayesian approach in bringing ecosystem models and data together. Help us implement and optimize our algorithms for high performance computing environments.</li>
+  
+<li><a href="#hpc">High performance computing</a> – PEcAn takes the Bayesian approach in bringing ecosystem models and data together. Help us implement and optimize our algorithms for high performance computing (HPC) environments.</li>
+
+<li><a href="#dataOpt">Database Optimization</a> –  PEcAn preserves a huge range of information to make any science done with PEcAn reproducible. Help us optimise our database and our database management.
 </li>
-<li><a href="#linking_databases">Linking databases</a> –  PEcAn develops tools to make predictions for the future, but we do not have data from the future (yet!) to validate our predictions. So, it seems like a good idea to predict the past using the same models and let data from the past inform us. Help PEcAn to talk to the databases from where we can pull this paleo data.</li>
-<li><a href="#distributed_computing">Distributed computing</a> –  PEcAn is growing: we incorporate more models, more data, more teams everyday. Help us design and maintain an intact cyber infrastructure.</li>
-<li><a href="#instance_setup">New instance setup</a>  –  We want to see more teams in our network but we also want to make it as trouble-free as possible. Help us come up with a system that automatizes this process.</li>
-<li><a href="#dockerization">Dockerization</a>  –  We distribute PEcAn as a fully functional virtual application that runs on a wide range of operating systems, but we want even more flexibility! Help us employ a dockerized system.</li>
-<li><a href="#documentation">Documentation/Education</a> – Did we mention that one of PEcAn's greatest strengths is that we provide accessible tools for a broader community? Help us make it even more accessible by clean and clear documentation.</li>
+
+<li><a href="#SciVis">Scientific Visualization</a> – Help us improve the stability of our current visualizations, and find creative new ways of interactively exploring data and results.
+</li>
+
+<li><a href="#betyport">BETY port from RUBY to Python</a> –  The current version of the BETY website is created using Ruby On Rails, since more people are becoming familiar with python we would like to use python instead of Ruby on Rails.</li>
+
+<li><a href="#RemEx">Remote Execution</a>  –  The current version of the PEcAn uses qsub and ssh to run models on remote hosts, we want to use docker and singularity to do in the future (including gnu parallel).
+</li>
+
+<li><a href="#DistComp">Distributed Computing</a>  –  Solidify  PEcAn's distributed computing capabilities.</li>
+
+<li><a href="#linkdata">Linking Databases and data types</a> - Leverage PEcAn’s ability to store meta-data and process data on the fly in order to solidify a common ontology of ecological data our community can use.  </li>
 </p> 
  
 
-<a name="Scientific_visualization">Scientific visualization</a>
-<p>Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for identifying patterns in model outputs and validation with data.</p>
+<a name="hpc">High performance computing</a>
+<p> PEcAn provides a Bayesian data assimilation framework in order to synthesize the data with the models. However, such workflows can be computationally very expensive due to complexity of models and Bayesian methods. PEcAn already has a data assimilation module implemented in R that works locally. Our goal is to 1) make this workflow compatible with HPC environments (e.g. remote execution, parallelization) and 2) implement massively parallelizable particle filter methods using Graphics Processing Units (GPUs).
+</p>
+
+<p><em>Expected outcome:</em>Implementation of data assimilation module in HPC environments, and application of massively parallelizable particle filter algorithms in data assimilation module using GPU programming
+</p>
+<p><em>Prerequisites:</em> R and C/C++ experience is required, experience or willingness to learn GPU programming, Bayesian statistics background is not required but candidates with a background will be preferred.</p>
+<p><em>Contact person:</em> Istem Fer, istfer[at]bu.edu</p>
+
+<a name="dataOpt">Database Optimization</a>
+<p>At PEcAn, we want to build tools that make science more reproducible. A huge part of reproducibility is archiving information: we archive data, model configurations, results, -everything you’d need to recreate the experiment and then some. This means that our database needs to be efficient, manageable, and well-curated.  Right now, our database errs towards archival, and creates redundant or unused records. With your help we can create a smarter archival & creation standard. </p>
+
+<p><em>Expected outcome:</em> A set of database management tools for pre-release database curation.</p>
+<p><em>Prerequisites:</em>Proficiency in R and SQL (PostgreSQL preferred). Interest in data provenance.</p>
+<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1496">#1496</a> - <a href="https://github.com/PecanProject/pecan/issues/1630">#1630</a> <a href="https://github.com/PecanProject/bety/issues?utf8=%E2%9C%93&q=is%3Aopen%20%22needed%20cleanup%22%20">#245 -#230</a></p>
+<p><em>Contact person:</em> Tess McCabe, tmccabe[at]bu.edu</p>
 
 
-<p><em>Expected outcome:</em> A set of web-based tools for interactive visualization of model simulations and user-provided data, including the ability to plot results as time series, do pairwise comparisons of different variables, and apply statistical tests and transformations to the results.</p>
-<p><em>Prerequisites:</em> Familiarity with web-based interactive visualization frameworks such as R’s Shiny or Javascript’s D3 is a requirement. Demonstrated proficiency with R, SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred.</p>
-<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1245">#1245</a> - <a href="https://github.com/PecanProject/pecan/issues/921">#921</a></p> 
+<a name="SciVis">Scientific Visualization</a>
+<p>Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for exploring model outputs and data as well as a fun learning tool in educational environments.
+</p>
+<p>Currently, PEcAn has basic support for interactive visualizations of outputs using R Shiny. We are looking for a student interested in addressing any of the following areas:
+<li>Improving Shiny application stability and performance, for instance through more efficient caching or lazy-loading of large outputs and data, or leveraging more efficient interactive visualization frameworks.
+</li>
+<li>Enhancing the visual elements of our interface for starting model runs, including visualization of existing sites and input data and better UI elements for setting run options.
+</li>
+<li>Developing novel interactive visualization tools that leverage more advanced statistical techniques, such as visualizing and applying machine learning algorithms to outputs and model-data residuals, exploring results in multivariate space.</li>
+</p>
+<p><em>Expected outcome:</em> A more robust set of web-based interactive visualization tools for model simulations and user-provided data.
+</p>
+<p><em>Prerequisites:</em> Familiarity with R Shiny including the ability to work with and debug these tools in a remote, Unix-based CLI environment is a requirement. Demonstrated proficiency with SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred. Experience with other web-based interactive visualization frameworks, such as Javascipt’s D3, is a plus.
+</p>
 <p><em>Contact person:</em> Alexey Shiklomanov, ashiklom[at]bu.edu</p>
 
-<a name="hpc">High performance computing</a>
-<p>PEcAn provides a Bayesian data assimilation framework in order to synthesize the data with the models. However, Markov Chain Monte Carlo (MCMC) numerical techniques that are the backbone of Bayesian computation are computationally expensive. PEcAn's data assimilation module already has a Metropolis-Hastings MCMC algorithm natively implemented in R, and also supports external packages that provide other samplers. Our goal is to implement and optimize massively parallelizable MCMC algorithms using Graphics Processing Units (GPUs) that can further accelerate such scalable applications.</p>
 
+<a name="betyport">BETY port from RUBY to Python</a>
+<p>The BETY database is used by multiple projects, such as PEcAn, and TERRA-REF. The database schema is still good to use, however the front end is written in Ruby on Rails. The front end has had some work done on it to improve as well as updating the software however has been the same for the last 6 years. Currently the group does not have any full time ruby developers, however we do have a lot of python development expertise. The goal is to take the Ruby frontend and convert this to a different language, such as python.
+</p>
 
-<p><em>Expected outcome:</em> Implementation of massively parallelizable MCMC algorithms in data assimilation module using GPU programming.</p>
-<p><em>Prerequisites:</em> R and C/C++/Fortran experience, experience with CUDA/OpenACC or willingness to learn. Some Bayesian statistics background is desirable but not required.</p>
-<p><em>Contact person:</em> Istem Fer, istfer[at]bu.edu</p>
-
-<a name="linking_databases">Linking databases</a>
-<p>Ecosystem models usually do a pretty good job predicting what we observe today, but when we forecast to the future, they tend not to agree with each other. To find out which model gets it right (if any), we test them against paleo-data and make improvements accordingly. Fossil pollen and tree ring data are particularly informative about the past vegetation. PEcAn already has a framework to synthesize paleo-data with ecosystem models, but we lack a systematic flow of the paleo-data into PEcAn workflow. In this project we want to cross-link to databases such as NEOTOMA, PANGAEA and The International Tree-Ring Data Bank to be able to pull in paleoecological data. In this project we will make use of rOpenSci packages neotoma and pangaear as clients to the databases.</p>
-
-<p><em>Expected outcome:</em> A framework to support external database connections to pull in paleoecological data to PEcAn workflow for calibration and validation of model runs.</p>
-<p><em>Prerequisites:</em> Experience with database management systems and R is required.</p>
-<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/492">#492</a> - <a href="https://github.com/PecanProject/pecan/issues/743">#743</a></p>
-<p><em>Contact person:</em> Istem Fer, istfer[at]bu.edu</p>
-
-<a name="distributed_computing">Distributed computing</a>
-<p>Currently the database that sits underneath PEcAn is build on top of postgresql. To allow any site to add new records, we have partitioned the database ids, where each site gets a billion records. This allows us to sync parts of the database. The biggest question is what to do with records that are owned by a remote site and you want to modify. The goal is for users to make changes on their local database and have the changes be distributed. We currently envision something like a git push and pull model, but are open to other solutions. This will need to work for cases where people are offline.</p>
-
-<p><em>Expected outcome:</em> For every site the ability to modify the database and have those records be pushed to other sites' databases.</p>
-<p><em>Prerequisites:</em> Database, PostgreSQL, experience with git is a plus.</p>
+<p><em>Expected outcome:</em> The frontend of BETY is changed from Ruby to another language such as python as well as a new front end. The frontend should be configurable to match different projects and should be skinnable.
+</p>
+<p><em>Prerequisites:</em> Experience with python, an ORM framework such as django, ruby experience helpful.
+</p>
+<p><em>Related GitHub issues:</em> see <a href="https://github.com/PecanProject/bety">BETY github issues</a>
 <p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu</p>
 
+<a name="RemEx">Remote Execution</a>
+<p>We are currently in the process of converting PEcAn to use docker containers. We would like to use either kubernetes or HPC resources to run and scale multiple instances of these containers. To be able to run on HPC resources we will need to use either singularity, or find resources that allow to run docker containers, such as Google App Engine. To be able to do this we need to securely set up a pipe that allows us to start and stop the right containers on HPC environments, or an easy way to scale containers on a cloud computing platform.</p>
 
-<a name="instance_setup">New instance setup</a>
-<p>When the user creates a new instance of PEcAn it will start with a clean database with no users, or the default user. Adding the default user as admin is a security issue for those instances that are online. The thought is for a user to go to an admin page and register the new server and get a new ID, add an admin user to the database, setup database parameters etc. Currently most of these are done in the config.php. This can also help with backups, updates, etc.</p>
-
-<p><em>Expected outcome:</em> A wizard that will help a new PEcAn system to be setup, registering it with the other PEcAn servers, and setup a sync with the other servers.</p>
-<p><em>Prerequisites:</em> PHP is strongly recommended since this is currently used for the web ui.</p>
-<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1003">#1003</a> - <a href="https://github.com/PecanProject/pecan/issues/849">#849</a> - <a href="https://github.com/PecanProject/pecan/issues/758">#758</a></p>
-<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu</p>
-
-<a name="dockerization">Dockerization</a>
-<p>The software stack used for PEcAn is currently distributed as a virtual machine (VM) that runs on a user machine or on a VM server. When upgrading this VM the user will either need to download the new VM and copy the database and the files from the old VM to the new VM, or they can update the software on the VM. The software is already split in smaller modules, each which could become a docker container (database, web frontends, models). This will make it easier to deploy new versions of the software and add new models to the system.</p>
-
-<p><em>Expected outcome:</em> A complete docker stack that will run all the code that is currently distributed as a VM, with the ability to easily update the software and add new models.</p>
-<p><em>Prerequisites:</em> Experience with docker, or willingness to learn. R and linux is a plus.</p>
-<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1028">#1028</a>
-<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu</p>
+<p><em>Expected outcome:</em>  The user can launch an ensemble of 1000 runs, and the framework will automatically either scale the cloud platform to handle this many requests (and scale down afterwards) or use singularity to submit a job on a HPC site.</p>
+<p><em>Prerequisites:</em> Experience with docker, google App Engine and/or singularity + HPC is a plus</p>
+<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1391">#1391</a>
+<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu ; Alexey Shiklomanov, ashiklom[at]bu.edu </p>
 
 
-<a name="documentation">Documentation/Education</a>
-<p>Documentation is fundamental to developing. PEcAn documentation is unique in that it must provide instructions to both users and developers in a depth and breadth capable of reaching an audience with a variety of backgrounds. In conjunction, the PEcAn software is constantly evolving because it is open-source, requiring a flexible workflow. Documenting the project will require a multi-faceted approach to clearly communicate and train new users and developers. Beyond static text, we envision a suite of interactive tutorials, videos, and vignettes to accomplish this task.</p>
+<a name="DistComp">Distributed Computing</a>
+<p>Currently the database that sits underneath PEcAn is build on top of postgresql. Recently, we have built capability to sync databases on multiple machines within our network using a THREDDS API. We wish to solidify this infrastructure within the context of a multi-model uncertainty analysis project that is currently underway.  The goal is to run multiple models, with different sets of data from different sites, on multiple machines and leverage the distributed network to  pull and push files between machines at different institutions. This is a critical feature of the PEcAn cyberinfrastructure as the sharing of files across a network of machines is a critical development goal toward a true distributed network . Beyond solidifying the existing infrastructure, we wish to add the ability to process files and share intermediary files as well. Pulling and pushing subsets of files to grab only specific variables from results files and requesting calculations be performed on files on remote machines are a few feature we wish to add. </p>
 
-<p><em>Expected outcome:</em> A set of tools to train users and developers and document PEcAn. Specifically we will develop interactive tutorials, videos, and explore other options to communicate the unique products PEcAn delivers.</p>
-<p><em>Prerequisites:</em> Experience with R and markup languages. Familiarity with graph visualization softwares is a plus.</p>
-<p><em>Related GitHub issues:</em> See <a href="https://github.com/PecanProject/pecan/labels/Documentation">Documentation</a> tag.</p>
+<p><em>Expected outcome:</em>  Execute Model runs on multiple machines and use the THREDDS API to pull result files all onto one machine and perform calculations on those files.</p>
+<p><em>Prerequisites:</em> Database, PostgreSQL, R, experience with git is a plus.</p>
 <p><em>Contact person:</em> Tony Gardella, tonygard[at]bu.edu</p>
 
 
 
+<a name="linkdata">Linking databases and data types</a>
+
+<p>Ecosystem modeling relies heavily on fusing data from multiple sources. Whether it be data to calibrate a model or benchmark a model result, they come from different sources that are varying in their formats  and naming conventions. The difference in semantics creates a bottleneck as a central ontology does not exist to translate and relate the measurements from different sites, experiments, and/or databases. To alleviate this issue, this project’s goal is to systemize PEcAn’s framework to synthesize data with ecosystem models. In this project we want to cross-link to databases such as DataONE, NEOTOMA, PANGAEA and The International Tree-Ring Data Bank to be able to pull in ecological data and leverage PEcAn’s ability to store meta-data and process data on the fly in order to solidify a common ontology of ecological data our community can use.</p>
+
+<p><em>Expected outcome:</em> A framework to support external database connections to pull in ecological data to PEcAn workflow for calibration and validation of model runs.</p>
+<p><em>Prerequisites:</em> Experience with database management systems and R is required.</p>
+<p><em>Contact person:</em> Tony Gardella, tonygard[at]bu.edu</p>
 
 
