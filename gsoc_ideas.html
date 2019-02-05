@@ -43,45 +43,72 @@
  
 <p>Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute includes but not limited to:</p>
 <p class="tab">
-  
-<li><a href="#hpc">High performance computing</a> – PEcAn takes the Bayesian approach in bringing ecosystem models and data together. Help us implement and optimize our algorithms for high performance computing (HPC) environments.</li>
 
-<li><a href="#dataOpt">Database Optimization</a> –  PEcAn preserves a huge range of information to make any science done with PEcAn reproducible. Help us optimise our database and our database management.
+<li><a href="#mdui">Meta-Data Upload Interface</a> – For trait ‘metadata’ tables, enable users to upload R data tables and csv files to sites, citations, variables, methods, treatments, experiments, tables in BETY the PostgresSQL database.
 </li>
 
-<li><a href="#SciVis">Scientific Visualization</a> – Help us improve the stability of our current visualizations, and find creative new ways of interactively exploring data and results.
+<li><a href="#disa">Data Ingestion SHINY App</a> – Improve upon the our existing data ingestion user interface. Implment machine learning algorithm to intelligently suggest variable matches to new data and extend the automated download to new  
 </li>
 
-<li><a href="#betyport">BETY port from RUBY to Python</a> –  The current version of the BETY website is created using Ruby On Rails, since more people are becoming familiar with python we would like to use python instead of Ruby on Rails.</li>
-
-<li><a href="#RemEx">Remote Execution</a>  –  The current version of the PEcAn uses qsub and ssh to run models on remote hosts, we want to use docker and singularity to do in the future (including gnu parallel).
+<li><a href="#api">Extend API</a> – We've developed the base funcaitonality to use PEcAn as an API. We need your help to extend it's functionallity for production and distribution as well as solidify documentation.
 </li>
 
-<li><a href="#DistComp">Distributed Computing</a>  –  Solidify  PEcAn's distributed computing capabilities.</li>
+<li><a href="#admin">Admin Dashboard</a> – Allow users of PEcAn to better set up new nodes and administrate over their PEcAn ecosystem through the web interface. </li>
 
-<li><a href="#linkdata">Linking Databases and data types</a> - Leverage PEcAn’s ability to store meta-data and process data on the fly in order to solidify a common ontology of ecological data our community can use.  </li>
+<li><a href="#vis">Visualization</a>  – Develop SHINY app to visualize ouputs and analysis of ensemble runs.</li>
+
+<li><a href="#cont">Containerization</a>  –  Solidify PEcAn's container architecture</li>
+
+<li><a href="#extana">Extend Analysis</a> - Develop SHINY app to allow users to easily implement PEcAn analysis to existing workflows.</li>
+
+<li><a href="#remotedata">Add Remote Data</a> – Expand Remote Sensing and GIS tools in PEcAn</li>
+
 </p> 
- 
 
-<a name="hpc">High performance computing</a>
-<p> PEcAn provides a Bayesian data assimilation framework in order to synthesize the data with the models. However, such workflows can be computationally very expensive due to complexity of models and Bayesian methods. PEcAn already has a data assimilation module implemented in R that works locally. Our goal is to 1) make this workflow compatible with HPC environments (e.g. remote execution, parallelization) and 2) implement massively parallelizable particle filter methods using Graphics Processing Units (GPUs).
+<a name="mdui">Meta-Data Upload Interface</a>
+<p> For trait ‘metadata’ tables … enable users to upload R data tables and csv files to sites, citations, variables, methods, treatments, experiments, tables
+
+There are three steps: 
+1. adding API endpoints
+2. writing R functions that use them 
+3. then creating a shiny application. 
 </p>
 
-<p><em>Expected outcome:</em>Implementation of data assimilation module in HPC environments, and application of massively parallelizable particle filter algorithms in data assimilation module using GPU programming
+<p><em>Expected outcome:</em>Add ‘post’ endpoints to API for metadata tables (sites, citations, variables, methods, treatments, experiments, ...).
+Write functions to take an appropriately formatted data table, google sheet, or csv and insert it into BETYdb.
+Create a Shiny application that will walk users through this process of uploading these tables.
 </p>
-<p><em>Prerequisites:</em> R and C/C++ experience is required, experience or willingness to learn GPU programming, Bayesian statistics background is not required but candidates with a background will be preferred.</p>
-<p><em>Contact person:</em> Istem Fer, istfer[at]bu.edu</p>
+<p><em>Prerequisites:</em> R is required, experience or willingness to learn PostgreSQL programming and R SHINY.</p>
+<p><em>Contact person:</em> David LeBauer, dlebauer[at]email.arizona.edu</p>
 
-<a name="dataOpt">Database Optimization</a>
-<p>At PEcAn, we want to build tools that make science more reproducible. A huge part of reproducibility is archiving information: we archive data, model configurations, results, -everything you’d need to recreate the experiment and then some. This means that our database needs to be efficient, manageable, and well-curated.  Right now, our database errs towards archival, and creates redundant or unused records. With your help we can create a smarter archival & creation standard. </p>
+<a name="disa">Data Ingestion Shiny App</a>
+<p>Ecosystem modeling relies heavily on fusing data from multiple sources. Whether it be data to calibrate a model or benchmark a model result, they come from different sources that are varying in their formats  and naming conventions. The difference in semantics creates a bottleneck as a central ontology does not exist to translate and relate the measurements from different sites, experiments, and/or databases. To alleviate this issue, this project’s goal is to improve upon the existing SHINY data ingestion app. Two main tasks will be to refine the existing interface and then to add a Machine Learning component to eas the process of matching ormats and variables as new data is added.  </p>
 
-<p><em>Expected outcome:</em> A set of database management tools for pre-release database curation.</p>
-<p><em>Prerequisites:</em>Proficiency in R and SQL (PostgreSQL preferred). Interest in data provenance.</p>
-<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1496">#1496</a> - <a href="https://github.com/PecanProject/pecan/issues/1630">#1630</a> <a href="https://github.com/PecanProject/bety/issues?utf8=%E2%9C%93&q=is%3Aopen%20%22needed%20cleanup%22%20">#245 -#230</a></p>
-<p><em>Contact person:</em> Tess McCabe, tmccabe[at]bu.edu</p>
+<p><em>Expected outcome:</em> A SHINY app that facilitates easy data ingestion and learns to suggest existing variable mathces in the database to the data that is being uploaded. </p>
+<p><em>Prerequisites:</em>Proficiency in R. Interest in data provenance, SQL (PostgreSQL preferred), and SHINY</p>
+<p><em>Contact person:</em> Tony Gardella tonygard[at]bu.edu</p>
 
 
-<a name="SciVis">Scientific Visualization</a>
+<a name="api">Extend API</a>
+<p> Extend the PEcAn API package to full functionality. Flush out support for file I/O and transfer components using PEcAn THREDDS and redesign functionality to not rely on database connections.
+</p>
+
+<p><em>Expected outcome:</em> Easy to use API package allowing users to
+</p>
+<p><em>Prerequisites:</em> Knowledge of R
+</p>
+<p><em>Contact person:</em> Make interest known on Slack and we will find a match you with a mentor</p>
+
+
+<a name="admin">Admin Dashboard</a>
+<p>PEcAn exists as a distributed set of machines, but can take great expertise to handle and setting up and maintaining. To ease this process, this project entials building upon the existing dashboard so thatits becomes easier to add a node to the network and modify mahcine settings. </p>
+
+<p><em>Expected outcome:</em>  Easy to use web interface to allow user to change config.php and machine settings of PEcAn</p>
+<p><em>Prerequisites:</em> Experience with R and PHP</p>
+<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu </p>
+
+
+<a name="vis">Scientific Visualization</a>
 <p>Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for exploring model outputs and data as well as a fun learning tool in educational environments.
 </p>
 <p>Currently, PEcAn has basic support for interactive visualizations of outputs using R Shiny. We are looking for a student interested in addressing any of the following areas:
@@ -93,46 +120,47 @@
 </p>
 <p><em>Expected outcome:</em> A more robust set of web-based interactive visualization tools for model simulations and user-provided data.
 </p>
-<p><em>Prerequisites:</em> Familiarity with R Shiny including the ability to work with and debug these tools in a remote, Unix-based CLI environment is a requirement. Demonstrated proficiency with SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred. Experience with other web-based interactive visualization frameworks, such as Javascript’s D3, is a plus.
+<p><em>Prerequisites:</em> Familiarity with R Shiny including the ability to work with and debug these tools in a remote, Unix-based CLI environment is a requirement. Preference for proficiency with SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred. Experience with other web-based interactive visualization frameworks, such as Javascript’s D3, is a plus.
 </p>
-<p><em>Contact person:</em> Alexey Shiklomanov, ashiklom[at]bu.edu</p>
+<p><em>Contact person:</em> Betsy Cowdery and Tony Gardella, ecowdery[at]bu.edu and tonygard[at]bu.edu</p>
 
 
-<a name="betyport">BETY port from RUBY to Python</a>
-<p>The BETY database is used by multiple projects, such as PEcAn, and TERRA-REF. The database schema is still good to use, however the front end is written in Ruby on Rails. The front end has had some work done on it to improve as well as updating the software however has been the same for the last 6 years. Currently the group does not have any full time ruby developers, however we do have a lot of python development expertise. The goal is to take the Ruby frontend and convert this to a different language, such as python.
-</p>
 
-<p><em>Expected outcome:</em> The frontend of BETY is changed from Ruby to another language such as python as well as a new front end. The frontend should be configurable to match different projects and should be skinnable.
-</p>
-<p><em>Prerequisites:</em> Experience with python, an ORM framework such as django, ruby experience helpful.
-</p>
-<p><em>Related GitHub issues:</em> see <a href="https://github.com/PecanProject/bety">BETY github issues</a>
+<a name="cont">Containers</a>
+<p> There are a number of project related to containers and PEcAn:</p>
+</li>
+<li>PEcAn and Kubernetes - Allow for ability to start a PEcAn instance on Google and/or Amazon and/or local Kubernetes cluster. 
+</li>
+</li>
+<li>Docker Models - Have only the model run in one container, but have the job setup, pre-model run and post-model run done in an additional container. This would help make the model containers smaller and not require and R code. This would also give the ability to not need to add the model setup, job configuration to the default docker image.
+</li>
+</li>
+<li>Secure Data - Securely fetch all the data from a central service, place the data next to the model and after finish execution have the ability to push the data back to the central service. Best if there is some caching capabilities, where files might not be deleted locally (assuming there is space), this would allow us to re-use the same met file without having to download it multiple times in case of an ensable run.
+</li>
+</li>
+<li> Singularity - Use singularity to run models and convert model docker images to singularity images. Launch from a docker web image a qsub on a HPC to run the singularity images on the hPC to do the actual model runs. Add the ability to leverage of HTcondor to run the models in a condor environment.
+</li>
+
+<p><em>Prerequisites:</em> R, Docker,SHINY, experience with git is a plus.</p>
 <p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu</p>
 
-<a name="RemEx">Remote Execution</a>
-<p>We are currently in the process of converting PEcAn to use docker containers. We would like to use either kubernetes or HPC resources to run and scale multiple instances of these containers. To be able to run on HPC resources we will need to use either singularity, or find resources that allow to run docker containers, such as Google App Engine. To be able to do this we need to securely set up a pipe that allows us to start and stop the right containers on HPC environments, or an easy way to scale containers on a cloud computing platform.</p>
-
-<p><em>Expected outcome:</em>  The user can launch an ensemble of 1000 runs, and the framework will automatically either scale the cloud platform to handle this many requests (and scale down afterwards) or use singularity to submit a job on a HPC site.</p>
-<p><em>Prerequisites:</em> Experience with docker, google App Engine and/or singularity + HPC is a plus</p>
-<p><em>Related GitHub issues:</em> <a href="https://github.com/PecanProject/pecan/issues/1391">#1391</a>
-<p><em>Contact person:</em> Rob Kooper, kooper[at]illinois.edu ; Alexey Shiklomanov, ashiklom[at]bu.edu </p>
 
 
-<a name="DistComp">Distributed Computing</a>
-<p>Currently the database that sits underneath PEcAn is build on top of postgresql. Recently, we have built capability to sync databases on multiple machines within our network using a THREDDS API. We wish to solidify this infrastructure within the context of a multi-model uncertainty analysis project that is currently underway.  The goal is to run multiple models, with different sets of data from different sites, on multiple machines and leverage the distributed network to  pull and push files between machines at different institutions. This is a critical feature of the PEcAn cyberinfrastructure as the sharing of files across a network of machines is a critical development goal toward a true distributed network . Beyond solidifying the existing infrastructure, we wish to add the ability to process files and share intermediary files as well. Pulling and pushing subsets of files to grab only specific variables from results files and requesting calculations be performed on files on remote machines are a few feature we wish to add. </p>
+<a name="extana">Extend Analysis</a>
 
-<p><em>Expected outcome:</em>  Execute Model runs on multiple machines and use the THREDDS API to pull result files all onto one machine and perform calculations on those files.</p>
-<p><em>Prerequisites:</em> Database, PostgreSQL, R, experience with git is a plus.</p>
-<p><em>Contact person:</em> Tony Gardella, tonygard[at]bu.edu</p>
+<p>PEcAn offers multiple analyses on top of a simple execution of an ecosystem model. Currently, you must write a custom script or start a run again from scratch if you would like to perform one of these analyses on an existing model run. To alleviate this problem, this project will entail creating a SHINY app that will facilitate the process of taking an existing model run and initating analyses on that existing run.</p>
+
+<p><em>Expected outcome:</em> A SHINY app that walks a user through selecting an existing workflow allowing a user to select from a set of analyses they can apply to that workflow.</p>
+<p><em>Prerequisites:</em> Experience with R required and knowledge of SHINY is preferred</p>
+<p><em>Contact person:</em> Post on slack about your interest in the project</p>
 
 
 
-<a name="linkdata">Linking databases and data types</a>
+<a name="remotedata">Add Remote Data</a>
 
-<p>Ecosystem modeling relies heavily on fusing data from multiple sources. Whether it be data to calibrate a model or benchmark a model result, they come from different sources that are varying in their formats  and naming conventions. The difference in semantics creates a bottleneck as a central ontology does not exist to translate and relate the measurements from different sites, experiments, and/or databases. To alleviate this issue, this project’s goal is to systemize PEcAn’s framework to synthesize data with ecosystem models. In this project we want to cross-link to databases such as DataONE, NEOTOMA, PANGAEA and The International Tree-Ring Data Bank to be able to pull in ecological data and leverage PEcAn’s ability to store meta-data and process data on the fly in order to solidify a common ontology of ecological data our community can use.</p>
+<p>PEcAn offers the ability to ingest multiple streams of data automatically into models. We are currently lacking automated ingestion of Remote sensing and large spatial data. This project will develop and improve upon PEcAn's ability to ingest these types of data.</p>
 
-<p><em>Expected outcome:</em> A framework to support external database connections to pull in ecological data to PEcAn workflow for calibration and validation of model runs.</p>
-<p><em>Prerequisites:</em> Experience with database management systems and R is required.</p>
-<p><em>Contact person:</em> Tony Gardella, tonygard[at]bu.edu</p>
-
+<p><em>Expected outcome:</em> A SHINY app and/or set of functions that automates the process of ingesting remote sensing data into the PEcAn workflow.</p>
+<p><em>Prerequisites:</em> Experience with R required</p>
+<p><em>Contact person:</em> Shawn Serbin and Bailey Morrison, </p>
 
