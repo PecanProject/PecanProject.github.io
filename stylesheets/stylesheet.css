@@ -8,7 +8,7 @@ by Jason Costello, @jsncostello
 /*******************************************************************************
 MeyerWeb Reset
 *******************************************************************************/
-
+/* 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,10 +27,10 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
-}
+} */
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+/* article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -42,13 +42,13 @@ ol, ul {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+} */
 
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
 
-body {
+/* body {
   box-sizing: border-box;
   color:#373737;
   background: #212121;
@@ -252,7 +252,7 @@ td {
 form {
   background: #f2f2f2;
   padding: 20px;
-}
+} */
 
 /*******************************************************************************
 Full-Width Styles
@@ -269,7 +269,7 @@ Full-Width Styles
   margin: 0 auto;
 }
 
-#container {
+/* #container {
     background-image:url(../images/PNW.jpg);
     background-position:center;
     position: relative;
@@ -302,7 +302,7 @@ Full-Width Styles
 
 #header_wrap .inner {
   padding: 50px 10px 30px 10px;
-}
+} */
 
 #project_title {
   margin: 0;
@@ -358,7 +358,7 @@ Full-Width Styles
 .tar_download_link:hover {
   background: url(../images/sprite_download.png) no-repeat top right;
 }
-
+/* 
 #main_content_wrap {
   background: #f2f2f2;
   border-top: 1px solid #111;
@@ -367,7 +367,7 @@ Full-Width Styles
 
 #main_content {
   padding-top: 40px;
-}
+} */
 
 #footer_wrap {
   background: #212121;
@@ -380,13 +380,13 @@ Small Device Styles
 *******************************************************************************/
 
 @media screen and (max-width: 480px) {
-  body {
+  /* body {
     font-size:14px;
   }
 
   #downloads {
     display: none;
-  }
+  } */
 
   .inner {
     min-width: 320px;
@@ -396,7 +396,7 @@ Small Device Styles
   #project_title {
   font-size: 32px;
   }
-
+/* 
   h1 {
     font-size: 28px;
   }
@@ -432,4 +432,4 @@ table, tr, td {
     border: none;
     margin-left: auto;
 margin-right: auto;
-}
+} */

@@ -1,83 +1,128 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-US">
   <head>
-    <meta charset='utf-8' />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="PEcAn : The Predictive Ecosystem Analyzer" />
     <meta name="google-site-verification" content="WiPnxPvenKX6-C6fNrwp9v64f23Q1qYw26Kapyswgms" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
     <title>PEcAn</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/responsee.css">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">     
+    <link rel="stylesheet" href="css/template-style.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>      
   </head>
-
-  <body>
-
+  
+  <body class="size-1140">
+  	<!-- VIEW ON GITHUB -->
+  	<a target="_blank" class="hide-s" href="https://github.com/PecanProject" style="position:fixed;top:120px;right:-14px;z-index:10;"><img src="images/view-on-github.png" alt="" style="width: 200px;"></a>
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="outer">
-          <a id="forkme_banner" href="https://github.com/PecanProject">View on GitHub</a>
-
-        <table><tr>
-          <td><h1 id="project_title">PEcAn</h1></td>
-<td><a href="index.html">Home</a></td>
-<td><a href="news.html">News</a></td>
-<td><a href="people.html">People</a></td>
-<td><a href="tutorials.html">Tutorials</a></td>
-<td><a href="http://pecan.ncsa.illinois.edu/pecan">Demo</a></td>
-<td><a href="http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">Download</a></td>
-<td><a href="documentation.html">Documentation</a></td>
-<td><a href="pkgdocs.html">Package Documentation</a></td>
-<td><a href="pecan_workshop.html">Workshop</a></td>
-<td><a href="gsoc.html">GSoC</a></td>
-<td><a href="gsod.html">GSoD</a></td>
-<td><a href="Report_an_issue.html">Report an Issue</a></td>
-<td><a href="contact.html">Contact Us</a></td>
-</tr></table>
-        </header>
-    </div>
-
-<div id="container">
-  <table style="width:100%" border="0" cellspacing="0" cellpadding="0">
-    <tr><td>
-    <h3 align="center" style="color:white"><i>Ecosystem science, policy, and management informed by the best available data and models</i></h3>
-    </td>
-    </tr>
-    <tr><td align="center">
-<iframe width="560" height="315" src="http://www.youtube.com/embed/E2W_Qmc5qec?rel=0?autoplay=1" frameborder="0" allowfullscreen></iframe>
-    </td></tr>
-    <tr><td>
-      <h4 align="center" style="color:white">Our Mission:</h4>
-<h3 align="center" style="color:white"><i>Develop and promote accessible tools for reproducible ecosystem modeling and forecasting</i></h3>
-    </td></tr>
-    </table>
-</div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
+    <header role="banner" class="position-absolute">    
+      <!-- Top Navigation -->
+      <nav class="background-dark background-transparent-hightlight full-width">
+        <div class="s-12 l-2">
+          <a href="index.html" class="logo">
+            <!-- Logo White Version -->
+            <img class="logo-white" src="images/logo.png" alt="">
+            <!-- Logo Dark Version -->
+            <img class="logo-dark" src="images/logo.png" alt="">
+          </a>
+        </div>
+        <div class="top-nav s-12 l-10 background-dark">
+          
+          <ul class="right chevron">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="http://pecan.ncsa.illinois.edu/pecan">Demo</a></li>
+            <li><a href="http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">Download</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="pkgdocs.html">Package Documentation</a></li>
+            <li><a href="pecan_workshop.html">Workshop</a></li>
+            <li><a>Google</a>
+              <ul>
+                <li><a href="gsoc.html" style="color: black;font-weight: 800;">GSoC</a></li>
+                <li><a href="gsod.html" style="color: black;font-weight: 800;">GSoD</a></li>
+              </ul>
+            </li>
+            <li><a href="Report_an_issue.html">Report an Issue</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- MAIN -->
+    <main role="main">    
+      <!-- Main Header -->
+      <header>
+        <div class="carousel-default owl-carousel carousel-main carousel-nav-white background-dark text-center">
+          <div class="item">
+            <div class="s-12">
+              <img src="images/PNW.jpg" alt="">
+              <div class="carousel-content">
+                <div class="content-center-vertical line">
+                  <div class="margin-top-bottom-80">
+                    <!-- Title -->
+                    <div class="s-12 m-10 l-8 center">
+                      <h1 class="text-white margin-top-10 text-size-30 text-m-size-16 text-line-height-1" style="padding-top: 3ch;">Ecosystem science, policy, and management informed by the best available data and models</h1>
+                      <iframe width="560" height="315" src="http://www.youtube.com/embed/E2W_Qmc5qec?rel=0?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                      <p class="text-white text-size-20 text-m-size-16 margin-bottom-18" style="font-weight: bold;" >Our Mission:<br>Develop and promote accessible tools for reproducible ecosystem modeling and forecasting</p></div>
+                    <div class="line">
+                      <div class="s-12 m-12 l-3 center">
+                        <a class="button button-white-stroke s-12" href="http://pecan.ncsa.illinois.edu/pecan">Get Started Now</a>
+                      </div>       
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>              
+        </div>               
+      </header>
       
-      
-      
-      <section id="main_content" class="inner">
-
-<p>Climate change science has witnessed an explosion in the amount and types of data that can be brought to bear on the potential responses of the terrestrial carbon cycle and biodiversity to global change. Many of the most pressing questions about global change are not necessarily limited by the need to collect new data as much as by our ability to synthesize existing data. This project specifically seeks to improve this ability. Because no one measurement provides a complete picture, multiple data sources must be integrated in a sensible manner. Process-based models represent an ideal framework for integrating these data streams because they represent multiple processes at different spatial and temporal scales in ways that capture our current understanding of the causal connections across scales and among data types. Three components are required to bridge this gap between the available data and the required level of understanding: 1) a state-of-the-art ecosystem model, 2) a workflow management system to handle the numerous streams of data, and 3) a data assimilation statistical framework in order to synthesize the data with the model.</p>
-
-<p><strong>Acknowledgements:</strong> The PEcAn project is supported by the National Science Foundation (ABI #1062547, ABI #1458021, DIBBS #1261582, ARC #1023477, EF #1318164, EF #1241894, EF #1241891), NASA Terrestrial Ecosystems, the Department of Energy (ARPA-E awards #DE-AR0000594 and DE-AR0000598), the Energy Biosciences Institute, and an Amazon AWS in Education Grant.</p>
-
-<p>PEcAn is open-source and built using open source software, and we benefit from the use of a wide range of other software, including R, JAGS, MySQL, Ruby on Rails, PHP, C, and Fortran.  In addition, we appreciate the availability of development tools including RStudio, Vim, Emacs, Navicat, and Git/GitHub</p>
-
-<a class="twitter-timeline" href="https://twitter.com/PEcAnProject" data-widget-id="469825011251826689">Tweets by @PEcAnProject</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-
+      <!-- Main Content -->    
+      <section class="section background-white text-center">
+        <div class="line">
+          <h2 class="text-size-50  text-m-size-40 text-center">About Us</h2>
+          <hr class="break-small background-primary break-center">
+          <p class="text-dark text-size-14 margin-top-10">Climate change science has witnessed an explosion in the amount and types of data that can be brought to bear on the potential responses of the terrestrial carbon cycle and biodiversity to global change.
+             Many of the most pressing questions about global change are not necessarily limited by the need to collect new data as much as by our ability to synthesize existing data. This project specifically seeks to improve this ability. Because no one measurement provides a complete picture, multiple data sources must be integrated in a sensible manner. Process-based models represent an ideal framework for integrating these data streams because they represent multiple processes at different spatial and temporal scales in ways that capture our current understanding of the causal connections across scales and among data types. Three components are required to bridge this gap between the available data and the required level of understanding: 
+            1) a state-of-the-art ecosystem model, 2) a workflow management system to handle the numerous streams of data, and 3) a data assimilation statistical framework in order to synthesize the data with the model.
+          </p>
+          <br>
+          <p class="text-dark text-size-14 margin-top-10">
+            <strong>Acknowledgements:</strong> The PEcAn project is supported by the National Science Foundation (ABI #1062547, ABI #1458021, DIBBS #1261582, ARC #1023477, EF #1318164, EF #1241894, EF #1241891),
+             NASA Terrestrial Ecosystems, the Department of Energy (ARPA-E awards #DE-AR0000594 and DE-AR0000598), the Energy Biosciences Institute, and an Amazon AWS in Education Grant.
+          </p>
+          <br>
+          <p class="text-dark text-size-14 margin-top-10">
+            PEcAn is open-source and built using open source software, and we benefit from the use of a wide range of other software, 
+            including R, JAGS, MySQL, Ruby on Rails, PHP, C, and Fortran.  In addition, we appreciate the availability of development tools including RStudio, Vim, Emacs, Navicat, and Git/GitHub
+          </p>
+          <br>
+          <a class="twitter-timeline" href="https://twitter.com/PEcAnProject" data-widget-id="469825011251826689">Tweets by @PEcAnProject</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
       </section>
-    </div>
+    </main>
+    
+    <script type="text/javascript" src="js/responsee.js"></script>
+    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-scripts.js"></script>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <p>Published with <a href="http://pages.github.com" style="color: rgb(255, 255, 255);" >GitHub Pages</a></p>
       </footer>
     </div>
 
@@ -93,9 +138,11 @@
 
     </script>
     <script>
-  ((window.gitter = {}).chat = {}).options = {
+      ((window.gitter = {}).chat = {}).options = {
     room: 'PecanProject/pecan'
-  };
-</script>
+      };
+    </script>
+
+    
   </body>
 </html>
