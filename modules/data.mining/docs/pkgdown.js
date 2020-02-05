@@ -1,18 +1,21 @@
 /* http://gregfranko.com/blog/jquery-best-practices/ */
 (function($) {
   $(function() {
-
     $("#sidebar")
-      .stick_in_parent({offset_top: 40})
-      .on('sticky_kit:bottom', function(e) {
-        $(this).parent().css('position', 'static');
+      .stick_in_parent({ offset_top: 40 })
+      .on("sticky_kit:bottom", function(e) {
+        $(this)
+          .parent()
+          .css("position", "static");
       })
-      .on('sticky_kit:unbottom', function(e) {
-        $(this).parent().css('position', 'relative');
+      .on("sticky_kit:unbottom", function(e) {
+        $(this)
+          .parent()
+          .css("position", "relative");
       });
 
-    $('body').scrollspy({
-      target: '#sidebar',
+    $("body").scrollspy({
+      target: "#sidebar",
       offset: 60
     });
 
@@ -23,8 +26,7 @@
     var max_length = -1;
     var pos = -1;
     for (var i = 0; i < links.length; i++) {
-      if (links[i].getAttribute("href") === "#")
-        continue;
+      if (links[i].getAttribute("href") === "#") continue;
       var path = paths(links[i].pathname);
 
       var length = prefix_length(cur_path, path);
@@ -47,40 +49,38 @@
     pieces.shift(); // always starts with /
 
     var end = pieces[pieces.length - 1];
-    if (end === "index.html" || end === "")
-      pieces.pop();
-    return(pieces);
+    if (end === "index.html" || end === "") pieces.pop();
+    return pieces;
   }
 
   function prefix_length(needle, haystack) {
-    if (needle.length > haystack.length)
-      return(0);
+    if (needle.length > haystack.length) return 0;
 
     // Special case for length-0 haystack, since for loop won't run
     if (haystack.length === 0) {
-      return(needle.length === 0 ? 1 : 0);
+      return needle.length === 0 ? 1 : 0;
     }
 
     for (var i = 0; i < haystack.length; i++) {
-      if (needle[i] != haystack[i])
-        return(i);
+      if (needle[i] != haystack[i]) return i;
     }
 
-    return(haystack.length);
+    return haystack.length;
   }
 
   /* Clipboard --------------------------*/
 
   function changeTooltipMessage(element, msg) {
-    var tooltipOriginalTitle=element.getAttribute('data-original-title');
-    element.setAttribute('data-original-title', msg);
-    $(element).tooltip('show');
-    element.setAttribute('data-original-title', tooltipOriginalTitle);
+    var tooltipOriginalTitle = element.getAttribute("data-original-title");
+    element.setAttribute("data-original-title", msg);
+    $(element).tooltip("show");
+    element.setAttribute("data-original-title", tooltipOriginalTitle);
   }
 
-  if(Clipboard.isSupported()) {
+  if (Clipboard.isSupported()) {
     $(document).ready(function() {
-      var copyButton = "<button type='button' class='btn btn-primary btn-copy-ex' type = 'submit' title='Copy to clipboard' aria-hidden='true' data-toggle='tooltip' data-placement='left auto' data-trigger='hover' data-clipboard-copy><i class='fa fa-copy' aria-hidden='true'></i></button>";
+      var copyButton =
+        "<button type='button' class='btn btn-primary btn-copy-ex' type = 'submit' title='Copy to clipboard' aria-hidden='true' data-toggle='tooltip' data-placement='left auto' data-trigger='hover' data-clipboard-copy><i class='fa fa-copy' aria-hidden='true'></i></button>";
 
       $(".examples, div.sourceCode").addClass("hasCopyButton");
 
@@ -88,23 +88,23 @@
       $(copyButton).prependTo(".hasCopyButton");
 
       // Initialize tooltips:
-      $('.btn-copy-ex').tooltip({container: 'body'});
+      $(".btn-copy-ex").tooltip({ container: "body" });
 
       // Initialize clipboard:
-      var clipboardBtnCopies = new Clipboard('[data-clipboard-copy]', {
+      var clipboardBtnCopies = new Clipboard("[data-clipboard-copy]", {
         text: function(trigger) {
           return trigger.parentNode.textContent;
         }
       });
 
-      clipboardBtnCopies.on('success', function(e) {
-        changeTooltipMessage(e.trigger, 'Copied!');
+      clipboardBtnCopies.on("success", function(e) {
+        changeTooltipMessage(e.trigger, "Copied!");
         e.clearSelection();
       });
 
-      clipboardBtnCopies.on('error', function() {
-        changeTooltipMessage(e.trigger,'Press Ctrl+C or Command+C to copy');
+      clipboardBtnCopies.on("error", function() {
+        changeTooltipMessage(e.trigger, "Press Ctrl+C or Command+C to copy");
       });
     });
   }
-})(window.jQuery || window.$)
+})(window.jQuery || window.$);
