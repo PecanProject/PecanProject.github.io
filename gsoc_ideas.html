@@ -77,28 +77,68 @@
  <h1><a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>GSoC - PEcAn Project Ideas</h1>
  
 <p>Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute includes but not limited to:</p>
+
 <p class="tab">
 
-<li><a href="#mdui">Meta-Data Upload Interface</a> – For trait ‘metadata’ tables, enable users to upload R data tables and csv files to sites, citations, variables, methods, treatments, experiments, tables in BETY the PostgresSQL database.
+<ol>
+
+<li><a href="#gee">Google Earth Engine - Establishing GEE and PEcAn communication.</a> - We want to establish an efficient GEE-PEcAn link to ingest the outputs of such analyses into the PEcAn workflow seamlessly.
 </li>
 
-<li><a href="#disa">Data Ingestion SHINY App</a> – Improve upon the our existing data ingestion user interface. Implment machine learning algorithm to intelligently suggest variable matches to new data and extend the automated download to new  
+<li><a href="#gha">GitHub Actions - Migrate from GitHub, Travis and DockerHub to have a single environment leveraging GitHub Actions.
 </li>
 
 <li><a href="#api">Extend API</a> – We've developed the base funcaitonality to use PEcAn as an API. We need your help to extend it's functionallity for production and distribution as well as solidify documentation.
 </li>
 
-<li><a href="#admin">Admin Dashboard</a> – Allow users of PEcAn to better set up new nodes and administrate over their PEcAn ecosystem through the web interface. </li>
+<li><a href="#disa">Data Ingestion SHINY App</a> – Improve upon the our existing data ingestion user interface. Implment machine learning algorithm to intelligently suggest variable matches to new data and extend the automated download to new  
+</li>
 
-<li><a href="#vis">Visualization</a>  – Develop SHINY app to visualize ouputs and analysis of ensemble runs.</li>
+<li><a href="#singularity">Singularity</a> – Add the ability to run models that are currently docker containers easily as singularity images on a HPC.</li>
 
-<li><a href="#cont">Containerization</a>  –  Solidify PEcAn's container architecture</li>
+<li><a href="#kube">Kubernetes</a> – Solidify PEcAn's kubernetes support.</li>
 
-<li><a href="#extana">Extend Analysis</a> - Develop SHINY app to allow users to easily implement PEcAn analysis to existing workflows.</li>
+<li><a href="#data">Data</a> – Securly share data between docker containers.</li>
 
-<li><a href="#remotedata">Add Remote Data</a> – Expand Remote Sensing and GIS tools in PEcAn</li>
+<li><a href="#older">Ideas from last year</a> – List of some ideas from last year that are still open, or might help you come up with a new idea</li>
 
-</p> 
+</ol>
+
+<a name="GEE">Google Earth Engine</a>
+<p>Establishing GEE and PEcAn communication. Google Earth Engine (GEE) is a cloud service that makes remote sensing data available for Earth System science. GEE has an API through which certain geopspatial analyses could be performed. We want to establish an efficient GEE-PEcAn link to ingest the outputs of such analyses into the PEcAn workflow seamlessly. PEcAn team will provide the initial example code that runs on the GEE servers, the GSoC participant will build the link that pulls the results from GEE to PEcAn, as well as submitting the code remotely to the GEE servers through the PEcAn workflow.</p>
+<p><em>Expected outcome: An application and/or set of functions that automates the connection between GEE and the PEcAn workflow.</em>
+<p><em>Prerequisites:</em> Experience with R required, familiarity with GEE is a plus</p>
+<p><em>Contact person:</em> Istem Fer, @istfer</p>
+
+<a name="GEE">GitHub Actions</a>
+<p>Currently PEcAn is build and tested using GitHub, Travis, Docker Hub as well as some custom scripts. The goal is to take this and use GitHub Actions to create a stable one place build environment.</p>
+<p><em>Expected outcome: Conversion from the mixture of build pieces to GitHub Actions.</em>
+<p><em>Prerequisites:</em>Familiarity with building software, Familiarity with GitHub actions, docker, and travis is a plus</p>
+<p><em>Contact person:</em>Rob Kooper @kooper, or Chris Black @infotroph</p>
+
+<a name="api">Extend API</a>
+<p>Extend the PEcAn API package to full functionality. Flush out support for file I/O and transfer components using PEcAn THREDDS and redesign functionality to not rely on database connections.</p>
+<p><em>Expected outcome:</em> Easy to use API package allowing users</p>
+<p><em>Prerequisites:</em> Knowledge of R</p>
+<p><em>Contact person:</em> Rob Kooper @kooper</p>
+
+<a name="singularity">Singularity</a>
+<p>Use singularity to run models and convert model docker images to singularity images. Launch from a docker web image a qsub on a HPC to run the singularity images on the hPC to do the actual model runs. Add the ability to leverage of HTcondor to run the models in a condor environment.</p>
+<p><em>Prerequisites:</em>Docker and singularity, HPC is a plus</p>
+<p><em>Contact person:</em> Rob Kooper, @kooper</p>
+
+<a name="kube">Kubernetes</a>
+<p>There is a helm chart that will load the PEcAn in kurbernetes. This would expand on this helm chart to add autoscaling, as well as taking the PEcAn executor container and splitting it up in smaller pieces. This would also include optimizations to the initial startup of the cluster as well as adding init containers for first user.</p>
+<p><em>Prerequisites:</em>R, Docker, and kubernetes.</p>
+<p><em>Contact person:</em> Rob Kooper, @kooper</p>
+
+<a name="data">Data Management</a>
+<p>PEcAn is written to allow for distributed executions. Currently the docker model requires a single shared data folder. This piece would expand the API endpoint to securly fetch the data needed for a run and send the resulting data back. This should be able to cache some of the data locally.</p>
+<p><em>Prerequisites:</em>R, Docker.</p>
+<p><em>Contact person:</em> Rob Kooper, @kooper</p>
+
+<hr/>
+<p><a name="older">Older Project Ideas</a></p>
 
 <a name="mdui">Meta-Data Upload Interface</a>
 <p> For trait ‘metadata’ tables … enable users to upload R data tables and csv files to sites, citations, variables, methods, treatments, experiments, tables
@@ -114,33 +154,14 @@ Write functions to take an appropriately formatted data table, google sheet, or 
 Create a Shiny application that will walk users through this process of uploading these tables.
 </p>
 <p><em>Prerequisites:</em> R is required, experience or willingness to learn PostgreSQL programming and R SHINY.</p>
-<p><em>Contact person:</em> David LeBauer, @dlebauer and Kristina Riemer,@Kristina Riemer</p>
+<p><em>Contact person:</em> David LeBauer, @dlebauer and Kristina Riemer, @Kristina Riemer</p>
 
 <a name="disa">Data Ingestion Shiny App</a>
 <p>Ecosystem modeling relies heavily on fusing data from multiple sources. Whether it be data to calibrate a model or benchmark a model result, they come from different sources that are varying in their formats  and naming conventions. The difference in semantics creates a bottleneck as a central ontology does not exist to translate and relate the measurements from different sites, experiments, and/or databases. To alleviate this issue, this project’s goal is to improve upon the existing SHINY data ingestion app. Two main tasks will be to refine the existing interface and then to add a Machine Learning component to eas the process of matching ormats and variables as new data is added.  </p>
 
 <p><em>Expected outcome:</em> A SHINY app that facilitates easy data ingestion and learns to suggest existing variable mathces in the database to the data that is being uploaded. </p>
 <p><em>Prerequisites:</em>Proficiency in R. Interest in data provenance, SQL (PostgreSQL preferred), and SHINY</p>
-<p><em>Contact person:</em> Tony Gardella @tonygard</p>
-
-
-<a name="api">Extend API</a>
-<p> Extend the PEcAn API package to full functionality. Flush out support for file I/O and transfer components using PEcAn THREDDS and redesign functionality to not rely on database connections.
-</p>
-
-<p><em>Expected outcome:</em> Easy to use API package allowing users to
-</p>
-<p><em>Prerequisites:</em> Knowledge of R
-</p>
-<p><em>Contact person:</em> Make interest known on Slack and we will find a match you with a mentor</p>
-
-
-<a name="admin">Admin Dashboard</a>
-<p>PEcAn exists as a distributed set of machines, but can take great expertise to handle and setting up and maintaining. To ease this process, this project entials building upon the existing dashboard so thatits becomes easier to add a node to the network and modify mahcine settings. </p>
-
-<p><em>Expected outcome:</em>  Easy to use web interface to allow user to change config.php and machine settings of PEcAn</p>
-<p><em>Prerequisites:</em> Experience with R and PHP</p>
-<p><em>Contact person:</em> Rob Kooper, @kooper </p>
+<p><em>Contact person:</em>Check on slack</p>
 
 
 <a name="vis">Scientific Visualization</a>
@@ -157,29 +178,7 @@ Create a Shiny application that will walk users through this process of uploadin
 </p>
 <p><em>Prerequisites:</em> Familiarity with R Shiny including the ability to work with and debug these tools in a remote, Unix-based CLI environment is a requirement. Preference for proficiency with SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred. Experience with other web-based interactive visualization frameworks, such as Javascript’s D3, is a plus.
 </p>
-<p><em>Contact person:</em> Betsy Cowdery, @bcow and Hamze Dokoohaki @Hamze</p>
-
-
-
-<a name="cont">Containers</a>
-<p> There are a number of project related to containers and PEcAn:</p>
-</li>
-<li>PEcAn and Kubernetes - Allow for ability to start a PEcAn instance on Google and/or Amazon and/or local Kubernetes cluster. 
-</li>
-</li>
-<li>Docker Models - Have only the model run in one container, but have the job setup, pre-model run and post-model run done in an additional container. This would help make the model containers smaller and not require and R code. This would also give the ability to not need to add the model setup, job configuration to the default docker image.
-</li>
-</li>
-<li>Secure Data - Securely fetch all the data from a central service, place the data next to the model and after finish execution have the ability to push the data back to the central service. Best if there is some caching capabilities, where files might not be deleted locally (assuming there is space), this would allow us to re-use the same met file without having to download it multiple times in case of an ensable run.
-</li>
-</li>
-<li> Singularity - Use singularity to run models and convert model docker images to singularity images. Launch from a docker web image a qsub on a HPC to run the singularity images on the hPC to do the actual model runs. Add the ability to leverage of HTcondor to run the models in a condor environment.
-</li>
-
-<p><em>Prerequisites:</em> R, Docker,SHINY, experience with git is a plus.</p>
-<p><em>Contact person:</em> Rob Kooper, @kooper</p>
-
-
+<p><em>Contact person:</em>Hamze Dokoohaki @Hamze</p>
 
 <a name="extana">Extend Analysis</a>
 
@@ -187,18 +186,7 @@ Create a Shiny application that will walk users through this process of uploadin
 
 <p><em>Expected outcome:</em> A SHINY app that walks a user through selecting an existing workflow allowing a user to select from a set of analyses they can apply to that workflow.</p>
 <p><em>Prerequisites:</em> Experience with R required and knowledge of SHINY is preferred</p>
-<p><em>Contact person:</em> Tony Gardella @tonygard</p>
-
-
-
-<a name="remotedata">Add Remote Data</a>
-
-<p>PEcAn offers the ability to ingest multiple streams of data automatically into models. We are currently lacking automated ingestion of Remote sensing and large spatial data. This project will develop and improve upon PEcAn's ability to ingest these types of data.</p>
-
-<p><em>Expected outcome:</em> A SHINY app and/or set of functions that automates the process of ingesting remote sensing data into the PEcAn workflow.</p>
-<p><em>Prerequisites:</em> Experience with R required</p>
-<p><em>Contact person:</em> Shawn Serbin and Bailey Morrison, @Bailey BNL </p>
-
+<p><em>Contact person:</em>Check on slack</p>
 
   </div>
 </section>
