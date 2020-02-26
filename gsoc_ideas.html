@@ -93,8 +93,7 @@
 <li><a href="#api">Extend API</a> – We've developed the base funcaitonality to use PEcAn as an API. We need your help to extend it's functionallity for production and distribution as well as solidify documentation.
 </li>
 
-<li><a href="#disa">Data Ingestion SHINY App</a> – Improve upon the our existing data ingestion user interface. Implment machine learning algorithm to intelligently suggest variable matches to new data and extend the automated download to new  
-</li>
+<li><a href="#fia">FIA</a> – Leverage of FIADB to create initial tree growth and distributions.</li>
 
 <li><a href="#singularity">Singularity</a> – Add the ability to run models that are currently docker containers easily as singularity images on a HPC.</li>
 
@@ -130,6 +129,12 @@
 <p><em>Prerequisites:</em> Knowledge of R</p>
 <p><em>Contact person:</em> Rob Kooper @kooper</p>
 
+<a name="fia">Leverage FIADB</a>
+<p>Some of the models we have can use initial data about trees and plants. One of the databases we have worked with in the past is the <a href="https://www.fia.fs.fed.us/library/database-documentation/">FIADB</a>. We have code that can connect to the FIADB and get the right data and format it for the ED model. The database is downloadable as a set of CSV files as well as some schema definitions. This project would write scripts to download the data to postgres, and update the code to create the initializations for the ED model.</p>
+<p><em>Expected outcome:</em> Scripts to download and install to postgres FIADB.</p>
+<p><em>Prerequisites:</em> Knowledge of R and PostgreSQL</p>
+<p><em>Contact person:</em> Rob Kooper @kooper and Ankur Desai @ankur</p>
+
 <a name="singularity">Singularity</a>
 <p>Use singularity to run models and convert model docker images to singularity images. Launch from a docker web image a qsub on a HPC to run the singularity images on the hPC to do the actual model runs. Add the ability to leverage of HTcondor to run the models in a condor environment.</p>
 <p><em>Prerequisites:</em> Docker and singularity, HPC is a plus</p>
@@ -154,7 +159,6 @@
 <p><em>Expected outcome:</em> A SHINY app that facilitates easy data ingestion and learns to suggest existing variable mathces in the database to the data that is being uploaded. </p>
 <p><em>Prerequisites:</em> Proficiency in R. Interest in data provenance, SQL (PostgreSQL preferred), and SHINY</p>
 <p><em>Contact person:</em> Check on slack</p>
-
 
 <a name="vis">Scientific Visualization</a>
 <p>Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for exploring model outputs and data as well as a fun learning tool in educational environments.
