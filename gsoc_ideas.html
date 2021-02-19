@@ -76,40 +76,69 @@
         
  <h1><a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>GSoC - PEcAn Project Ideas</h1>
  
-<p>Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute includes but not limited to:</p>
+<p>Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute. Below is a list of potential ideas. Feel free to contact any of the mentors in slack, or feel free to ask questions in our #gsoc-2021 channel in slack.</p>
 
-<p class="tab">
+<hr/>
 
-<ol>
+<h2><a name="ideas">Project Ideas</a></h2>
 
-<li><a href="#gee">Google Earth Engine - Establishing GEE and PEcAn communication.</a> - We want to establish an efficient GEE-PEcAn link to ingest the outputs of such analyses into the PEcAn workflow seamlessly.
-</li>
+<p>&nbsp;</p>
 
-<li><a href="#mdu">Metadata Upload Interface</a> - create a new user-friendly interface for the metadata upload app</li>
+<a name="api">Extend API</a>
+<p>Last year we have started to build an API for PEcAn. This was a enormous success, and the scientists loved this approach. We would like to expand on this API and have more functionality available through the API.</p>
+<p><em>Expected outcome:</em> More functions available through the API, especially options to query the database.</p>
+<p><em>Prerequisites:</em> Knowledge of R and Rest</p>
+<p><em>Contact person:</em> Rob Kooper @kooper</p>
 
-<li><a href="#gha">GitHub Actions - Migrate from GitHub, Travis and DockerHub to have a single environment leveraging GitHub Actions.
-</li>
+<p>&nbsp;</p>
 
-<li><a href="#api">Extend API</a> – We've developed the base funcaitonality to use PEcAn as an API. We need your help to extend it's functionallity for production and distribution as well as solidify documentation.
-</li>
+<a name="test">Testing Dashboard</a>
+<p>Integration testing, test-suite development, and PEcAn "status board" (i.e. a place we can go to easily see what models, inputs, etc are currently working and which are down). The goal is to run multiple integration tests in different locations with different models and show the results of these tests. This can also show historical data on runtimes and past success rates.</p>
+<p><em>Expected outcome:</em> A Dashboard that shows all test runs and their results</p>
+<p><em>Prerequisites:</em> R and HTML.</p>
+<p><em>Contact person:</em> Mike Dieze @dietze</p>
 
-<li><a href="#fia">FIA</a> – Leverage of FIADB to create initial tree growth and distributions.</li>
+<p>&nbsp;</p>
 
-<li><a href="#singularity">Singularity</a> – Add the ability to run models that are currently docker containers easily as singularity images on a HPC.</li>
+<a name="kube">Kubernetes</a>
+<p>There is a helm chart that will load the PEcAn in kurbernetes. This would expand on this helm chart to add autoscaling, as well as taking the PEcAn executor container and splitting it up in smaller pieces.</p>
+<p><em>Expected outcome:</em> A helm chart that will install PEcAn in kubernetes and scales the models up and down as needed.</p>
+<p><em>Prerequisites:</em> R, Docker, and kubernetes.</p>
+<p><em>Contact person:</em> Rob Kooper, @kooper</p>
 
-<li><a href="#kube">Kubernetes</a> – Solidify PEcAn's kubernetes support.</li>
+<p>&nbsp;</p>
 
-<li><a href="#data">Data</a> – Securly share data between docker containers.</li>
+<a name="cran">PEcAn in CRAN</a>
+<p>Currently PEcAn is not available in CRAN, this makes it harder to install on systems since it requires the user to download all code first and install it. Adding it to CRAN will not only make it easier to install, but also easier to find. This will require to fix warnings in the build process and potentially splitting the code in different modules.</p>
+<p><em>Expected outcome:</em> All PEcAn packages are available in CRAN.</p>
+<p><em>Prerequisites:</em> R and knownledge of CRAN/devtoools</p>
+<p><em>Contact person:</em> Chris Black, @infotroph</p>
 
-<li><a href="#older">Ideas from last year</a> – List of some ideas from last year that are still open, or might help you come up with a new idea</li>
+<p>&nbsp;</p>
 
-</ol>
-
-<a name="GEE">Google Earth Engine</a>
-<p>Establishing GEE and PEcAn communication. Google Earth Engine (GEE) is a cloud service that makes remote sensing data available for Earth System science. GEE has an API through which certain geopspatial analyses could be performed. We want to establish an efficient GEE-PEcAn link to ingest the outputs of such analyses into the PEcAn workflow seamlessly. PEcAn team will provide the initial example code that runs on the GEE servers, the GSoC participant will build the link that pulls the results from GEE to PEcAn, as well as submitting the code remotely to the GEE servers through the PEcAn workflow.</p>
-<p><em>Expected outcome:</em> An application and/or set of functions that automates the connection between GEE and the PEcAn workflow.</em>
-<p><em>Prerequisites:</em> Experience with R and Python required, familiarity with GEE is a plus</p>
+<a name="drought">Drought Model</a>
+<p>Most models require both merterological data as well as plant functional types to predict the plant growth in an area. Other mdoels will allow for additional data. This idea is to add a drought model to PEcAn (see <a href="https://www.icos-cp.eu/data-products/YVR0-4898">Drought-2018 ecosystem eddy covariance flux product for 52 stations in FLUXNET-Archive format</a>)</p>
+<p><em>Expected outcome:</em> Drought model is availble in PEcAn.</p>
+<p><em>Prerequisites:</em> R.</p>
 <p><em>Contact person:</em> Istem Fer, @istfer</p>
+
+<p>&nbsp;</p>
+
+<a name="drought">Additional Input Data</a>
+<p>One of the goals of PEcAn is to be able to compare different ecological models and compare the output with actual measurements. These models will be able to create better predictions when we have more diverse data available. Exmaple inputs we are looking at are Input products: ORNL DAAC subset tool (MODIS/VIIRS/Daymet); GES DISC (LDAS, others?); NLCD; SMAP; NASA CMS; GEDI; ECOSTRESS.</p>
+<p><em>Expected outcome:</em> Additinal inputs are implemented and made availble throug the web interface.</p>
+<p><em>Prerequisites:</em> R.</p>
+<p><em>Contact person:</em> Depends on the input data model, please check in slack</p>
+
+<p>&nbsp;</p>
+
+<a name="webpage">Webpage updates</a>
+<p>The current webpage for PEcAn is a mixture of auto-generated documentation from R, documentation and example code written using RMarkdown and webpages written in HTML. We would like to have a system that will take all these different sources, and create a consistent looking webpage (automatically).</p>
+<p><em>Expected outcome:</em> A consistent looking webpage that is automatically updated with historical manuals availble.</p>
+<p><em>Prerequisites:</em> R, HTML, and github actions.</p>
+<p><em>Contact person:</em> Prakher Prashank </p>
+
+<p>&nbsp;</p>
 
 <a name="mdu">Metadata Upload Interface</a>
 <p>We have developed a Flask app BETYdb-YABA for uploading metadata, such as sites and experimental data, from csv files. We are looking for someone to create a usable, self-explanatory GUI that walks new users through how to upload these data and for checking data are in the correct format for the database BETYdb. See the BETYdb-YABA <a href="https://github.com/PecanProject/BETYdb-YABA/">GitHub repository</a> and <a href="https://github.com/PecanProject/BETYdb-YABA/issues/1">issue</a> detailing the desired UI format.</p>
@@ -117,17 +146,27 @@
 <p><em>Prerequisites:</em> Python, responsive web design</p>
 <p><em>Contact person:</em> David LeBauer, @dlebauer, Kristina Riemer, @Kristina Riemer</p>
 
+
+<hr/>
+<h2><a name="older">Older Project Ideas</a></h2>
+
+<p></p>
+
+<a name="GEE">Google Earth Engine</a>
+<p>Establishing GEE and PEcAn communication. Google Earth Engine (GEE) is a cloud service that makes remote sensing data available for Earth System science. GEE has an API through which certain geopspatial analyses could be performed. We want to establish an efficient GEE-PEcAn link to ingest the outputs of such analyses into the PEcAn workflow seamlessly. PEcAn team will provide the initial example code that runs on the GEE servers, the GSoC participant will build the link that pulls the results from GEE to PEcAn, as well as submitting the code remotely to the GEE servers through the PEcAn workflow.</p>
+<p><em>Expected outcome:</em> An application and/or set of functions that automates the connection between GEE and the PEcAn workflow.</em>
+<p><em>Prerequisites:</em> Experience with R and Python required, familiarity with GEE is a plus</p>
+<p><em>Contact person:</em> Istem Fer, @istfer</p>
+
+<p>&nbsp;</p>
+
 <a name="GEE">GitHub Actions</a>
 <p>Currently PEcAn is build and tested using GitHub, Travis, Docker Hub as well as some custom scripts. The goal is to take this and use GitHub Actions to create a stable one place build environment.</p>
 <p><em>Expected outcome: Conversion from the mixture of build pieces to GitHub Actions.</em>
 <p><em>Prerequisites:</em> Familiarity with building software, Familiarity with GitHub actions, docker, and travis is a plus</p>
 <p><em>Contact person:</em> Rob Kooper @kooper, or Chris Black @infotroph</p>
 
-<a name="api">Extend API</a>
-<p>Extend the PEcAn API package to full functionality. Flush out support for file I/O and transfer components using PEcAn THREDDS and redesign functionality to not rely on database connections.</p>
-<p><em>Expected outcome:</em> Easy to use API package allowing users</p>
-<p><em>Prerequisites:</em> Knowledge of R</p>
-<p><em>Contact person:</em> Rob Kooper @kooper</p>
+<p>&nbsp;</p>
 
 <a name="fia">Leverage FIADB</a>
 <p>Some of the models we have can use initial data about trees and plants. One of the databases we have worked with in the past is the <a href="https://www.fia.fs.fed.us/library/database-documentation/">FIADB</a>. We have code that can connect to the FIADB and get the right data and format it for the ED model. The database is downloadable as a set of CSV files as well as some schema definitions. This project would write scripts to download the data to postgres, and update the code to create the initializations for the ED model.</p>
@@ -135,23 +174,21 @@
 <p><em>Prerequisites:</em> Knowledge of R and PostgreSQL</p>
 <p><em>Contact person:</em> Rob Kooper @kooper and Ankur Desai @ankur</p>
 
+<p>&nbsp;</p>
+
 <a name="singularity">Singularity</a>
 <p>Use singularity to run models and convert model docker images to singularity images. Launch from a docker web image a qsub on a HPC to run the singularity images on the hPC to do the actual model runs. Add the ability to leverage of HTcondor to run the models in a condor environment.</p>
 <p><em>Prerequisites:</em> Docker and singularity, HPC is a plus</p>
 <p><em>Contact person:</em> Rob Kooper, @kooper</p>
 
-<a name="kube">Kubernetes</a>
-<p>There is a helm chart that will load the PEcAn in kurbernetes. This would expand on this helm chart to add autoscaling, as well as taking the PEcAn executor container and splitting it up in smaller pieces. This would also include optimizations to the initial startup of the cluster as well as adding init containers for first user.</p>
-<p><em>Prerequisites:</em> R, Docker, and kubernetes.</p>
-<p><em>Contact person:</em> Rob Kooper, @kooper</p>
+<p>&nbsp;</p>
 
 <a name="data">Data Management</a>
 <p>PEcAn is written to allow for distributed executions. Currently the docker model requires a single shared data folder. This piece would expand the API endpoint to securly fetch the data needed for a run and send the resulting data back. This should be able to cache some of the data locally.</p>
 <p><em>Prerequisites:</em> R, Docker.</p>
 <p><em>Contact person:</em> Rob Kooper, @kooper</p>
 
-<hr/>
-<p><a name="older">Older Project Ideas</a></p>
+<p>&nbsp;</p>
 
 <a name="disa">Data Ingestion Shiny App</a>
 <p>Ecosystem modeling relies heavily on fusing data from multiple sources. Whether it be data to calibrate a model or benchmark a model result, they come from different sources that are varying in their formats  and naming conventions. The difference in semantics creates a bottleneck as a central ontology does not exist to translate and relate the measurements from different sites, experiments, and/or databases. To alleviate this issue, this project’s goal is to improve upon the existing SHINY data ingestion app. Two main tasks will be to refine the existing interface and then to add a Machine Learning component to eas the process of matching ormats and variables as new data is added.  </p>
@@ -159,6 +196,8 @@
 <p><em>Expected outcome:</em> A SHINY app that facilitates easy data ingestion and learns to suggest existing variable mathces in the database to the data that is being uploaded. </p>
 <p><em>Prerequisites:</em> Proficiency in R. Interest in data provenance, SQL (PostgreSQL preferred), and SHINY</p>
 <p><em>Contact person:</em> Check on slack</p>
+
+<p>&nbsp;</p>
 
 <a name="vis">Scientific Visualization</a>
 <p>Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for exploring model outputs and data as well as a fun learning tool in educational environments.
@@ -176,6 +215,8 @@
 </p>
 <p><em>Contact person:</em> Hamze Dokoohaki @Hamze</p>
 
+<p>&nbsp;</p>
+
 <a name="extana">Extend Analysis</a>
 
 <p>PEcAn offers multiple analyses on top of a simple execution of an ecosystem model. Currently, you must write a custom script or start a run again from scratch if you would like to perform one of these analyses on an existing model run. To alleviate this problem, this project will entail creating a SHINY app that will facilitate the process of taking an existing model run and initating analyses on that existing run.</p>
@@ -183,6 +224,8 @@
 <p><em>Expected outcome:</em> A SHINY app that walks a user through selecting an existing workflow allowing a user to select from a set of analyses they can apply to that workflow.</p>
 <p><em>Prerequisites:</em> Experience with R required and knowledge of SHINY is preferred</p>
 <p><em>Contact person:</em> Check on slack</p>
+
+<p>&nbsp;</p>
 
   </div>
 </section>
