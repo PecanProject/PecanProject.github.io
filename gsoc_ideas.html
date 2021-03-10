@@ -141,9 +141,9 @@
 <p>&nbsp;</p>
 
 <a name="mdu">Metadata Upload Interface</a>
-<p>We have developed a Flask app BETYdb-YABA for uploading metadata, such as sites and experimental data, from csv files. We are looking for someone to create a usable, self-explanatory GUI that walks new users through how to upload these data and for checking data are in the correct format for the database BETYdb. See the BETYdb-YABA <a href="https://github.com/PecanProject/BETYdb-YABA/">GitHub repository</a> and <a href="https://github.com/PecanProject/BETYdb-YABA/issues/1">issue</a> detailing the desired UI format.</p>
-<p><em>Expected outcome:</em> A webapp that shows users how to upload metadata files to database</p>
-<p><em>Prerequisites:</em> Python, responsive web design</p>
+<p>We have developed the BETYdb-YABA app to support insertion of metadata into BETYdb, including sites and experimental data. The app is built on the YABA API. The user interface provides visualizations prior to uploading to support QA/QC. Currently, the app uses an API written in Node.js for user validation and visualization. We want to extend and migrate this functionality into the YABA API Python codebase and add additional data validation steps.</p>
+<p><em>Expected outcome:</em> YABA API with functionality for data validation and visualization.</p>
+<p><em>Prerequisites:</em> Python, Flask, SQLAlchemy, and PostgreSQL.</p>
 <p><em>Contact person:</em> David LeBauer, @dlebauer, Kristina Riemer, @Kristina Riemer</p>
 
 
