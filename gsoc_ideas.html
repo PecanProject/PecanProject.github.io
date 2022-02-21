@@ -12,20 +12,20 @@
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/responsee.css">
     <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="owl-carousel/owl.theme.css">     
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="css/template-style.css">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>      
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   </head>
-  
+
   <body class="size-1140">
   	<a target="_blank" class="hide-s" href="https://github.com/PecanProject" style="position:fixed;top:120px;right:-14px;z-index:10;"><img src="images/view-on-github.png" alt="" style="width: 200px; padding-right: 10px;"></a>
-    
+
     <!-- HEADER -->
 
-        <header role="banner" class="position-absolute">    
+        <header role="banner" class="position-absolute">
       <!-- Top Navigation -->
       <nav class="background-dark background-transparent-hightlight full-width">
         <div class="s-12 l-2">
@@ -37,7 +37,7 @@
           </a>
         </div>
         <div class="top-nav s-12 l-10 background-dark">
-          
+
           <ul class="right chevron">
             <li><a href="index.html">Home</a></li>
             <li><a>About</a>
@@ -57,10 +57,10 @@
               </ul>
             </li>
             <li><a href="http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">Download</a></li>
-            <li><a>Google</a>
+            <li><a>GSoC</a>
               <ul>
-                <li><a href="gsoc.html" style="color: black;font-weight: 800;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GSoC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-                <li><a href="gsod.html" style="color: black;font-weight: 800;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GSoD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="gsoc.html" style="color: black;font-weight: 800;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contributor Guidance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="gsoc_ideas.html" style="color: black;font-weight: 800;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ideas List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
               </ul>
             </li>
             <li><a href="Report_an_issue.html">Bug Report</a></li>
@@ -68,169 +68,170 @@
         </div>
       </nav>
     </header>
-    
+
     <!-- MAIN CONTENT -->
 
     <section id="main_content" class="inner" style="padding-top: 80px;">
       <div id="main_content_wrap" class="outer">
-        
+
  <h1><a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>GSoC - PEcAn Project Ideas</h1>
- 
-<p>Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute. Below is a list of potential ideas. Feel free to contact any of the mentors in slack, or feel free to ask questions in our #gsoc-2021 channel in slack.</p>
+
+Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute. Below is a list of potential ideas. Feel free to contact any of the mentors in slack, or feel free to ask questions in our #gsoc-2021 channel in slack.
 
 <hr/>
 
 <h2><a name="ideas">Project Ideas</a></h2>
 
-<p>&nbsp;</p>
-
-<a name="api">Extend API</a>
-<p>Last year we have started to build an API for PEcAn. This was a enormous success, and the scientists loved this approach. We would like to expand on this API and have more functionality available through the API.</p>
-<p><em>Expected outcome:</em> More functions available through the API, especially options to query the database.</p>
-<p><em>Prerequisites:</em> Knowledge of R and Rest</p>
-<p><em>Contact person:</em> Rob Kooper @kooper</p>
-
-<p>&nbsp;</p>
-
-<a name="test">Testing Dashboard</a>
-<p>Integration testing, test-suite development, and PEcAn "status board" (i.e. a place we can go to easily see what models, inputs, etc are currently working and which are down). The goal is to run multiple integration tests in different locations with different models and show the results of these tests. This can also show historical data on runtimes and past success rates.</p>
-<p><em>Expected outcome:</em> A Dashboard that shows all test runs and their results</p>
-<p><em>Prerequisites:</em> R and HTML.</p>
-<p><em>Contact person:</em> Mike Dieze @dietze</p>
-
-<p>&nbsp;</p>
-
-<a name="kube">Kubernetes</a>
-<p>There is a helm chart that will load the PEcAn in kurbernetes. This would expand on this helm chart to add autoscaling, as well as taking the PEcAn executor container and splitting it up in smaller pieces.</p>
-<p><em>Expected outcome:</em> A helm chart that will install PEcAn in kubernetes and scales the models up and down as needed.</p>
-<p><em>Prerequisites:</em> R, Docker, and kubernetes.</p>
-<p><em>Contact person:</em> Rob Kooper, @kooper</p>
-
-<p>&nbsp;</p>
-
-<a name="cran">PEcAn packages on CRAN</a>
-<p>Currently PEcAn is not available in CRAN, this makes it harder to install on systems since it requires the user to download all code first and install it. Adding PEcAn packages to CRAN will not only make it easier to install, but also easier to find and easier to use standalone modules. This will require fixing warnings in the build process, removing unnecessary dependencies, and potentially splitting modules.</p>
-<p><em>Expected outcome:</em>PEcAn packages available in CRAN.</p>
-<p><em>Prerequisites:</em> R and comfort with the key steps required to release a package on CRAN; experience with R packages helpful, but most of the process is covered in chapters on R package releases in the <a href="https://devguide.ropensci.org/releasing.html">book ‘rOpenSci packages’</a> and the <a href="https://r-pkgs.org/release.html">book ‘R packages’ by Hadley Wickham</a></p>
-<p><em>Contact person:</em> Chris Black, @infotroph</p>
-
-
-<a name="drought">Drought-2018 Product</a>
-<p>Most models require both meteorological data as well as flux data to inform and improve their predictions to capture the ecosysem dynamics in an area. This idea is to add the <a href="https://www.icos-cp.eu/data-products/YVR0-4898">Drought-2018 ecosystem eddy covariance flux product for 52 stations</a> to PEcAn's data streams.</p>
-<p><em>Expected outcome:</em> Drought product is availble in PEcAn.</p>
-<p><em>Prerequisites:</em> R and python.</p>
-<p><em>Contact person:</em> Istem Fer, @istfer</p>
-
-<p>&nbsp;</p>
-
-<a name="drought">Additional Input Data</a>
-<p>One of the goals of PEcAn is to be able to compare different ecological models and compare the output with actual measurements. These models will be able to create better predictions when we have more diverse data available. Exmaple inputs we are looking at are Input products: ORNL DAAC subset tool (MODIS/VIIRS/Daymet); GES DISC (LDAS, others?); NLCD; SMAP; NASA CMS; GEDI; ECOSTRESS.</p>
-<p><em>Expected outcome:</em> Additinal inputs are implemented and made availble throug the web interface.</p>
-<p><em>Prerequisites:</em> R.</p>
-<p><em>Contact person:</em> Depends on the input data model, please check in slack</p>
-
-<p>&nbsp;</p>
-
-<a name="webpage">Webpage updates</a>
-<p>The current webpage for PEcAn is a mixture of auto-generated documentation from R, documentation and example code written using RMarkdown and webpages written in HTML. We would like to have a system that will take all these different sources, and create a consistent looking webpage (automatically).</p>
-<p><em>Expected outcome:</em> A consistent looking webpage that is automatically updated with historical manuals availble.</p>
-<p><em>Prerequisites:</em> R, HTML, and github actions.</p>
-<p><em>Contact person:</em> Prakher Prashank </p>
-
-<p>&nbsp;</p>
-
-<a name="mdu">Metadata Upload Interface</a>
-<p>We have developed the BETYdb-YABA app to support insertion of metadata into BETYdb, including sites and experimental data. The app is built on the YABA API. The user interface provides visualizations prior to uploading to support QA/QC. Currently, the app uses an API written in Node.js for user validation and visualization. We want to extend and migrate this functionality into the YABA API Python codebase and add additional data validation steps.</p>
-<p><em>Expected outcome:</em> YABA API with functionality for data validation and visualization.</p>
-<p><em>Prerequisites:</em> Python, Flask, SQLAlchemy, and PostgreSQL.</p>
-<p><em>Contact person:</em> David LeBauer, @dlebauer, Kristina Riemer, @Kristina Riemer</p>
-
+Following is a list of project ideas, use this list to contact the appropriate mentors on slack. Feel free to propose your own ideas as well,
+in this case contact @kooper in slack so he can put you in contact with the best mentors.
 
 <hr/>
-<h2><a name="older">Older Project Ideas</a></h2>
 
-<p></p>
+<h4><a name="cran">PEcAn packages on CRAN [R package development]</h4>
 
-<a name="GEE">Google Earth Engine</a>
-<p>Establishing GEE and PEcAn communication. Google Earth Engine (GEE) is a cloud service that makes remote sensing data available for Earth System science. GEE has an API through which certain geopspatial analyses could be performed. We want to establish an efficient GEE-PEcAn link to ingest the outputs of such analyses into the PEcAn workflow seamlessly. PEcAn team will provide the initial example code that runs on the GEE servers, the GSoC participant will build the link that pulls the results from GEE to PEcAn, as well as submitting the code remotely to the GEE servers through the PEcAn workflow.</p>
-<p><em>Expected outcome:</em> An application and/or set of functions that automates the connection between GEE and the PEcAn workflow.</em>
-<p><em>Prerequisites:</em> Experience with R and Python required, familiarity with GEE is a plus</p>
-<p><em>Contact person:</em> Istem Fer, @istfer</p>
+PEcAn is implemented as a set of R packages, but the user must currently download and install all the
+packages as a single unit. Making PEcAn packages available on CRAN will not only make it easier to install,
+but also easier to find and easier to use standalone modules. This will require fixing warnings in the build
+process, refactoring to remove unnecessary dependencies, and potentially splitting modules.
 
 <p>&nbsp;</p>
 
-<a name="GEE">GitHub Actions</a>
-<p>Currently PEcAn is build and tested using GitHub, Travis, Docker Hub as well as some custom scripts. The goal is to take this and use GitHub Actions to create a stable one place build environment.</p>
-<p><em>Expected outcome: Conversion from the mixture of build pieces to GitHub Actions.</em>
-<p><em>Prerequisites:</em> Familiarity with building software, Familiarity with GitHub actions, docker, and travis is a plus</p>
-<p><em>Contact person:</em> Rob Kooper @kooper, or Chris Black @infotroph</p>
+<dl>
+  <dt>Expected outcome:</dt>
+  <dd>PEcAn packages available in CRAN.</dd>
+  <dt>Prerequisites:</dt>
+  <dd>R and comfort with the key steps required to release a package on CRAN; experience with R packages
+    helpful, but most of the process is covered in chapters on R package releases in the book
+    ‘rOpenSci packages’ and the book ‘R packages’ by Hadley Wickham</dd>
+  <dt>Contact person:</dt>
+  <dd>Chris Black, @infotroph</dd>
+</dl>
+
+<hr/>
+
+<h4><a name="pecan.ma">Submit PEcAn.MA to CRAN [Data Science]</h4>
+
+The PEcAn meta analysis package currently queries plant trait data stored in the BETYdb Postgres database
+and uses meta-analysis to estimate parameters for ecosystem models. It also stores information about the
+meta-analysis in the database. This project would decouple the PEcAn.MA package from the BETYdb database
+in order to make it more modular and portable. It would replace dependency on the database with text files
+as inputs and outputs. These text files could optionally be read from and inserted back into the database.
 
 <p>&nbsp;</p>
 
-<a name="fia">Leverage FIADB</a>
-<p>Some of the models we have can use initial data about trees and plants. One of the databases we have worked with in the past is the <a href="https://www.fia.fs.fed.us/library/database-documentation/">FIADB</a>. We have code that can connect to the FIADB and get the right data and format it for the ED model. The database is downloadable as a set of CSV files as well as some schema definitions. This project would write scripts to download the data to postgres, and update the code to create the initializations for the ED model.</p>
-<p><em>Expected outcome:</em> Scripts to download and install to postgres FIADB.</p>
-<p><em>Prerequisites:</em> Knowledge of R and PostgreSQL</p>
-<p><em>Contact person:</em> Rob Kooper @kooper and Ankur Desai @ankur</p>
+<dl>
+  <dt>Expected outcome:</dt>
+  <dd>The PEcAn.MA package submitted to CRAN, without dependency on a running database. Additional functions
+    in the PEcAn.DB package responsible for generating and reading text files from and into the database.
+  <dt>Prerequisites:</dt>
+  <dd>R and SQL, plus package development as described in the PEcAn packages on CRAN project.
+  <dt>Contact person:</dt>
+  <dd>David @dlebauer, Kristina</dd>
+</dl>
+
+<hr/>
+
+<h4><a name="pecan.ma">Input Processing / Asynchronous workflow execution [Data Science]</h4>
+
+One of the goals of PEcAn is to be able to run different ecological models (which require a range of data inputs)
+and compare the model outputs with actual measurements (a.k.a. data constraints). The goal of this project is twofold,
+depending on the specific interests of the GSOC student.
+<ol>
+  <li>The current PEcAn input processing occurs mostly within the primary runtime workflow, but numerous PEcAn
+    applications would benefit from the ability to update near real-time data asynchronously with model execution,
+    handling different data streams in parallel. As part of this we’d also like to make it easier to use PEcAn
+    input processing modules as stand alone tools.</li>
+  <li>Increase the number of input products supported. Students may focus on one or more of the following:
+    <ol type="a">
+      <li>add the ECMWF Open Data as an meteorological drivers</li>
+      <li>create a common pipeline for ingesting agricultural management data using ICASA standards and json file
+        formats (see https://github.com/PecanProject/pecan/issues/2518)</li>
+      <li>Extend our existing support for ingesting data from the National Ecological Observatory Network (NEON)
+        and Ameriflux as both data inputs and constraints.</li>
+    </ol>
+  </li>
+</ol>
 
 <p>&nbsp;</p>
 
-<a name="singularity">Singularity</a>
-<p>Use singularity to run models and convert model docker images to singularity images. Launch from a docker web image a qsub on a HPC to run the singularity images on the hPC to do the actual model runs. Add the ability to leverage of HTcondor to run the models in a condor environment.</p>
-<p><em>Prerequisites:</em> Docker and singularity, HPC is a plus</p>
-<p><em>Contact person:</em> Rob Kooper, @kooper</p>
+<dl>
+  <dt>Prerequisites:</dt>
+  <dd>R.</dd>
+  <dt>Contact person:</dt>
+  <dd>@Alexis Helgeson (1, 2c), @HenriKajasilta (2a,b), Istem Fer @istfer (2a,b), David LeBauer @dlebauer (2b).</dd>
+</dl>
+
+<hr/>
+
+<h4><a name="api">Extend API / Distributed file sharing [Computer Science]</h4>
+
+Last year we have started to build an API for PEcAn. This was a enormous success, and the scientists loved this approach. We would like to expand on this API and have more functionality available through the API.
 
 <p>&nbsp;</p>
 
-<a name="data">Data Management</a>
-<p>PEcAn is written to allow for distributed executions. Currently the docker model requires a single shared data folder. This piece would expand the API endpoint to securly fetch the data needed for a run and send the resulting data back. This should be able to cache some of the data locally.</p>
-<p><em>Prerequisites:</em> R, Docker.</p>
-<p><em>Contact person:</em> Rob Kooper, @kooper</p>
+<dl>
+  <dt>Expected outcome:</dt>
+  <dd>More functions available through the API, especially options to query the database./dd>
+  <dt>Prerequisites:</dt>
+  <dd>Knowledge of R and Rest</dd>
+  <dt>Contact person:</dt>
+  <dd>Rob Kooper @kooper
+</dl>
+
+<hr/>
+
+<h4><a name="kubernetes">Kubernetes [Computer Science]</h4>
+
+There is a helm chart that will load the PEcAn in kubernetes. This would expand on this helm chart to add autoscaling,
+as well as taking the PEcAn executor container and splitting it up in smaller pieces.
 
 <p>&nbsp;</p>
 
-<a name="disa">Data Ingestion Shiny App</a>
-<p>Ecosystem modeling relies heavily on fusing data from multiple sources. Whether it be data to calibrate a model or benchmark a model result, they come from different sources that are varying in their formats  and naming conventions. The difference in semantics creates a bottleneck as a central ontology does not exist to translate and relate the measurements from different sites, experiments, and/or databases. To alleviate this issue, this project’s goal is to improve upon the existing SHINY data ingestion app. Two main tasks will be to refine the existing interface and then to add a Machine Learning component to eas the process of matching ormats and variables as new data is added.  </p>
+<dl>
+  <dt>Expected outcome:</dt>
+  <dd>A helm chart that will install PEcAn in kubernetes and scales the models up and down as needed.</dd>
+  <dt>Prerequisites:</dt>
+  <dd>R, Docker, and kubernetes.</dd>
+  <dt>Contact person:</dt>
+  <dd>Rob Kooper, @kooper</dd>
+</dl>
 
-<p><em>Expected outcome:</em> A SHINY app that facilitates easy data ingestion and learns to suggest existing variable mathces in the database to the data that is being uploaded. </p>
-<p><em>Prerequisites:</em> Proficiency in R. Interest in data provenance, SQL (PostgreSQL preferred), and SHINY</p>
-<p><em>Contact person:</em> Check on slack</p>
+<hr/>
 
-<p>&nbsp;</p>
-
-<a name="vis">Scientific Visualization</a>
-<p>Our mission is to create an ecosystem modeling toolbox that is accessible to a non-technical audience (e.g., a high school ecology classroom) while retaining sufficient power and versatility to be valuable to scientific programmers (e.g. ecosystem model developers). However, the diversity of ecosystem models and associated analyses supported by PEcAn poses logistical challenges for presentation of results, especially given the wide range of targeted users. Web-based interactive visualizations can be a powerful tool for exploring model outputs and data as well as a fun learning tool in educational environments.
-</p>
-<p>Currently, PEcAn has basic support for interactive visualizations of outputs using R Shiny. We are looking for a student interested in addressing any of the following areas:
-<li>Improving Shiny application stability and performance, for instance through more efficient caching or lazy-loading of large outputs and data, or leveraging more efficient interactive visualization frameworks.
-</li>
-<li>Enhancing the visual elements of our interface for starting model runs, including visualization of existing sites and input data and better UI elements for setting run options.
-</li>
-<li>Developing novel interactive visualization tools that leverage more advanced statistical techniques, such as visualizing and applying machine learning algorithms to outputs and model-data residuals, exploring results in multivariate space.</li>
-</p>
-<p><em>Expected outcome:</em> A more robust set of web-based interactive visualization tools for model simulations and user-provided data.
-</p>
-<p><em>Prerequisites:</em> Familiarity with R Shiny including the ability to work with and debug these tools in a remote, Unix-based CLI environment is a requirement. Preference for proficiency with SQL (especially PostgreSQL), HDF/NetCDF formats, and/or advanced statistics (e.g. multivariate regression, time series analysis, information theory) is preferred. Experience with other web-based interactive visualization frameworks, such as Javascript’s D3, is a plus.
-</p>
-<p><em>Contact person:</em> Hamze Dokoohaki @Hamze</p>
+<h4><a name="uncertainty">Uncertainty Analysis: [Data Science]</h4>
+The ability to partition the contributions of different model parameters to a model’s predictive uncertainty has long been a core feature of PEcAn. This task extends the current uncertainty analysis to include model drivers (e.g. meteorology), initial conditions, and process error using a Sobol-based approach. Note that uncertainties in these inputs have been worked out and implemented in PEcAn already, the focus is on implementing and running the Sobol analysis. A secondary goal is to research the file formats and data structures used by other ensemble-based packages and tools so as to make PEcAn more interoperable.
 
 <p>&nbsp;</p>
 
-<a name="extana">Extend Analysis</a>
+<dl>
+  <dt>Contact person:</dt>
+  <dd>Mike @Dietze, @Alexis Helgeson</dd>
+</dl>
 
-<p>PEcAn offers multiple analyses on top of a simple execution of an ecosystem model. Currently, you must write a custom script or start a run again from scratch if you would like to perform one of these analyses on an existing model run. To alleviate this problem, this project will entail creating a SHINY app that will facilitate the process of taking an existing model run and initating analyses on that existing run.</p>
+<hr/>
 
-<p><em>Expected outcome:</em> A SHINY app that walks a user through selecting an existing workflow allowing a user to select from a set of analyses they can apply to that workflow.</p>
-<p><em>Prerequisites:</em> Experience with R required and knowledge of SHINY is preferred</p>
-<p><em>Contact person:</em> Check on slack</p>
+<h4><a name="ci">Continuous Integration / Workflow Hardening</h4>
+
+Last year’s GSOC students developed an integration testing framework for PEcAn and a web-based <a href="http://141.142.220.191/statusboard/">"status board"</a>
+where we can see what models, inputs, etc are currently working and which are down. The goals this year are:
+<ol>
+  <li>to extend the set of integration tests to a wider suite of models and inputs</li>
+  <li>to analyze the status board to identify key bottlenecks and failure points</li>
+  <li>to refactor those failure points to increase overall workflow reliability.</li>
+</ol>
 
 <p>&nbsp;</p>
+
+<dl>
+  <dt>Contact person:</dt>
+  <dd>Mike @Dietze, Chris Black @infotroph</dd>
+</dl>
 
   </div>
 </section>
 
-    <!-- scripts -->    
-  
+    <!-- scripts -->
+
     <script type="text/javascript" src="js/responsee.js"></script>
     <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="js/template-scripts.js"></script>
@@ -259,6 +260,6 @@
       };
     </script>
 
-    
+
   </body>
 </html>
