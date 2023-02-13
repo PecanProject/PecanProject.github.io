@@ -76,7 +76,7 @@
 
  <h1><a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>GSoC - PEcAn Project Ideas</h1>
 
-Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute. Below is a list of potential ideas. Feel free to contact any of the mentors in slack, or feel free to ask questions in our #gsoc-2021 channel in slack.
+Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute. Below is a list of potential ideas. Feel free to contact any of the mentors in slack, or feel free to ask questions in our #gsoc-2023 channel in slack.
 
 <hr/>
 
@@ -87,181 +87,106 @@ in this case contact @kooper in slack so he can put you in contact with the best
 
 <hr/>
 
-<h4><a name="cran">PEcAn packages on CRAN [R package development]</h4>
+<h4><a name="cran">PEcAn packages & CRAN [R package development]</h4>
 
-PEcAn is implemented as a set of R packages, but the user must currently download and install all the
-packages as a single unit. Making PEcAn packages available on CRAN will not only make it easier to install,
-but also easier to find and easier to use standalone modules. This will require fixing warnings in the build
-process, refactoring to remove unnecessary dependencies, and potentially splitting modules.
-
+PEcAn is implemented as a set of R packages, but the user must currently download and install all the packages as a single unit. The short-term goal of this project is to focus on fixing warnings in the build process, refactoring to remove unnecessary dependencies, and potentially splitting modules. The medium-term goal is to increase the reliability of PEcAn’s integration tests, and thus this year’s package development will prioritize the packages that are most associated with overall workflow bottlenecks (e.g., PEcAn.data.atmosphere, which is focused on downloading and processing meteorological data). The longer-term goal is to make PEcAn packages available on CRAN (the primary R package archive) which will not only make it easier to install, but also easier to find and easier to use standalone modules.
 <p>&nbsp;</p>
 
 <dl>
   <dt>Expected outcome:</dt>
-  <dd>PEcAn packages available in CRAN.</dd>
+  <dd>PEcAn packages pass checks and integration tests without warnings. Packages are made available in CRAN.</dd>
   <dt>Prerequisites:</dt>
-  <dd>R and comfort with the key steps required to release a package on CRAN; experience with R packages
-    helpful, but most of the process is covered in chapters on R package releases in the book
-    ‘rOpenSci packages’ and the book ‘R packages’ by Hadley Wickham</dd>
+  <dd>R; experience with R packages is helpful, but most of the process is covered in chapters on R package releases in the book ‘rOpenSci packages’ and the book ‘R packages’ by Hadley Wickham</dd>
   <dt>Contact person:</dt>
-  <dd>Chris Black, @infotroph</dd>
+  <dd>Chris Black, @infotroph; Mike @Dietze</dd>
   <dt>Duration:</dt>
   <dd>Size: 175 hours for proposals that focus on dependency removal, 350 hours for proposals that split modules.</dd>
   <dt>Difficulty:</dt>
-  <dd>Easy.</dd>
+  <dd>Easy, we anticipate the ability for multiple people to work on this project since different individuals can focus on different PEcAn R packages.</dd>
 </dl>
 
 <hr/>
 
-<h4><a name="pecan.ma">Submit PEcAn.MA to CRAN [Data Science]</h4>
 
-The PEcAn meta analysis package currently queries plant trait data stored in the BETYdb Postgres database
-and uses meta-analysis to estimate parameters for ecosystem models. It also stores information about the
-meta-analysis in the database. This project would decouple the PEcAn.MA package from the BETYdb database
-in order to make it more modular and portable. It would replace dependency on the database with text files
-as inputs and outputs. These text files could optionally be read from and inserted back into the database.
-
-<p>&nbsp;</p>
-
-<dl>
-  <dt>Expected outcome:</dt>
-  <dd>The PEcAn.MA package submitted to CRAN, without dependency on a running database. Additional functions
-    in the PEcAn.DB package responsible for generating and reading text files from and into the database.
-  <dt>Prerequisites:</dt>
-  <dd>R and SQL, plus package development as described in the PEcAn packages on CRAN project.
-  <dt>Contact person:</dt>
-  <dd>David @dlebauer, Kristina</dd>
-  <dt>Duration:</dt>
-  <dd>Large (350hr)</dd>
-  <dt>Difficulty:</dt>
-  <dd>Hard some knowledge of how the meta analysis package works is needed for this</dd>
-</dl>
-
-<hr/>
 
 <h4><a name="pecan.ma">Input Processing / Asynchronous workflow execution [Data Science]</h4>
 
-One of the goals of PEcAn is to be able to run different ecological models (which require a range of data inputs)
-and compare the model outputs with actual measurements (a.k.a. data constraints). The goal of this project is twofold,
-depending on the specific interests of the GSOC student.
+One of the goals of PEcAn is to be able to run different ecological models (which require a range of data inputs) and compare the model outputs with actual measurements (a.k.a. data constraints). The goal of this project is twofold, depending on the specific interests of the GSOC student.
 <ol>
-  <li>The current PEcAn input processing occurs mostly within the primary runtime workflow, but numerous PEcAn
-    applications would benefit from the ability to update near real-time data asynchronously with model execution,
-    handling different data streams in parallel. As part of this we’d also like to make it easier to use PEcAn
-    input processing modules as stand alone tools.</li>
+  <li>The current PEcAn input processing occurs mostly within the primary runtime workflow, but numerous PEcAn applications would benefit from the ability to update near real-time data asynchronously with model execution, handling different data streams in parallel. As part of this we’d also like to make it easier to use PEcAn input processing modules as stand alone tools. This subproject also leverages a joint effort with the Red Hat Collaboratory.</li>
   <li>Increase the number of input products supported. Students may focus on one or more of the following:
     <ol type="a">
-      <li>add the ECMWF Open Data as an meteorological drivers</li>
-      <li>create a common pipeline for ingesting agricultural management data using ICASA standards and json file
-        formats (see https://github.com/PecanProject/pecan/issues/2518)</li>
-      <li>Extend our existing support for ingesting data from the National Ecological Observatory Network (NEON)
-        and Ameriflux as both data inputs and constraints.</li>
+      <li>Add the NMME (seasonal weather forecast) as an meteorological drivers</li>
+      <li>Add remote sensing data streams: NASA GEDI (lidar), solar induced fluorescence (e.g., NASA OCO-2, OCO-3), thermal (e.g., NASA ECOSTRESS)
+</li>
+      <li>Extend our existing support for ingesting data from the National Ecological Observatory Network (NEON) soil moisture and soil respiration data products. This will involve developing integrating NEONSoils code into PEcAn https://github.com/jmzobitz/NEONSoils and internal code from the Dietze lab on soil moisture gap-filling and downscaling.</li>
     </ol>
   </li>
 </ol>
-
+We anticipate the ability for multiple people doing this project since there are separate parts that can be done by individuals.
 <p>&nbsp;</p>
 
 <dl>
   <dt>Prerequisites:</dt>
   <dd>R.</dd>
   <dt>Contact person:</dt>
-  <dd>@Alexis Helgeson (1, 2c), @HenriKajasilta (2a,b), Istem Fer @istfer (2a,b), David LeBauer @dlebauer (2b).</dd>
+  <dd>@Alexis Helgeson, @Ankur Desai, Istem Fer @istfer</dd>
   <dt>Duration:</dt>
-  <dd>1 data update [size: large (350hr), 2.a ECMWF [size: small (175 hr), difficulty: easy], 2.b Management standards [size: large (350 hr), difficulty: medium] 2.c Neon [size: small (175hr)]</dd>
+  <dd>1. data workflow update [size: large (350hr)]; 2. Individual data packages: [size: small (175 hr) for one, large for 2-3 data packages]</dd>
   <dt>Difficulty:</dt>
-  <dd>1 data update [difficulty: hard], 2.a ECMWF [difficulty: easy], 2.b Management standards [difficulty: medium], 2.c Neon [difficulty: easy]</dd>
+  <dd>1 data update [difficulty: hard]; 2. Individual data packages: 2.1 easy, 2.2 easy, 2.3 medium</dd>
 </dl>
 
 <hr/>
 
-<h4><a name="api">Extend API / Distributed file sharing [Computer Science]</h4>
+<h4><a name="gha">GitHub Actions</h4>
 
-Last year we have started to build an API for PEcAn. This was a enormous success, and the scientists loved this approach. We would like to expand on this API and have more functionality available through the API.
+Currently GitHub Actions will check to see if there are newer versions of the packages installed. We need to limit these checks since they are limited by GitHub. Additionally we do a simple test of SIPNET, it would be great if that can use the full docker stack to test a full run.
+<p>&nbsp;</p>
 
+In the past year we have created a dashboard that shows how tests are performing. It would be great to have a test that runs the tests using the develop stack and writes the test results back into a file in a special branch. As part of this task the dashboard will need to be updated to fetch the data from this branch.
 <p>&nbsp;</p>
 
 <dl>
   <dt>Expected outcome:</dt>
-  <dd>More functions available through the API, especially options to query the database./dd>
+  <dd>New GitHub actions that do not take as long to run, and have the ability to do larger tests./dd>
   <dt>Prerequisites:</dt>
-  <dd>Knowledge of R and Rest</dd>
+  <dd>GitHub Actions, Docker</dd>
   <dt>Contact person:</dt>
   <dd>Rob Kooper @kooper</dd>
   <dt>Duration:</dt>
-  <dd>Depending on the number of API calls added this can be both small (175hr) and large (350hr) project</dd>
+  <dd>Flexible to work as either a Small (175hr) or Large (350 hr)</dd>
   <dt>Difficulty:</dt>
-  <dd>Easy</dd>
+  <dd>Medium, Large if running and updating the integration testing dashboard</dd>
 </dl>
 
 <hr/>
 
-<h4><a name="kubernetes">Kubernetes [Computer Science]</h4>
 
-There is a helm chart that will load the PEcAn in kubernetes. This would expand on this helm chart to add autoscaling,
-as well as taking the PEcAn executor container and splitting it up in smaller pieces.
+<h4><a name="ci">SDA Dashboard</h4>
+
+This project is primarily focused on the interactive visualization of outputs from our carbon cycle forecast and data assimilation system. This project builds on a previously-developed site-level R Shiny dashboard that is no longer functional, and aims to extend this to a much larger number of sites. We also hope to integrate in functionality from one of our other dashboards (which visualizes spatial interactions) and advances made by external collaborators. If time permits, we’d also like to resurrect our automated email alert system.
 
 <p>&nbsp;</p>
 
 <dl>
   <dt>Expected outcome:</dt>
-  <dd>A helm chart that will install PEcAn in kubernetes and scales the models up and down as needed.</dd>
+  <dd>The aims here are:
+  <ol>
+    <li>Resurrect a previously-developed R Shiny dashboard for our carbon cycle forecast system (pecan/shiny/ForecastingDashboard), potentially integrating in work done by the Ecological Forecasting Initiative on their dashboard (https://github.com/eco4cast/neon4cast-dashboard) and FMI’s Field Observatory (https://www.fieldobservatory.org/en/home/)
+</li>
+    <li>Merge in the functionality from our data assimilation dashboard (pecan/shiny/SDAdashboard)
+</li>
+    <li>Resurrect the automated email alert system that sent a subset of visualizations, and links to the full app, to users for the sites they are interested in.</li>
+  </ol></dd>
   <dt>Prerequisites:</dt>
-  <dd>R, Docker, and kubernetes.</dd>
+  <dd>R, R Shiny, data visualization</dd>
   <dt>Contact person:</dt>
-  <dd>Rob Kooper, @kooper</dd>
-  <dt>Duration:</dt>
-  <dd>Small (175hr), adding more features can grow this to large (350hr)</dd>
-  <dt>Difficulty:</dt>
-  <dd>Easy</dd>
-</dl>
-
-<hr/>
-
-<h4><a name="uncertainty">Uncertainty Analysis: [Data Science]</h4>
-The ability to partition the contributions of different model parameters to a model’s predictive uncertainty has long been a core feature of PEcAn. This task extends the current uncertainty analysis to include model drivers (e.g. meteorology), initial conditions, and process error using a Sobol-based approach. Note that uncertainties in these inputs have been worked out and implemented in PEcAn already, the focus is on implementing and running the Sobol analysis. A secondary goal is to research the file formats and data structures used by other ensemble-based packages and tools so as to make PEcAn more interoperable.
-
-<p>&nbsp;</p>
-
-<dl>
-  <dt>Expected outcome:</dt>
-  <dd>Primary - New Sobol functions within the PEcAn.uncertainty module. Outputs from those functions for provided inputs.
-    Secondary - Summary report on proposed ensemble data structures and file formats. Implementation of proposal if time permits.</dd>
-  <dt>Prerequisites:</dt>
-  <dd>R required, experience in statistics preferred</dd>
-  <dt>Contact person:</dt>
-  <dd>Mike @Dietze, @Alexis Helgeson</dd>
-  <dt>Duration:</dt>
-  <dd>Small (175 hr) for primary alone, Large (350) for both primary and secondary goals.</dd>
-  <dt>Difficulty:</dt>
-  <dd>Understanding current system - Medium; Implementing new components once you understand that system - Easy.</dd>
-</dl>
-
-<hr/>
-
-<h4><a name="ci">Continuous Integration / Workflow Hardening</h4>
-
-Last year’s GSOC students developed an integration testing framework for PEcAn and a web-based <a href="http://141.142.220.191/statusboard/">"status board"</a>
-where we can see what models, inputs, etc are currently working and which are down. The goals this year are:
-<ol>
-  <li>to extend the set of integration tests to a wider suite of models and inputs</li>
-  <li>to analyze the status board to identify key bottlenecks and failure points</li>
-  <li>to refactor those failure points to increase overall workflow reliability.</li>
-</ol>
-
-<p>&nbsp;</p>
-
-<dl>
-  <dt>Expected outcome:</dt>
-  <dd>Larger number of integration tests and higher percentage of successful tests (>75% as a Small project, >90% as a Large project)</dd>
-  <dt>Prerequisites:</dt>
-  <dd>R, Github Actions</dd>
-  <dt>Contact person:</dt>
-  <dd>Mike @Dietze, Chris Black @infotroph</dd>
+  <dd>Mike @Dietze, @HenriKajasilta</dd>
   <dt>Duration:</dt>
   <dd>Flexible to work as either a Small (175hr) or Large (350 hr)</dd>
   <dt>Difficulty:</dt>
-  <dd>Goals 1 & 2 are Easy, Goal 3 is Medium.</dd>
+  <dd>Medium</dd>
 </dl>
 
   </div>
