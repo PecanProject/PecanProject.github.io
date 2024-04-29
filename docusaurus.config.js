@@ -9,7 +9,7 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "PecanProject", // Usually your GitHub org/user name.
-  projectName: "web", // Usually your repo name.
+  projectName: "PecanProject.github.io", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "PEcAn",
