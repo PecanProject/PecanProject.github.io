@@ -7,7 +7,7 @@ import energy from "../../static/img/energy-bio.png";
 import { Timeline } from "react-twitter-widgets";
 const FeatureList = [
   {
-    title: "A state-of-the-art ecosystem model",
+    title: "A state-of-the-art framework for ecological synthesis",
     Svg: require("../../static/img/nature.svg").default,
     description: (
       <>
@@ -135,7 +135,7 @@ export default function HomepageFeatures() {
           <img src={dep} className={styles.image} />
           <img src={energy} className={styles.image} />
         </div>
-        <div className={styles.timeline}>
+        {/*<div className={styles.timeline}>
           <Timeline
             dataSource={{
               sourceType: "profile",
@@ -146,7 +146,7 @@ export default function HomepageFeatures() {
               width: "50rem",
             }}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
