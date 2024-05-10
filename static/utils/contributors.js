@@ -56,13 +56,6 @@ const contributors = [
     img: "https://people.bu.edu/dietze/images/ifp_photo-426x636.jpg",
   },
   {
-    name: "Hamze Dokoohaki",
-    email: "hamzed@illinois.edu",
-    role: "",
-    profession: "Staff Scientist, Indigo Ag",
-    img: "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=91lPlxQAAAAJ&citpid=7",
-  },
-  {
     name: "Alexey Shiklomanov",
     email: "alexey.shiklomanov@nasa.gov",
     role: "",
@@ -89,6 +82,27 @@ const contributors = [
     role: "Research Scientist",
     profession: "Brookhaven National Lab",
     img: "https://www.bnl.gov/assets/global/images/render.php?q=0|26462.jpg|500", 
+  },
+  {
+    name: "Meet Agarwal",
+    email: "agrawalmeet91@gmail.com",
+    role: "GSoC'23 Contributor",
+    profession: "Software Engineer",
+    img: "https://64.media.tumblr.com/c8143e590d0312d730d5dd42e345126a/e1e32936de328bec-90/s1280x1920/8e05bb187c1458f41f0c341ddb8f91d5e228ed77.jpg",
+  },
+  {
+    name: "Nihar Sanda",
+    email: "nihar.sanda@gmail.com",
+    role: "GSoC'22 & GSoC'23 Contributor; GSoC '24 Mentor",
+    profession: "Research Associate, IIT Bombay",
+    img: "https://koolgax99.github.io/nihar.jpg",
+  },
+  {
+    name: "Rohan Sasne",
+    email: "rohansasne30@gmail.com",
+    role: "GSoC'23 Contributor",
+    profession: "Co-Founder and CEO, Dynalize Technologies",
+    img: "https://avatars.githubusercontent.com/u/110545952?v=4",
   },
 ];
 export default contributors;
