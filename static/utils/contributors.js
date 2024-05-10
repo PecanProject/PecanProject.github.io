@@ -8,9 +8,9 @@ const contributors = [
   },
   {
     name: "Dr. David LeBauer",
-    email: "dlebauer@email.arizona.edu",
+    email: "dlebauer@gmail.com",
     role: "PEcAn Co-PI",
-    profession: "Staff Scientist, Indigo Ag",
+    profession: "Scientist, The LeBauer Approach LLC and University of Arizona",
     img: "https://datascience.cct.arizona.edu/sites/datascience.cct.arizona.edu/files/styles/az_medium/public/2023-11/david_lebauer.jpeg",
   },
   {
@@ -36,16 +36,16 @@ const contributors = [
   },
   {
     name: "Shawn Serbin",
-    email: "sserbin@bnl.gov",
+    email: "shawn.p.serbin@nasa.gov",
     role: "",
-    profession: "Associate Scientist, Brookhaven National Laboratory",
+    profession: "Supervisory Research AST Earth Science Remote Sensing, NASA Goddard Space Flight Center",
     img: "https://ngee-tropics.lbl.gov/wp-content/uploads/sites/16/2017/01/Shawn-Serbin.jpg",
   },
   {
     name: "Christopher Black",
     email: "chris@ckblack.org",
     role: "",
-    profession: "Senior Scientist, Indigo Ag",
+    profession: "Scientist, Pools and Fluxes LLC",
     img: "https://ckblack.org/2014/04/ckb-20140427-300px.jpg",
   },
   {
@@ -73,15 +73,8 @@ const contributors = [
     name: "Dr. Betsy Cowdery",
     email: "",
     role: "",
-    profession: "Graduate Student, Boston University",
+    profession: "Postdoctoral Researcher, The James Hutton Institute",
     img: "https://people.bu.edu/dietze/images/04-elizabeth.jpg",
-  },
-  {
-    name: "Tony Gardella",
-    email: "",
-    role: "",
-    profession: "Project Manager, Boston University",
-    img: "https://pecanproject.github.io/images/tonyg_pic.jpg",
   },
   {
     name: "Dongchen Zhang",

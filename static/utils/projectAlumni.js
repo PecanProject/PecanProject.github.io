@@ -1,5 +1,12 @@
 const ProjectAlumni = [
   {
+    name: "Tony Gardella",
+    email: "",
+    role: "Former Project Manager",
+    profession: "Graduate Student, University of Michigan",
+    img: "https://pecanproject.github.io/images/tonyg_pic.jpg",
+  },
+  {
     name: "Rohan Sasne",
     email: "rohansasne30@gmail.com",
     role: "GSoC'23 Contributor",
