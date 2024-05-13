@@ -1,0 +1,199 @@
+---
+title: 'GSoC 2024 - PEcAn Project Ideas'
+---
+
+# [GSoC - PEcAn Project Ideas](#background)
+
+Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute. Below is a list of potential ideas. Feel free to contact any of the mentors in slack, or feel free to ask questions in our #gsoc-2024 channel in slack.
+
+---
+
+## [Project Ideas](#ideas)
+
+Following is a list of project ideas, use this list to contact the appropriate mentors on slack. Feel free to propose your own ideas as well, in this case contact @kooper in slack so he can put you in contact with the best mentors.
+
+---
+
+#### [Machine Learning downscaling of PEcAn outputs](#ml)
+
+This project would extend an existing prototype that takes ensemble-based outputs from the process-based PEcAn models (and the data assimilation code in particular) and use ML models to make predictions to new locations where the PEcAn models were not run (a.k.a. downscaling). Existing code downscales the low-frequency (monthly to annual) carbon pool outputs using a random forest model and a harmonized stack of gridded spatial data (climate, land use/land cover, soils, topography). The current system also preserves the covariance structure across variables, space, and time by downscaling each model ensemble member separately and then using the downscaled ensemble to calculate summary statistics. Also included are some basic assessments of (cross-)validation skill and variable importance.
+
+**Expected outcome:**
+
+A successful project would complete at subset of the following tasks:
+
+1. Extend the code to downscale higher-frequency (hourly to daily) carbon flux outputs
+2. Develop tools for aggregating downscaled outputs to user-specified spatial units (e.g., political boundaries, atmospheric model grid cells)
+3. Explore alternative ML models and multi-model ensembles.
+4. Extend the set of covariate data to make use of time-varying inputs (e.g. that year’s weather rather than the climatological mean), additional remotely sensed observations, and the previous ecosystem state.
+5. Improving the downscaling validation checks, potentially adding additional corrections to the computed uncertainties (current prototype tool tends to underpredict the ensemble spread).
+
+**Prerequisites:**
+
+- Required: R (existing prototype is in R); basic familiarity with ML techniques and packages
+- Helpful: familiarity with large spatial gridded data (e.g., GIS, R terra, remote sensing); more advanced statistics, ML, or data science; Python
+
+**Contact person:**
+Mike @Dietze
+
+**Duration:**
+Size: 175 hours for 1-2 tasks, 350 hours for 3 or more tasks
+
+**Difficulty:**
+Medium
+
+---
+
+#### [Adopting data schema for field management events](#management)
+
+This project aims to adapt a data schema for an R shiny application called fieldactivity. Fieldactivity is an application that allows field operators and researchers to enter field information about management activities through UI to aid bookkeeping of such events. The management activities and associated information are then stored in json files from which the information can be used for modelling.
+
+The fieldactivity application uses UI elements that are created with RShiny and therefore follows the R coding conventions. At the moment, to meet these R coding criteria, the data structure is read from a json file called ui_structure_json, which contains the necessary attributes to create the UI with R. As this json file is independent and does not communicate with any other data sources, it must be manually updated if the data requirements are to be kept up to date with other data sources. To overcome the potential differences between the data sources, we have created a json data schema ([management-event.schema.json](https://github.com/hamk-uas/fieldobservatory-data-schemas/blob/main/management-event.schema.json)) to act as a single source of truth for different data sources. The GSoC task is to incorporate this schema into the fieldactivity shiny app such that it can read the variable information from the schema and store the data in the correct structure. In addition, the app should be made flexible such that when a change is made to the json schema, it can deploy and change / create UI elements accordingly on the fly. To achieve this, the functionalities around how the applications store the data need to be reconstructed.
+
+**Expected outcome:**
+
+The project can be divided to following subtasks:
+
+1. The fieldactivity application will be able to handle/read the data, which have been stored in the current way or structured according to the management data schema.
+2. The data storage convention will be changed for those management cases, where it is possible to store multiple incidents at once. Currently these cases are stored in a list in a format that the data schema doesn’t support.
+3. Include the data schema as part of the fieldactivity code:
+   - Variable names and metadata are read from the data schema. This also requires translation of the data schema information so that UI elements can be created in R Shiny.
+   - Stored data follows the structure and the names of the data schema.
+
+**Prerequisites:**
+
+- Required: R and RShiny, json
+
+**Contact person:**
+Henri Kajasilta
+
+**Duration:**
+Flexible to work as either a Small (175hr) or Large (350 hr)
+
+**Difficulty:**
+Medium
+
+---
+
+#### [PEcAn Code Hardening by Integration Testing](#testing)
+
+The proposed project aims to enhance the reliability of PEcAn's integration tests by prioritizing packages associated with overall workflow bottlenecks. The focus will be on preparing contributors to gain an in-depth understanding of PEcAn's inner workings and the interactions between modules. It will commence with prioritizing basic runs to establish a robust foundation that include single site, single model runs to cover the major models. Subsequently, attention will shift towards ensemble runs, diversifying testing scenarios to ensure comprehensive coverage. A specific emphasis will be placed on Data Simulation models for single site, single model runs, with a focus on prominent models. This initiative aims to provide contributors with a holistic perspective on PEcAn's functionality, fostering a deeper understanding of how individual modules contribute to the overall workflow. By combining these elements, the GSoC project seeks to create a structured and immersive learning experience that equips participants to contribute effectively to PEcAn's development while addressing critical workflow bottlenecks.
+
+**Expected outcome:**
+
+- Increased module and model coverage in PEcAn’s automated integration tests; contributors can understand which components are and are not covered by existing tests.
+
+**Prerequisites:**
+
+- R
+
+**Contact person:**
+Chris Black (@infotroph), Shashank Singh (@moki1202)
+
+**Duration:**
+Flexible to work as either a Small (175hr) or Large (350 hr)
+
+**Difficulty:**
+Medium, Large
+
+---
+
+#### [Optimize PEcAn for freestanding use of single packages [R package development]](#freestanding)
+
+PEcAn was designed as a system of independent modules, each implemented as its own R package that was intended to be usable either standalone or as part of the full PEcAn system. Subsequent development focused on the most common cross-module workflows has lead to tighter coupling between modules than was originally intended, so that in practice many of the modules are now challenging to use, test, or develop without a full understanding of their interdependencies. Further, some packages expect inputs and outputs in data structures that are only generated by other PEcAn packages but might be more easily provided in standard well-known formats. We seek proposals to re-loosen these couplings by revisiting the design and interface of PEcAn packages through one or more of:
+
+1. Refactoring code to remove unneeded dependencies, simplify package interfaces, and exchange data in standard formats
+2. Identifying exported functions that are not core to the functionality of the package, and removing them or making them internal
+3. Writing tests and examples that demonstrate freestanding use of the package
+4. Developing methods for tracking the dependencies between packages that cannot be eliminated, including how these change between package versions
+   Proposals for this project should choose a subset of these approaches and apply them to a specified subset of the PEcAn packages. Strong proposals will clearly show why each chosen package should be a priority, how it will become more independent at the completion of the project, and what interface changes will be needed to achieve this.
+
+**Expected outcome:**
+
+- One or more PEcAn packages can be installed, used, and/or tested without the user needing to know [something previously important] about [another package].
+
+**Prerequisites:**
+
+- Familiarity with R, especially how it manages dependencies between packages, and with concepts of software package development. Helpful resources: [rOpenSci packages](https://devguide.ropensci.org/index.html) and [R packages](https://r-pkgs.org). Experience with multi-package code bases will be very helpful.
+
+**Contact person:**
+Chris Black @infotroph, Shashank Singh @moki1202
+
+**Duration:**
+Flexible to work as either a Small (175hr) or Large (350 hr)
+
+**Difficulty:**
+Medium, Large
+
+---
+
+#### [PEcAn model coupling and development [Data Science]](#coupling)
+
+PEcAn has the capability to interface multiple ecological models. The goal of this project is to improve the coupling of existing models to PEcAn (specifically FATES) and add new models (specifically a simple vegetation model that is under development). It is also possible to contribute to the development of the simple vegetation model which is written in fortran.
+
+**Expected outcome:**
+
+- New or improved PEcAn model packages.
+
+**Prerequisites:**
+
+- R, Fortran is an advantage.
+
+**Contact person:**
+Hui Tang @Hui Tang, Istem Fer @istfer
+
+**Duration:**
+Flexible to work as either a Small (175hr) or Large (350 hr)
+
+**Difficulty:**
+Medium
+
+---
+
+#### [Development of Notebook-based PEcAn Workflows](#notebook)
+
+The PEcAn workflow is currently run using either a web based user interface, an API, or custom R scripts. The web based user interface is easiest to use, but has limited functionality whereas the custom R scripts and API are more flexible, but require more experience.
+
+This project will focus on building Quarto workflows aimed at providing an interface to PEcAn that is both welcoming to new users and flexible enough to be a starting point for more advanced users. It will build on existing [Pull Request 1733](https://github.com/PecanProject/pecan/pull/1733).
+
+**Expected outcome:**
+
+- Two or more template workflows for running the PEcAn workflow. Written vignette and video tutorial introducing their use.
+
+**Prerequisites:**
+
+- Familiarity with R. Familiarity with R studio and Quarto or Rmarkdown is a plus.
+
+**Contact person:**
+David LeBauer @dlebauer, Nihar Sanda @koolgax99
+
+**Duration:**
+Small (175hr)
+
+**Difficulty:**
+Medium
+
+---
+
+#### [PEcAn in the cloud](#cloud)
+
+The PEcAn system is a complex system with many microservices such as the database system, frontend, models, job management etc. These microservices lend themselves to be deployed in the cloud. We have an existing helm chart that should get you most of the way there and should allow you to deploy pecan on kubernetes. Additionally there is a docker-compose file that should allow you to deploy PEcAn on a single server using docker.
+
+This project will take the helm chart and docker-compose files and harden them and upgrade them to use the latest versions of containers. The current system uses the shared folder not only to deploy data in all services, but also uses it to let the central system know when executions are finished. We would like to move away from this shared system and use the message system to indicate executions are done, and use a file service to pull and push data (for example from/to S3).
+
+**Expected outcome:**
+
+- Updates to docker-compose and helm chart, as well as code submissions to mark executions as finished using RabbitMQ and file push/pull functionality when executing jobs.
+
+**Prerequisites:**
+
+- Familiarity with Kubernetes, Docker, Helm and R. Familiarity with RabbitMQ and postgreSQL is a plus
+
+**Contact person:**
+Rob Kooper @kooper, Samu Varjonen @samu, Istem Fer @istfer
+
+**Duration:**
+Large (350 hr)
+
+**Difficulty:**
+Medium
