@@ -110,7 +110,7 @@ module.exports = {
               href: "https://github.com/PecanProject/pecan/graphs/contributors",
             },
             {
-              label: "Bety Database",
+              label: "BETYdb Database",
               href: "https://github.com/PecanProject/bety/graphs/contributors",
             },
             {
