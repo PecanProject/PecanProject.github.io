@@ -102,7 +102,7 @@ const contributors = [
     email: "rohansasne30@gmail.com",
     role: "GSoC'23 Contributor",
     profession: "Co-Founder and CEO, Dynalize Technologies",
-    img: "https://avatars.githubusercontent.com/u/110545952?v=4",
+    img: "https://media.licdn.com/dms/image/D4D03AQHY70hvxDx1wg/profile-displayphoto-shrink_400_400/0/1718313426682?e=1725494400&v=beta&t=T3SkIPDWUUDAPsjCIuGy07C63BQbaCovWUEHCuzkUbk",
   },
 ];
 export default contributors;
