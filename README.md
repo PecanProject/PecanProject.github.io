@@ -145,21 +145,23 @@ Steps to add a blog post:
 
 1. Create a new file named `blog/yyyy-mm-dd-title.md`
 2. In the top of your blog file add a yaml header.
-3. Add at least `title`, `author` and `tags` yaml fields.
+3. Add at least `title`, `authors` and `tags` yaml fields.
    - These metadata fields help with search and navigation on the site.
    - These and other yaml header options are described in the [blog header options](https://docusaurus.io/docs/blog#header-options) section of the Docusaurus documentation.
-4. writing your blog and save the file.
+   - If the author is not already listed in `blog/authors.yml` add them as a new entry. 
+4. write your blog and save the file.
 5. any images can be put in `static/img/` and referenced using a relative path `static/img/myimage.png`
-6. build the website to make sure the blog shows up as expected
+6. build the website to make sure the blog shows up as expected (`yarn build` and `yarn start`
 7. After the new changes are merged into the main branch, the new blog post will appear on the website.
 
+Here is an example of the blog header:
+
 ```yml
+---
 title: GSoC '21 Report- Webpage Updates
-author: Eshan Tripathi
-author_title: GSoC'21 participant @PEcAn Project
-author_url: https://github.com/eshantri
-author_image_url: https://avatars.githubusercontent.com/u/48446729?v=4
+author: eshan_tripathi
 tags: [gsoc, gsoc21]
+---
 ```
 
 ## Screenshots
