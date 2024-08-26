@@ -110,7 +110,7 @@ module.exports = {
               href: "https://github.com/PecanProject/pecan/graphs/contributors",
             },
             {
-              label: "BETYdb Database",
+              label: "Bety Database",
               href: "https://github.com/PecanProject/bety/graphs/contributors",
             },
             {
@@ -122,7 +122,11 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} PEcAn Project.`,
     },
-    hideableSidebar: true,
+    docs: {
+	sidebar: {
+	    hideable: true
+	},
+    },
   },
   presets: [
     [
