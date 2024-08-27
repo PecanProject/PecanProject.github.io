@@ -1,0 +1,30 @@
+david_lebauer:
+  name: David LeBauer
+  url: https://davidlebauer.com
+  title: PEcAn Project co-PI
+  image_url: https://datascience.cct.arizona.edu/sites/datascience.cct.arizona.edu/files/styles/az_medium/public/2023-11/david_lebauer.jpeg
+  socials:
+    github: dlebauer
+    linkedin: dlebauer
+
+rohan_sasne:
+  name: Rohan Sasne
+  title: GSoC'23 participant @PEcAn Project
+  image_url: "https://media.licdn.com/dms/image/D4D03AQHY70hvxDx1wg/profile-displayphoto-shrink_400_400/0/1718313426682?e=1725494400&v=beta&t=T3SkIPDWUUDAPsjCIuGy07C63BQbaCovWUEHCuzkUbk"
+  socials:
+    linkedin: rohan-sasne
+
+eshan_tripathi:
+  name: Eshan Tripathi
+  title: GSoC'21 participant @PEcAn Project
+  url: https://github.com/eshantri
+  image_url: https://avatars.githubusercontent.com/u/48446729?v=4
+  socials:
+    github: eshantri
+
+tony_gardella:
+  name: Tony Gardella
+  title: Ex Project Manager @PEcAn Project
+  image_url: https://avatars.githubusercontent.com/u/8570691?v=4
+  socials:
+    github: tonygardella

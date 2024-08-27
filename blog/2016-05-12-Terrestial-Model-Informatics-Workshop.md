@@ -1,10 +1,7 @@
 ---
 slug: Terrestial-Model-Informatics-Workshop
 title: PEcAn Terrestial Model Informatics Workshop 2016
-author: Tony Gardella
-author_title: Ex Project Manager @PEcAn Project
-author_url: https://github.com/tonygardella
-author_image_url: https://avatars.githubusercontent.com/u/8570691?v=4
+authors: tony_gardella
 tags: [PEcAn, workshop]
 ---
 
@@ -16,6 +13,7 @@ tags: [PEcAn, workshop]
 
 The PEcAn 2 Terrestrial Model Informatics Workshop took place from May 9th-11th 2016 at Boston University.
 
+<!-- truncate -->
 The big picture of this workshop was to discuss how new and emerging tools and technologies can accelerate the pace of progress in ecosystem and land surface modeling and allow us to better respond to the needs of the community, policy makers, and the general public. This workshop specifically targeted the modeling community.
 
 <!--truncate-->

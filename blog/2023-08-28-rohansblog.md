@@ -1,14 +1,17 @@
 ---
 slug: rohan-gsoc-2023-report
 title: GSoC'23 Report - GitHub Actions
-author: Rohan Sasne
-author_title: GSoC'23 participant @PEcAn Project
-author_url: https://github.com/RohanSasne
-author_image_url: https://avatars.githubusercontent.com/u/110545952?v=4
+authors: rohan_sasne
 tags: [gsoc, gsoc23]
 ---
 
+Improving Github Actions for the PEcAn Project: Report on my 2023 GSOC project.
+
+
+<!-- truncate -->
+
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*C7eMsCNLVVlmP8AShnW70w.jpeg)
+
 ## What is Google Summer of Code?
 
 [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/) is a global program that pairs students with [open source](https://en.wikipedia.org/wiki/Open_source) organizations to produce code and contribute to these communities while making some money. The whole idea behind this program is to encourage students to get involved in open source contributions.
