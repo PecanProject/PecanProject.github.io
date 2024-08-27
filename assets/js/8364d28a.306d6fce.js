@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[365],{4900:e=>{e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"p-ec-an","name":"pecan","count":1,"permalink":"/blog/tags/p-ec-an"}')}}]);
