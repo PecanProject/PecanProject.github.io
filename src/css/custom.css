@@ -63,7 +63,7 @@ html[data-theme="dark"] .card:hover {
 }
 .mdx-page .row {
   display: flex;
-  flex-direction: column !important;
+  flex-direction: row !important;
   justify-content: center !important;
   align-items: center !important;
 }
