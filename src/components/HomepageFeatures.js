@@ -5,6 +5,7 @@ import nasa from "../../static/img/nasa-logo.png";
 import dep from "../../static/img/dep-energysvg.png";
 import energy from "../../static/img/energy-bio.png";
 import navicat from "../../static/img/navicat-logo.png";
+import aws from "../../static/img/aws.png"
 import { Timeline } from "react-twitter-widgets";
 const FeatureList = [
   {
@@ -136,6 +137,7 @@ export default function HomepageFeatures() {
           <img src={dep} className={styles.image} />
           <img src={energy} className={styles.image} />
           <img src={navicat} className={styles.image} />
+          <img src={aws} className={styles.image} />
         </div>
         {/*<div className={styles.timeline}>
           <Timeline
