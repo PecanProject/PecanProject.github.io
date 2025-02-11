@@ -37,7 +37,7 @@ Mike @Dietze
 
 **Duration:**
 
-Flexible to work as either a Small (175hr) or Large (350 hr)
+Flexible to work as either a Medium (175hr) or Large (350 hr)
 
 **Difficulty:**
 
@@ -45,6 +45,35 @@ Medium
 
 ---
 
+#### [Parallelization of runs](#hpc)
+
+This project would extend PEcAn's existing run mechanisms to be able to run on an HPC using apptainer. For uncertaintity analysis, PEcAn will run 1000s of runs of the same model with small permutations. This is a perfect use for an HPC run. The goal is to not submit 1000s of jobs, but have a single job with multiple nodes that will run all of the ensembles efficiently. Running can be orchistrated using RabbitMQ but other methods are encouraged as well. The end goal should be for the PEcAn system to be launched, and run the full workflow on the HPC from start to finish leveraging as many nodes as given during the submission.
+
+**Expected outcomes:**
+
+A successful project would complete at subset of the following tasks:
+
+* Show different ways to launch the jobs (rabbitmq, lock files, simple round robin, etc)
+* Report of different options and how they can be enabled
+
+**Prerequisites:**
+
+- Required: R (existing workflow and prototype is in R), docker
+- Helpful: familiarity with HPC and apptain
+
+**Contact person:**
+
+Rob @Kooper
+
+**Duration:**
+
+Flexible to work as either a Medium (175hr) or Large (350 hr)
+
+**Difficulty:**
+
+Medium
+
+---
 #### [Database Improvements](#db)
 
 **Chris TODO**
@@ -57,7 +86,7 @@ Medium
 Chris Black (@infotroph)
 
 **Duration:**
-Flexible to work as either a Small (175hr) or Large (350 hr)
+Flexible to work as either a Medium (175hr) or Large (350 hr)
 
 **Difficulty:**
 Medium, Large
