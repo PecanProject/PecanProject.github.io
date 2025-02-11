@@ -30,11 +30,18 @@ html[data-theme="dark"] {
 .navbar img {
   border-radius: 15px !important;
 }
-.footer {
-  --ifm-footer-color: #93a0ac;
-  --ifm-footer-link-color: #93a0ac;
-  --ifm-footer-title-color: #93a0ac;
+html[data-theme="dark"] .footer {
+  --ifm-footer-color: #f5f5f5; 
+  --ifm-footer-link-color:#f5f5f5;
+  --ifm-footer-title-color: #f5f5f5; 
 }
+
+html[data-theme="light"] .footer {
+  --ifm-footer-color: #292d30; 
+  --ifm-footer-link-color: #292d30;
+  --ifm-footer-title-color: #292d30;
+}
+
 .header-github-link:hover {
   opacity: 0.6;
 }
