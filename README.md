@@ -78,9 +78,22 @@ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Adding Content
+## Contributing
 
 This describes how to add or modify the Website's content.
+
+This is an open source project and contributions are what make an open source community.
+Everyone is welcome to contribute to this project.
+
+All involved are expected to follow the [PEcAn code of conduct](https://pecanproject.github.io/pecan-documentation/master/contributor-covenant-code-of-conduct.html) and contribute to a positive and inclusive environment.
+
+First time contributors are welcome. Contributions can be very simple, make sure to check out issues labeled ['good first issue'](https://github.com/PecanProject/PecanProject.github.io/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22). If you have an idea, the best place to start a discussion is on the PEcAn project Slack channel, or by opening an issue in this repository.
+
+Changes to `package-lock.json` and `yarn.lock` files should only be committed when:
+
+- Adding a new dependency: Installing a new package will modify these lock files to ensure the exact version is documented.
+- Updating an existing dependency: Running an update for a package will adjust these files to reflect the new versions.
+- Removing a dependency: Uninstalling a package will update these files to remove the reference to the dependency.
 
 ### Add or Edit Feature Cards
 
@@ -171,14 +184,6 @@ This section contains screenshots of website's homepage in light and dark theme.
 ![LightTheme](screenshots/light.png)
 
 ![DarkTheme](screenshots/dark.png)
-
-## Contributing
-
-This is an open source project and contributions are what make an open source community.
-Everyone is welcome to contribute to this project.
-All involved are expected to follow the [PEcAn code of conduct](https://pecanproject.github.io/pecan-documentation/master/contributor-covenant-code-of-conduct.html) and contribute to a positive and inclusive environment.
-
-First time contributors are welcome. Contributions can be very simple, make sure to check out beginner friendly issues, if present.
 
 ## Next Steps
 
