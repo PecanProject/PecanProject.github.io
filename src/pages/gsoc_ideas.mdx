@@ -4,13 +4,13 @@ title: 'GSoC 2025 - PEcAn Project Ideas'
 
 # [GSoC - PEcAn Project Ideas](#background)
 
-Ecosystem science has many components, so does PEcAn! Some of those components where you can contribute. Below is a list of potential ideas. Feel free to contact any of the mentors in slack, or feel free to ask questions in our #gsoc-2025 channel in slack.
+PEcAn is an open-source ecosystem modeling framework integrating data, models, and uncertainty quantification. Below is a list of potential ideas where contributors can help improve and expand PEcAn. Come find us on Slack to discuss. If you have questions or would like to propose your own idea, contact @kooper in Slack or join our `#gsoc-2025`
 
 ---
 
 ## [Project Ideas](#ideas)
 
-Following is a list of project ideas, use this list to contact the appropriate mentors on slack. Feel free to propose your own ideas as well, in this case contact @kooper in Slack so he can put you in contact with the best mentors.
+Below is a list of project ideas. Feel free to contact the listed mentors on Slack to discuss further or contact @kooper with new ideas and he can help connect you with mentors.
 
 ---
 
@@ -21,9 +21,9 @@ This project would extend PEcAn's existing uncertainty partitioning routines, wh
 
 **Expected outcomes:**
 
-A successful project would complete at subset of the following tasks:
+A successful project would complete a subset of the following tasks:
 
-* Reliable, automated Sensitivity analyss and uncertainty partitioning 
+* Reliable, automated Sobol sensitivity analyss and uncertainty partitioning across multiple model inputs.
 * Applications to test case(s) in natural and / or managed ecosystems.
 
 **Prerequisites:**
@@ -45,9 +45,9 @@ Medium
 
 ---
 
-#### [Parallelization of runs](#hpc)
+#### [Parallelization of Model Runs on HPC](#hpc)
 
-This project would extend PEcAn's existing run mechanisms to be able to run on an HPC using apptainer. For uncertaintity analysis, PEcAn will run 1000s of runs of the same model with small permutations. This is a perfect use for an HPC run. The goal is to not submit 1000s of jobs, but have a single job with multiple nodes that will run all of the ensembles efficiently. Running can be orchistrated using RabbitMQ but other methods are encouraged as well. The end goal should be for the PEcAn system to be launched, and run the full workflow on the HPC from start to finish leveraging as many nodes as given during the submission.
+This project would extend PEcAn's existing run mechanisms to be able to run on a High Performance Compute cluster (HPC) using [Apptainer](https://apptainer.org). For uncertaintity analysis, PEcAn will run the same model 1000s of times with small permutations. This is a perfect use for an HPC run. The goal is to not submit 1000s of jobs, but have a single job with multiple nodes that will run all of the ensembles efficiently. Running can be orchistrated using RabbitMQ, but other methods are also encouraged. The end goal should be for the PEcAn system to be launched, and run the full workflow on the HPC from start to finish leveraging as many nodes as it is given during the submission.
 
 **Expected outcomes:**
 
@@ -58,8 +58,8 @@ A successful project would complete at subset of the following tasks:
 
 **Prerequisites:**
 
-- Required: R (existing workflow and prototype is in R), docker
-- Helpful: familiarity with HPC and apptain
+- Required: R (existing workflow and prototype is in R), Docker
+- Helpful: Familiarity with HPC and Apptainer
 
 **Contact person:**
 
@@ -74,22 +74,35 @@ Flexible to work as either a Medium (175hr) or Large (350 hr)
 Medium
 
 ---
-#### [Database Improvements](#db)
+#### [Database and Data Improvements](#db)
 
-**Chris TODO**
-- decouple traits from provenance
-- make betydb.org data available through R package
+PEcAn relies the BETYdb database to store trait and yield data as well as model provenance information. This project aims separating trait data from provenance tracking, and ensure that PEcAn is aboe to run without the Postgres server currently required to run BETYdb. The goal is to making the workflows easier to use and data more accessible.
+
+
+**Potential Directions**
+
+- **Minimal BETYdb Database:** Create a simplified version of BETYdb for demonstrations and Integration tests.
+- **Non-Database Setup:** Enable workflows that do not require PostgreSQL or a web front-end.
+
+**Expected outcomes**:
+
+A successful project would complete a subset of the following tasks:
+- A lightweight, distributable demo Postgres database.
+- A Postgres database independent workflow enabling easier local testing and deployment.
 
 
 
 **Contact person:**
+
 Chris Black (@infotroph)
 
 **Duration:**
-Flexible to work as either a Medium (175hr) or Large (350 hr)
+
+Suitable fora Medium (175hr) or Large (350 hr) project.
 
 **Difficulty:**
 Medium, Large
+
 
 ---
 
@@ -117,11 +130,75 @@ Medium (175hr)
 Medium
 
 
+#### [Refactoring Compile-time Flags to Runtime Flags in SIPNET](#sipnet)
+
+**Project Overview**
+
+The ecosystem SIPNET is a core component of many PEcAn analyses. SIPNET is compiled with multiple compile-time flags that control whether different features are turned on and off. Thus, as currently configured, each model structure requires a separate compiled binary. 
+
+This project will refactor these flags to be runtime-configurable via command-line arguments or a configuration file, improving usability and testing efficiency.
+
+**Expected Outcomes**
+
+- Convert selected SIPNET compile-time flags to runtime options.
+- Develop a global configuration object for managing runtime flags.
+- Improve testability by enabling different configurations without recompiling.
+
+**Prerequisites**
+
+- Required: C, experience with compilers and build systems.
+- Helpful: Understanding of simulation models.
+
+**Mentor(s)**
+
+- David LeBauer (@dlebauer)
+- Mike Longfritz
+
+**Duration**
+- Medium (175hr) or Large (350hr)
+
+**Difficulty**
+- Medium to Large
+
 
 <!--
 
 
 # This comment section for ideas that may be potentially viable in future (with revision)
+
+
+#### BETYdb R data package
+
+BETYdb's web front end is built on a version of Ruby on Rails that is functional byt no longer supported. A key feature of BETYdb is that the data is open and accessible. 
+
+Building an R data package would make the Trait and Yield data currently in BETYdb more accessible to users beyond the PEcAn community.
+
+**Expected outcomes:**
+
+A successful project would complete a subset of the following tasks:
+
+- An R package containing the data currently hosted in BETYdb.
+- Documentation and examples of use.
+- Updates to BETYdb documentation.
+
+**Prerequisites:**
+
+- Required: R
+- Helpful: R package development; familiarity with relational databases and SQL.
+
+**Contact person:**
+
+David LeBauer (@dlebauer)
+
+**Duration:**
+
+Medium (175hr) to Large (350hr) depending on scope of proposal.
+
+**Difficulty:**
+
+Medium
+
+---
 
 #### [Optimize PEcAn for freestanding use of single packages [R package development]](#freestanding)
 
