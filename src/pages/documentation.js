@@ -80,7 +80,7 @@ function Documentation() {
             <div class="card">
               <div class="card__header" style={{ textAlign: "center" }}>
                 <h3 class="text-dark margin-bottom-30 margin-top-60 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">
-                  Release 1.7.0
+                  Release V1.7.0
                 </h3>
               </div>
               <div class="card__body">
