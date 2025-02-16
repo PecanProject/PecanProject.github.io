@@ -77,6 +77,7 @@ module.exports = {
             {
               label: "Tutorial",
               to: "/documentation/master",
+              className: "footer-docs-link",
             },
           ],
         },
@@ -86,10 +87,12 @@ module.exports = {
             {
               label: "Slack",
               href: "https://join.slack.com/t/pecanproject/shared_invite/enQtMzkyODUyMjQyNTgzLWEzOTM1ZjhmYWUxNzYwYzkxMWVlODAyZWQwYjliYzA0MDA0MjE4YmMyOTFhMjYyMjYzN2FjODE4N2Y4YWFhZmQ",
+              className: "footer-slack-link",
             },
             {
               label: "Twitter",
               href: "https://twitter.com/pecanproject",
+              className: "footer-twitter-link",
             },
           ],
         },
@@ -99,6 +102,7 @@ module.exports = {
             {
               label: "GitHub",
               href: "https://github.com/PecanProject",
+              className: "footer-github-link",
             },
           ],
         },
@@ -108,14 +112,17 @@ module.exports = {
             {
               label: "PecanProject",
               href: "https://github.com/PecanProject/pecan/graphs/contributors",
+              className: "footer-pastContributors-link",
             },
             {
               label: "BETYdb Database",
               href: "https://github.com/PecanProject/bety/graphs/contributors",
+              className: "footer-pastContributors-link",
             },
             {
               label: "Pecan Website",
               href: "https://github.com/PecanProject/web/graphs/contributors",
+              className: "footer-pastContributors-link",
             },
           ],
         },
