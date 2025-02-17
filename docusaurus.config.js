@@ -107,25 +107,19 @@ module.exports = {
           ],
         },
         {
-          title: "Past Contributors",
           items: [
             {
-              label: "PecanProject",
-              href: "https://github.com/PecanProject/pecan/graphs/contributors",
-              className: "footer-pastContributors-link",
-            },
-            {
-              label: "BETYdb Database",
-              href: "https://github.com/PecanProject/bety/graphs/contributors",
-              className: "footer-pastContributors-link",
-            },
-            {
-              label: "Pecan Website",
-              href: "https://github.com/PecanProject/web/graphs/contributors",
-              className: "footer-pastContributors-link",
+              html: `
+                <div class="footer-logo">
+                  <a href="/" class="footer-logo-link">
+                    <img src="/img/logo.jpeg" alt="PEcAn Logo" class="footer-logo-img"/>
+                    <span class="footer-logo-text">PEcAn</span>
+                  </a>
+                </div>
+              `,
             },
           ],
-        },
+        }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} PEcAn Project.`,
     },

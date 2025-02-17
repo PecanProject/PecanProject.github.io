@@ -179,3 +179,45 @@ html[data-theme="dark"] .card:hover {
   height: 100%;
   border: none;
 }
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.footer-logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; 
+}
+
+.footer-logo-text {
+  font-size: 18px; 
+  font-weight: 700; 
+  display: flex;
+  align-items: center; 
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+html[data-theme="dark"] .footer-logo-text {
+  color:#f5f5f5; 
+}
+
+html[data-theme="light"] .footer-logo-text {
+  color: #292d30; 
+}
+
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  text-decoration: none !important; 
+}
+
+.footer-logo-link:hover .footer-logo-text {
+  color: rgb(70, 203, 174);
+  text-decoration: none !important;
+}
