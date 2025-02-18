@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import styles from "./about.module.css";
 import clsx from "clsx";
-function gsoc() {
+function Documentation() {
     return (
         <Layout title="documentation">
             <div className={styles.aboutContainer}>
@@ -50,7 +50,7 @@ function gsoc() {
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="https://pecanproject.github.io/pecan-documentation/v1.7.1" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.7.1</u></a>
+                                    <a href="documentation/version171" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.7.1</u></a>
                                 </p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ function gsoc() {
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="https://pecanproject.github.io/pecan-documentation/1.7.0" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.7.0</u></a>
+                                    <a href="documentation/version170" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.7.0</u></a>
                                 </p>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ function gsoc() {
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="https://pecanproject.github.io/pecan-documentation/v1.6.0" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.6.0</u></a>
+                                    <a href="documentation/version160" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.6.0</u></a>
                                 </p>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ function gsoc() {
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="https://pecanproject.github.io/pecan-documentation/v1.5.3" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.5.3</u></a>
+                                    <a href="documentation/version153" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.5.3</u></a>
                                 </p>
                             </div>
                         </div>
@@ -119,7 +119,7 @@ function gsoc() {
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="https://pecanproject.github.io/pecan-documentation/v1.5.1" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.5.1</u></a>
+                                    <a href="documentation/version151" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.5.1</u></a>
                                 </p>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ function gsoc() {
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="https://pecanproject.github.io/pecan-documentation/1.5.0" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.5.0</u></a>
+                                    <a href="documentation/version150" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.5.0</u></a>
 
                                 </p>
                             </div>
@@ -156,7 +156,7 @@ function gsoc() {
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="https://pecanproject.github.io/pecan-documentation/1.4.10.1/" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.4.10.1</u></a>
+                                    <a href="documentation/version14101" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.4.10.1</u></a>
                                 </p>
                             </div>
                         </div>
@@ -170,4 +170,4 @@ function gsoc() {
     );
 }
 
-export default gsoc;
+export default Documentation;
