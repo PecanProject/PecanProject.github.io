@@ -2,19 +2,25 @@
 title: 'GSoC 2025 - PEcAn Project Ideas'
 ---
 
-# [GSoC - PEcAn Project Ideas](#background)
+# GSoC - PEcAn Project Ideas{#background}
 
-PEcAn is an open-source ecosystem modeling framework integrating data, models, and uncertainty quantification. Below is a list of potential ideas where contributors can help improve and expand PEcAn. Come find us on Slack to discuss. If you have questions or would like to propose your own idea, contact @kooper in Slack or join our `#gsoc-2025`
+PEcAn is an open-source ecosystem modeling framework integrating data, models, and uncertainty quantification. Below is a list of potential ideas where contributors can help improve and expand PEcAn. Come find us on Slack to discuss. If you have questions or would like to propose your own idea, contact @kooper in Slack or join our **[gsoc-2025](https://pecanproject.slack.com/archives/C0853U6GF71)**
 
 ---
 
-## [Project Ideas](#ideas)
+## Project Ideas{#ideas}
 
 Below is a list of project ideas. Feel free to contact the listed mentors on Slack to discuss further or contact @kooper with new ideas and he can help connect you with mentors.
 
+1. [Global Sensitivity Analysis / Uncertainty Partitioning](#sa)  
+2. [Parallelization of Model Runs on HPC](#hpc)  
+3. [Database and Data Improvements](#db)  
+4. [Development of Notebook-based PEcAn Workflows](#notebook)  
+5. [Refactoring Compile-time Flags to Runtime Flags in SIPNET](#sipnet) 
+
 ---
 
-#### [Global sensitivity analysis / uncertainty partitioning](#sa)
+### 1. Global Sensitivity Analysis / Uncertainty Partitioning{#sa}
 
 This project would extend PEcAn's existing uncertainty partitioning routines, which are primarily one-at-a-time and focused on model parameters, to also consider ensemble-based uncertainties in other model inputs (meteorology, soils, vegetation, phenology, etc). This project would employ Sobol' methods and some uncommitted code exists that manually prototyped how this would be done in PEcAn. The goal would be to refactor/reimplement this prototype into a reliable, automated system and apply it to some key test cases in both natural and managed ecosystems.
 
@@ -45,7 +51,7 @@ Medium
 
 ---
 
-#### [Parallelization of Model Runs on HPC](#hpc)
+### 2. Parallelization of Model Runs on HPC{#hpc}
 
 This project would extend PEcAn's existing run mechanisms to be able to run on a High Performance Compute cluster (HPC) using [Apptainer](https://apptainer.org). For uncertaintity analysis, PEcAn will run the same model 1000s of times with small permutations. This is a perfect use for an HPC run. The goal is to not submit 1000s of jobs, but have a single job with multiple nodes that will run all of the ensembles efficiently. Running can be orchistrated using RabbitMQ, but other methods are also encouraged. The end goal should be for the PEcAn system to be launched, and run the full workflow on the HPC from start to finish leveraging as many nodes as it is given during the submission.
 
@@ -74,7 +80,7 @@ Flexible to work as either a Medium (175hr) or Large (350 hr)
 Medium
 
 ---
-#### [Database and Data Improvements](#db)
+### 3. Database and Data Improvements{#db}
 
 PEcAn relies the BETYdb database to store trait and yield data as well as model provenance information. This project aims separating trait data from provenance tracking, and ensure that PEcAn is aboe to run without the Postgres server currently required to run BETYdb. The goal is to making the workflows easier to use and data more accessible.
 
@@ -106,7 +112,7 @@ Medium, Large
 
 ---
 
-#### [Development of Notebook-based PEcAn Workflows](#notebook)
+### 4. Development of Notebook-based PEcAn Workflows{#notebook}
 
 The PEcAn workflow is currently run using either a web based user interface, an API, or custom R scripts. The web based user interface is easiest to use, but has limited functionality whereas the custom R scripts and API are more flexible, but require more experience.
 
@@ -130,7 +136,7 @@ Medium (175hr)
 Medium
 
 
-#### [Refactoring Compile-time Flags to Runtime Flags in SIPNET](#sipnet)
+### 5. Refactoring Compile-time Flags to Runtime Flags in SIPNET{#sipnet}
 
 **Project Overview**
 
