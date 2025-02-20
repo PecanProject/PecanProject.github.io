@@ -6,6 +6,7 @@ module.exports = {
   url: "https://pecanproject.github.io",
   baseUrl: "/",
   onBrokenLinks: "ignore",
+  onBrokenAnchors: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "PecanProject", // Usually your GitHub org/user name.
