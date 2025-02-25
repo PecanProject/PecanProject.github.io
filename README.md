@@ -95,6 +95,21 @@ Changes to `package-lock.json` and `yarn.lock` files should only be committed wh
 - Updating an existing dependency: Running an update for a package will adjust these files to reflect the new versions.
 - Removing a dependency: Uninstalling a package will update these files to remove the reference to the dependency.
 
+### Content File Formats
+
+**Use `.md` or `.mdx` file formats** MDX is a markdown format that allows embedded JSX components for more flexibility. Refer to the Docusaurus Docs page [MDX and React](https://docusaurus.io/docs/markdown-features/react) for information on MDX syntax and capabilities.
+
+**Always link using explicit heading IDs** when adding or editing headings in a `.md` or `.mdx` file. This prevents broken links if heading text changes later. For example:
+
+```markdown
+    ### My Important Section{#my-important-section}
+```
+  Then, you can link to this section using:
+
+ ```markdown
+    [Link to my section](#my-important-section)
+ ```
+
 ### Add or Edit Feature Cards
 
 Feature Cards on the website homepage highlight the key features of the PEcAn Project.
@@ -177,6 +192,8 @@ tags: [gsoc, gsoc21]
 ---
 ```
 
+
+<!-- These screenshots are large and don't appear to be in the right place, if necessary
 ## Screenshots
 
 This section contains screenshots of website's homepage in light and dark theme.
@@ -184,21 +201,7 @@ This section contains screenshots of website's homepage in light and dark theme.
 ![LightTheme](screenshots/light.png)
 
 ![DarkTheme](screenshots/dark.png)
-
-## Editing a Documentation File
-The PEcAn documentation is a crucial part of the project.  We aim to make it comprehensive, accurate, and easy to navigate. When contributing to documentation, please keep the following in mind:
-
-*   **Always use explicit heading IDs** when adding or editing headings in documentation file(`.mdx`). This prevents broken links if heading text changes later. For example:
-
-```markdown
-    ### My Important Section{#my-important-section}
-```
-  Then, you can link to this section using:
-
- ```markdown
-    [Link to my section](#my-important-section)
- ```
-*   **Use appropriate file formats**, primarily Markdown (`.md`) and MDX (`.mdx`). MDX allows embedding JSX components within documentation for more flexibility. Refer to [Docusaurus Docs](https://docusaurus.io/docs) for MDX syntax.
+-->
 
 ## Next Steps
 
