@@ -180,6 +180,21 @@ All involved are expected to follow the [PEcAn code of conduct](https://pecanpro
 
 First time contributors are welcome. Contributions can be very simple, make sure to check out beginner friendly issues, if present.
 
+## Editing a Documentation File
+The PEcAn documentation is a crucial part of the project.  We aim to make it comprehensive, accurate, and easy to navigate. When contributing to documentation, please keep the following in mind:
+
+*   **Always use explicit heading IDs** when adding or editing headings in documentation file(`.mdx`). This prevents broken links if heading text changes later. For example:
+
+```markdown
+    ### My Important Section{#my-important-section}
+```
+  Then, you can link to this section using:
+
+ ```markdown
+    [Link to my section](#my-important-section)
+ ```
+*   **Use appropriate file formats**, primarily Markdown (`.md`) and MDX (`.mdx`). MDX allows embedding JSX components within documentation for more flexibility. Refer to [Docusaurus Docs](https://docusaurus.io/docs) for MDX syntax.
+
 ## Next Steps
 
 This section contains future plans for the website. New contributors can use this section as a reference for planning their contributions.
