@@ -77,6 +77,7 @@ module.exports = {
             {
               label: "Tutorial",
               to: "/documentation/master",
+              className: "footer-docs-link",
             },
           ],
         },
@@ -86,10 +87,12 @@ module.exports = {
             {
               label: "Slack",
               href: "https://join.slack.com/t/pecanproject/shared_invite/enQtMzkyODUyMjQyNTgzLWEzOTM1ZjhmYWUxNzYwYzkxMWVlODAyZWQwYjliYzA0MDA0MjE4YmMyOTFhMjYyMjYzN2FjODE4N2Y4YWFhZmQ",
+              className: "footer-slack-link",
             },
             {
               label: "Twitter",
               href: "https://twitter.com/pecanproject",
+              className: "footer-twitter-link",
             },
           ],
         },
@@ -99,26 +102,24 @@ module.exports = {
             {
               label: "GitHub",
               href: "https://github.com/PecanProject",
+              className: "footer-github-link",
             },
           ],
         },
         {
-          title: "Past Contributors",
           items: [
             {
-              label: "PecanProject",
-              href: "https://github.com/PecanProject/pecan/graphs/contributors",
-            },
-            {
-              label: "BETYdb Database",
-              href: "https://github.com/PecanProject/bety/graphs/contributors",
-            },
-            {
-              label: "Pecan Website",
-              href: "https://github.com/PecanProject/web/graphs/contributors",
+              html: `
+                <div class="footer-logo">
+                  <a href="/" class="footer-logo-link">
+                    <img src="/img/logo.jpeg" alt="PEcAn Logo" class="footer-logo-img"/>
+                    <span class="footer-logo-text">PEcAn</span>
+                  </a>
+                </div>
+              `,
             },
           ],
-        },
+        }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} PEcAn Project.`,
     },
