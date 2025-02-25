@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">GSoC 2025 - PEcAn Project Ideas | PEcAn Project</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://pecanproject.github.io/gsoc_ideas"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="GSoC 2025 - PEcAn Project Ideas | PEcAn Project"><meta data-rh="true" name="description" content="background)"><meta data-rh="true" property="og:description" content="background)"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://pecanproject.github.io/gsoc_ideas"><link data-rh="true" rel="alternate" href="https://pecanproject.github.io/gsoc_ideas" hreflang="en"><link data-rh="true" rel="alternate" href="https://pecanproject.github.io/gsoc_ideas" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="PEcAn Project RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="PEcAn Project Atom Feed"><link rel="stylesheet" href="/assets/css/styles.4d7b32f1.css">
-<script src="/assets/js/runtime~main.e9ce267b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c63713a1.js" defer="defer"></script>
 <script src="/assets/js/main.6103caf1.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -18,7 +18,7 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="global-sensitivity-analysis--uncertainty-partitioning"><a href="#sa">Global sensitivity analysis / uncertainty partitioning</a><a href="#global-sensitivity-analysis--uncertainty-partitioning" class="hash-link" aria-label="Direct link to global-sensitivity-analysis--uncertainty-partitioning" title="Direct link to global-sensitivity-analysis--uncertainty-partitioning">​</a></h4>
 <p>This project would extend PEcAn&#x27;s existing uncertainty partitioning routines, which are primarily one-at-a-time and focused on model parameters, to also consider ensemble-based uncertainties in other model inputs (meteorology, soils, vegetation, phenology, etc). This project would employ Sobol&#x27; methods and some uncommitted code exists that manually prototyped how this would be done in PEcAn. The goal would be to refactor/reimplement this prototype into a reliable, automated system and apply it to some key test cases in both natural and managed ecosystems.</p>
 <p><strong>Expected outcomes:</strong></p>
-<p>A successful project would complete a subset of the following tasks:</p>
+<p>A successful project would complete the following tasks:</p>
 <ul>
 <li>Reliable, automated Sobol sensitivity analyss and uncertainty partitioning across multiple model inputs.</li>
 <li>Applications to test case(s) in natural and / or managed ecosystems.</li>
@@ -38,10 +38,10 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="parallelization-of-model-runs-on-hpc"><a href="#hpc">Parallelization of Model Runs on HPC</a><a href="#parallelization-of-model-runs-on-hpc" class="hash-link" aria-label="Direct link to parallelization-of-model-runs-on-hpc" title="Direct link to parallelization-of-model-runs-on-hpc">​</a></h4>
 <p>This project would extend PEcAn&#x27;s existing run mechanisms to be able to run on a High Performance Compute cluster (HPC) using <a href="https://apptainer.org" target="_blank" rel="noopener noreferrer">Apptainer</a>. For uncertaintity analysis, PEcAn will run the same model 1000s of times with small permutations. This is a perfect use for an HPC run. The goal is to not submit 1000s of jobs, but have a single job with multiple nodes that will run all of the ensembles efficiently. Running can be orchistrated using RabbitMQ, but other methods are also encouraged. The end goal should be for the PEcAn system to be launched, and run the full workflow on the HPC from start to finish leveraging as many nodes as it is given during the submission.</p>
 <p><strong>Expected outcomes:</strong></p>
-<p>A successful project would complete at subset of the following tasks:</p>
+<p>A successful project would complete the following tasks:</p>
 <ul>
-<li>Show different ways to launch the jobs (rabbitmq, lock files, simple round robin, etc)</li>
-<li>Report of different options and how they can be enabled</li>
+<li>Show different ways to launch jobs (rabbitmq, lock files, simple round robin, etc)</li>
+<li>Report of different options and how they can be enabled.</li>
 </ul>
 <p><strong>Prerequisites:</strong></p>
 <ul>
@@ -56,7 +56,7 @@
 <p>Medium</p>
 <hr>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="database-and-data-improvements"><a href="#db">Database and Data Improvements</a><a href="#database-and-data-improvements" class="hash-link" aria-label="Direct link to database-and-data-improvements" title="Direct link to database-and-data-improvements">​</a></h4>
-<p>PEcAn relies the BETYdb database to store trait and yield data as well as model provenance information. This project aims separating trait data from provenance tracking, and ensure that PEcAn is aboe to run without the Postgres server currently required to run BETYdb. The goal is to making the workflows easier to use and data more accessible.</p>
+<p>PEcAn relies on the BETYdb database to store trait and yield data as well as model provenance information. This project aims to separate trait data from provenance tracking, and ensure that PEcAn is able to run without the  server currently required to run the Postgres database used by BETYdb. The goal is to make PEcAn workflows easier to test, deploy, and use while also making data more accessible.</p>
 <p><strong>Potential Directions</strong></p>
 <ul>
 <li><strong>Minimal BETYdb Database:</strong> Create a simplified version of BETYdb for demonstrations and Integration tests.</li>
@@ -66,7 +66,7 @@
 <p>A successful project would complete a subset of the following tasks:</p>
 <ul>
 <li>A lightweight, distributable demo Postgres database.</li>
-<li>A Postgres database independent workflow enabling easier local testing and deployment.</li>
+<li>A workflow that is independent of the Postgres database.</li>
 </ul>
 <p><strong>Contact person:</strong></p>
 <p>Chris Black (@infotroph)</p>
@@ -77,14 +77,16 @@ Medium, Large</p>
 <hr>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="development-of-notebook-based-pecan-workflows"><a href="#notebook">Development of Notebook-based PEcAn Workflows</a><a href="#development-of-notebook-based-pecan-workflows" class="hash-link" aria-label="Direct link to development-of-notebook-based-pecan-workflows" title="Direct link to development-of-notebook-based-pecan-workflows">​</a></h4>
 <p>The PEcAn workflow is currently run using either a web based user interface, an API, or custom R scripts. The web based user interface is easiest to use, but has limited functionality whereas the custom R scripts and API are more flexible, but require more experience.</p>
-<p>This project will focus on building Quarto workflows aimed at providing an interface to PEcAn that is both welcoming to new users and flexible enough to be a starting point for more advanced users. It will build on existing <a href="https://github.com/PecanProject/pecan/pull/1733" target="_blank" rel="noopener noreferrer">Pull Request 1733</a>.</p>
-<p><strong>Expected outcome:</strong></p>
+<p>This project will focus on building Quarto notebooks that provide an interface to PEcAn that is both welcoming to new users and flexible enough to be a starting point for more advanced users. It will build on existing <a href="https://github.com/PecanProject/pecan/pull/1733" target="_blank" rel="noopener noreferrer">Pull Request 1733</a>.</p>
+<p><strong>Expected outcomes:</strong></p>
 <ul>
-<li>Two or more template workflows for running the PEcAn workflow. Written vignette and video tutorial introducing their use.</li>
+<li>Two or more template workflows for running the PEcAn workflow.</li>
+<li>Written vignette and video tutorial introducing their use.</li>
 </ul>
 <p><strong>Prerequisites:</strong></p>
 <ul>
-<li>Familiarity with R. Familiarity with R studio and Quarto or Rmarkdown is a plus.</li>
+<li>Familiarity with R.</li>
+<li>Familiarity with R studio and Quarto or Rmarkdown is a plus.</li>
 </ul>
 <p><strong>Contact person:</strong>
 David LeBauer @dlebauer, Nihar Sanda @koolgax99</p>
@@ -118,7 +120,7 @@ Medium</p>
 </ul>
 <p><strong>Difficulty</strong></p>
 <ul>
-<li>Medium to Large</li>
+<li>Medium to Hard</li>
 </ul></article></div><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#project-ideas" class="table-of-contents__link toc-highlight">Project Ideas</a></li></ul></div></div></div></main></div><footer class="footer"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/documentation/master">Tutorial</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://join.slack.com/t/pecanproject/shared_invite/enQtMzkyODUyMjQyNTgzLWEzOTM1ZjhmYWUxNzYwYzkxMWVlODAyZWQwYjliYzA0MDA0MjE4YmMyOTFhMjYyMjYzN2FjODE4N2Y4YWFhZmQ" target="_blank" rel="noopener noreferrer" class="footer__link-item">Slack<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/pecanproject" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Contribute to Code</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/PecanProject" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Past Contributors</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/PecanProject/pecan/graphs/contributors" target="_blank" rel="noopener noreferrer" class="footer__link-item">PecanProject<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/PecanProject/bety/graphs/contributors" target="_blank" rel="noopener noreferrer" class="footer__link-item">BETYdb Database<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/PecanProject/web/graphs/contributors" target="_blank" rel="noopener noreferrer" class="footer__link-item">Pecan Website<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 PEcAn Project.</div></div></div></footer></div>
 </body>
 </html>
