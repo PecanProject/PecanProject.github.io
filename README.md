@@ -133,7 +133,7 @@ You should use SVG images when available.
 
 The people page contains details of the PEcAn team. The image here is a representation of how the page should look like with placeholder values.
 
-![PecanPople](screenshots/pecanPeople.png)
+![PecanPeople](screenshots/pecanPeople.png)
 
 ```javascript
 const contributors = [

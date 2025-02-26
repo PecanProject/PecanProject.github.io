@@ -27,7 +27,7 @@ This project would extend PEcAn's existing uncertainty partitioning routines, wh
 
 **Expected outcomes:**
 
-A successful project would complete a subset of the following tasks:
+A successful project would complete the following tasks:
 
 * Reliable, automated Sobol sensitivity analyss and uncertainty partitioning across multiple model inputs.
 * Applications to test case(s) in natural and / or managed ecosystems.
@@ -57,10 +57,10 @@ This project would extend PEcAn's existing run mechanisms to be able to run on a
 
 **Expected outcomes:**
 
-A successful project would complete at subset of the following tasks:
+A successful project would complete the following tasks:
 
-* Show different ways to launch the jobs (rabbitmq, lock files, simple round robin, etc)
-* Report of different options and how they can be enabled
+* Show different ways to launch jobs (rabbitmq, lock files, simple round robin, etc)
+* Report of different options and how they can be enabled.
 
 **Prerequisites:**
 
@@ -82,7 +82,7 @@ Medium
 ---
 ### 3. Database and Data Improvements{#db}
 
-PEcAn relies the BETYdb database to store trait and yield data as well as model provenance information. This project aims separating trait data from provenance tracking, and ensure that PEcAn is aboe to run without the Postgres server currently required to run BETYdb. The goal is to making the workflows easier to use and data more accessible.
+PEcAn relies on the BETYdb database to store trait and yield data as well as model provenance information. This project aims to separate trait data from provenance tracking, and ensure that PEcAn is able to run without the  server currently required to run the Postgres database used by BETYdb. The goal is to make PEcAn workflows easier to test, deploy, and use while also making data more accessible.
 
 
 **Potential Directions**
@@ -94,7 +94,7 @@ PEcAn relies the BETYdb database to store trait and yield data as well as model 
 
 A successful project would complete a subset of the following tasks:
 - A lightweight, distributable demo Postgres database.
-- A Postgres database independent workflow enabling easier local testing and deployment.
+- A workflow that is independent of the Postgres database.
 
 
 
@@ -116,15 +116,17 @@ Medium, Large
 
 The PEcAn workflow is currently run using either a web based user interface, an API, or custom R scripts. The web based user interface is easiest to use, but has limited functionality whereas the custom R scripts and API are more flexible, but require more experience.
 
-This project will focus on building Quarto workflows aimed at providing an interface to PEcAn that is both welcoming to new users and flexible enough to be a starting point for more advanced users. It will build on existing [Pull Request 1733](https://github.com/PecanProject/pecan/pull/1733).
+This project will focus on building Quarto notebooks that provide an interface to PEcAn that is both welcoming to new users and flexible enough to be a starting point for more advanced users. It will build on existing [Pull Request 1733](https://github.com/PecanProject/pecan/pull/1733).
 
-**Expected outcome:**
+**Expected outcomes:**
 
-- Two or more template workflows for running the PEcAn workflow. Written vignette and video tutorial introducing their use.
+- Two or more template workflows for running the PEcAn workflow. 
+- Written vignette and video tutorial introducing their use.
 
 **Prerequisites:**
 
-- Familiarity with R. Familiarity with R studio and Quarto or Rmarkdown is a plus.
+- Familiarity with R. 
+- Familiarity with R studio and Quarto or Rmarkdown is a plus.
 
 **Contact person:**
 David LeBauer @dlebauer, Nihar Sanda @koolgax99
@@ -164,7 +166,7 @@ This project will refactor these flags to be runtime-configurable via command-li
 - Medium (175hr) or Large (350hr)
 
 **Difficulty**
-- Medium to Large
+- Medium to Hard
 
 
 <!--
