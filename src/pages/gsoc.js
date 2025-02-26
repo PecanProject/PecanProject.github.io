@@ -28,7 +28,7 @@ function gsoc() {
 
                             <p>&nbsp;</p>
 
-                            <h2><a href="gsoc_apply">How to apply?</a></h2>
+                            <h2><a href="#how-to-apply" onClick={(e) => e.preventDefault()}>How to apply?</a></h2>
 
                             There are two steps to the application process:
 
@@ -49,15 +49,13 @@ function gsoc() {
 
                             <ul>
                                 <li>Choose a project from our <a href="gsoc_ideas.html">project ideas list</a> or come up with your own.</li>
-                                <li>Join the #gsoc-2023 channel in our slack workspace and introduce yourself</li>
+                                <li>Join the <a href="https://pecanproject.slack.com/archives/C0853U6GF71" target="_blank" rel="noopener noreferrer">#gsoc-2025</a> channel in our slack workspace and introduce yourself</li>
                                 <li>Send message to your project-specific mentors indicating that you are interested in their idea and how you plan to implement the idea</li>
                             </ul>
 
                             <p>&nbsp;</p>
 
-                            When talking to the mentors, use the following questions to introuduce yourself:
-
-                            <p>&nbsp;</p>
+                            <h3>When talking to the mentors, use the following questions to introuduce yourself:</h3>
 
                             <ul>
                                 <li>What interests you most about our project?</li>
