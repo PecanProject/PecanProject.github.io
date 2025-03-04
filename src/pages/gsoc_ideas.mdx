@@ -92,7 +92,7 @@ PEcAn relies on the BETYdb database to store trait and yield data as well as mod
    - Design and create a freestanding version of the trait data, including choosing the format and distribution method, implementing whatever pipelines are needed to move the data over, and documenting how to use and update the result.
    - Review the information we currently log, identify components that no longer need to be tracked or that should be temporary rather than permanent, and build tools to clean unneeded/expired records from the database.
 
-- **Non-Database Setup:** Enable workflows that do not require PostgreSQL or a web front-end.
+- **Non-Database Setup:** Enable workflows that do not require PostgreSQL or a web front-end, potentially including:
    - Identify PEcAn modules that are still DB-dependent and refactor them to allow freestanding use
    - Implement mechanisms for decoupling the DB from the model pipelines in time and space while still tracking provenance. Perhaps this could involve separate prep/execution/post-logging phases, but we encourage your creative suggestions.
    - Create tools that maximize interoperability with data from other sources, including from external databases or the user's own observations.
