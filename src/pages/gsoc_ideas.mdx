@@ -94,7 +94,7 @@ PEcAn relies on the BETYdb database to store trait and yield data as well as mod
 
 - **Non-Database Setup:** Enable workflows that do not require PostgreSQL or a web front-end.
    - Identify PEcAn modules that are still DB-dependent and refactor them to allow freestanding use
-	- Implement mechanisms for decoupling the DB from the model pipelines in time and space while still tracking provenance. Perhaps this could involve separate prep/execution/post-logging phases, but we encourage your creative suggestions.
+   - Implement mechanisms for decoupling the DB from the model pipelines in time and space while still tracking provenance. Perhaps this could involve separate prep/execution/post-logging phases, but we encourage your creative suggestions.
    - Create tools that maximize interoperability with data from other sources, including from external databases or the user's own observations.
    - Identify functionality from the "BETYdb network" sync system that is out of date and replace or remove it as needed.
 
@@ -105,7 +105,11 @@ A successful project would complete a subset of the following tasks:
 - A distributable dataset of the existing trait and yield records in a maximally reusable format (i.e. maybe _not_ Postgres)
 - A workflow that is independent of the Postgres database.
 
+**Skills Required**:
 
+- Familiarity with database concepts required
+- Postgres experience helpful (and required if proposing DB cleanup tasks)
+- R experience helpful (and required if proposing PEcAn code changes)
 
 **Contact person:**
 
@@ -113,10 +117,11 @@ Chris Black (@infotroph)
 
 **Duration:**
 
-Suitable fora Medium (175hr) or Large (350 hr) project.
+Suitable for a Medium (175hr) or Large (350 hr) project.
 
 **Difficulty:**
-Medium, Large
+
+Intermediate to hard
 
 
 ---
