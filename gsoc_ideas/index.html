@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">GSoC 2025 - PEcAn Project Ideas | PEcAn Project</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://pecanproject.github.io/gsoc_ideas"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="GSoC 2025 - PEcAn Project Ideas | PEcAn Project"><meta data-rh="true" name="description" content="background}"><meta data-rh="true" property="og:description" content="background}"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://pecanproject.github.io/gsoc_ideas"><link data-rh="true" rel="alternate" href="https://pecanproject.github.io/gsoc_ideas" hreflang="en"><link data-rh="true" rel="alternate" href="https://pecanproject.github.io/gsoc_ideas" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="PEcAn Project RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="PEcAn Project Atom Feed"><link rel="stylesheet" href="/assets/css/styles.7b72055f.css">
-<script src="/assets/js/runtime~main.e0560987.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7e978e0c.js" defer="defer"></script>
 <script src="/assets/js/main.e97dd735.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -63,24 +63,46 @@
 <p>Medium</p>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="db">3. Database and Data Improvements<a href="#db" class="hash-link" aria-label="Direct link to 3. Database and Data Improvements" title="Direct link to 3. Database and Data Improvements">​</a></h3>
-<p>PEcAn relies on the BETYdb database to store trait and yield data as well as model provenance information. This project aims to separate trait data from provenance tracking, and ensure that PEcAn is able to run without the  server currently required to run the Postgres database used by BETYdb. The goal is to make PEcAn workflows easier to test, deploy, and use while also making data more accessible.</p>
+<p>PEcAn relies on the BETYdb database to store trait and yield data as well as model provenance information. This project aims to separate trait data from provenance tracking, ensure that PEcAn is able to run without the server currently required to run the Postgres database used by BETYdb, and enable flexible data sharing in place of a server-reliant sync mechanism. The goal is to make PEcAn workflows easier to test, deploy, and use while also making data more accessible.</p>
 <p><strong>Potential Directions</strong></p>
 <ul>
-<li><strong>Minimal BETYdb Database:</strong> Create a simplified version of BETYdb for demonstrations and Integration tests.</li>
-<li><strong>Non-Database Setup:</strong> Enable workflows that do not require PostgreSQL or a web front-end.</li>
+<li>
+<p><strong>Minimal BETYdb Database:</strong> Create a simplified version of BETYdb for demonstrations and Integration tests, which might include:</p>
+<ul>
+<li>Review the provenance information we currently log, identify components that no longer need to be tracked or that should be temporary rather than permanent records, and build tools to clean unneeded records from the database.</li>
+<li>Design and create a freestanding version of the trait data, including choosing the format and distribution method, implementing whatever pipelines are needed to move the data over, and documenting how to use and update the result.</li>
+<li>Review the information we currently log, identify components that no longer need to be tracked or that should be temporary rather than permanent, and build tools to clean unneeded/expired records from the database.</li>
+</ul>
+</li>
+<li>
+<p><strong>Non-Database Setup:</strong> Enable workflows that do not require PostgreSQL or a web front-end, potentially including:</p>
+<ul>
+<li>Identify PEcAn modules that are still DB-dependent and refactor them to allow freestanding use</li>
+<li>Implement mechanisms for decoupling the DB from the model pipelines in time and space while still tracking provenance. Perhaps this could involve separate prep/execution/post-logging phases, but we encourage your creative suggestions.</li>
+<li>Create tools that maximize interoperability with data from other sources, including from external databases or the user&#x27;s own observations.</li>
+<li>Identify functionality from the &quot;BETYdb network&quot; sync system that is out of date and replace or remove it as needed.</li>
+</ul>
+</li>
 </ul>
 <p><strong>Expected outcomes</strong>:</p>
 <p>A successful project would complete a subset of the following tasks:</p>
 <ul>
 <li>A lightweight, distributable demo Postgres database.</li>
+<li>A distributable dataset of the existing trait and yield records in a maximally reusable format (i.e. maybe <em>not</em> Postgres)</li>
 <li>A workflow that is independent of the Postgres database.</li>
+</ul>
+<p><strong>Skills Required</strong>:</p>
+<ul>
+<li>Familiarity with database concepts required</li>
+<li>Postgres experience helpful (and required if proposing DB cleanup tasks)</li>
+<li>R experience helpful (and required if proposing PEcAn code changes)</li>
 </ul>
 <p><strong>Contact person:</strong></p>
 <p>Chris Black (@infotroph)</p>
 <p><strong>Duration:</strong></p>
-<p>Suitable fora Medium (175hr) or Large (350 hr) project.</p>
-<p><strong>Difficulty:</strong>
-Medium, Large</p>
+<p>Suitable for a Medium (175hr) or Large (350 hr) project.</p>
+<p><strong>Difficulty:</strong></p>
+<p>Intermediate to hard</p>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="notebook">4. Development of Notebook-based PEcAn Workflows<a href="#notebook" class="hash-link" aria-label="Direct link to 4. Development of Notebook-based PEcAn Workflows" title="Direct link to 4. Development of Notebook-based PEcAn Workflows">​</a></h3>
 <p>The PEcAn workflow is currently run using either a web based user interface, an API, or custom R scripts. The web based user interface is easiest to use, but has limited functionality whereas the custom R scripts and API are more flexible, but require more experience.</p>
