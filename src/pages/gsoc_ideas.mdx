@@ -82,18 +82,27 @@ Medium
 ---
 ### 3. Database and Data Improvements{#db}
 
-PEcAn relies on the BETYdb database to store trait and yield data as well as model provenance information. This project aims to separate trait data from provenance tracking, and ensure that PEcAn is able to run without the  server currently required to run the Postgres database used by BETYdb. The goal is to make PEcAn workflows easier to test, deploy, and use while also making data more accessible.
+PEcAn relies on the BETYdb database to store trait and yield data as well as model provenance information. This project aims to separate trait data from provenance tracking, ensure that PEcAn is able to run without the server currently required to run the Postgres database used by BETYdb, and enable flexible data sharing in place of a server-reliant sync mechanism. The goal is to make PEcAn workflows easier to test, deploy, and use while also making data more accessible.
 
 
 **Potential Directions**
 
-- **Minimal BETYdb Database:** Create a simplified version of BETYdb for demonstrations and Integration tests.
+- **Minimal BETYdb Database:** Create a simplified version of BETYdb for demonstrations and Integration tests, which might include:
+   - Review the provenance information we currently log, identify components that no longer need to be tracked or that should be temporary rather than permanent records, and build tools to clean unneeded records from the database.
+   - Design and create a freestanding version of the trait data, including choosing the format and distribution method, implementing whatever pipelines are needed to move the data over, and documenting how to use and update the result.
+   - Review the information we currently log, identify components that no longer need to be tracked or that should be temporary rather than permanent, and build tools to clean unneeded/expired records from the database.
+
 - **Non-Database Setup:** Enable workflows that do not require PostgreSQL or a web front-end.
+   - Identify PEcAn modules that are still DB-dependent and refactor them to allow freestanding use
+	- Implement mechanisms for decoupling the DB from the model pipelines in time and space while still tracking provenance. Perhaps this could involve separate prep/execution/post-logging phases, but we encourage your creative suggestions.
+   - Create tools that maximize interoperability with data from other sources, including from external databases or the user's own observations.
+   - Identify functionality from the "BETYdb network" sync system that is out of date and replace or remove it as needed.
 
 **Expected outcomes**:
 
 A successful project would complete a subset of the following tasks:
 - A lightweight, distributable demo Postgres database.
+- A distributable dataset of the existing trait and yield records in a maximally reusable format (i.e. maybe _not_ Postgres)
 - A workflow that is independent of the Postgres database.
 
 
