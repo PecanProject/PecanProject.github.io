@@ -21,9 +21,8 @@ function News() {
 
                                         This release has a number of bug fixes and added functionality. All can be seen
                                         <a href=" https://github.com/PecanProject/pecan/releases/tag/v1.6.0"> listed here</a>. The VM
-                                        can be downloaded <a
-                                            href="https://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">here</a>.
-
+                                        can be downloaded at (note: VM has been deprecated, so the following link may no longer work)
+                                        https://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN`
                                         <p>Major additions include:
                                             <ul>
                                                 <li>A data ingest SHINY app that allows users to upload and register data from their own

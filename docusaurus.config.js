@@ -33,7 +33,7 @@ module.exports = {
             },
             {
               to: "http://pecan.ncsa.illinois.edu/pecan/01-introduction.php", label: "Demo"
-            },            
+            },
           ],
         },
         { to: "/blog", label: "Blog", position: "left" },
@@ -52,12 +52,7 @@ module.exports = {
           href: "https://github.com/PecanProject",
           position: "right",
           className: "header-github-link",
-          "aria-label": "GitHub repository",  
-        },
-        {
-          href: "https://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN",
-          label: "Download",
-          position: "left",
+          "aria-label": "GitHub repository",
         },
         {
           label: "GSoC",
@@ -124,9 +119,9 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} PEcAn Project.`,
     },
     docs: {
-	sidebar: {
-	    hideable: true
-	},
+      sidebar: {
+        hideable: true
+      },
     },
   },
   presets: [
