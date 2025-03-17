@@ -2,11 +2,64 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pecanproject.github.io/blog</id>
     <title>PEcAn Project Blog</title>
-    <updated>2024-08-26T00:00:00.000Z</updated>
+    <updated>2025-02-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pecanproject.github.io/blog"/>
     <subtitle>PEcAn Project Blog</subtitle>
     <icon>https://pecanproject.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[PEcAn Request for Proposals]]></title>
+        <id>https://pecanproject.github.io/blog/pecanrfp</id>
+        <link href="https://pecanproject.github.io/blog/pecanrfp"/>
+        <updated>2025-02-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The PEcAn Project is excited to announce the availability of funding for small projects and activities. This fund is made possible by GSOC mentor stipends.]]></summary>
+        <content type="html"><![CDATA[<p>The PEcAn Project is excited to announce the availability of funding for small projects and activities. This fund is made possible by GSOC mentor stipends.</p>
+<p>We invite proposals for small grants to support activities that advance and promote PEcAn-related work.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="supported-activities"><strong>Supported Activities</strong><a href="https://pecanproject.github.io/blog/pecanrfp#supported-activities" class="hash-link" aria-label="Direct link to supported-activities" title="Direct link to supported-activities">​</a></h2>
+<p>The objective of this funding is to build and support the PEcAn community. A broad scope of activities could be supported. Examples include:</p>
+<ul>
+<li><strong>Community Engagement:</strong> PEcAn-related swag or outreach activities that enhance community visibility and engagement.</li>
+<li><strong>Workshops:</strong> Funding to help coordinate in-person PEcAn-related meetups.</li>
+<li><strong>Conference Participation:</strong> Support for presenting PEcAn-related work at conferences.</li>
+<li><strong>Publications:</strong> Assistance with publication costs for PEcAn-related papers.</li>
+<li><strong>Other Uses:</strong> We are open to creative proposals that support the PEcAn community.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="expected-award-size"><strong>Expected Award Size</strong><a href="https://pecanproject.github.io/blog/pecanrfp#expected-award-size" class="hash-link" aria-label="Direct link to expected-award-size" title="Direct link to expected-award-size">​</a></h2>
+<p>All proposals will be considered contingent on available funds. We anticipate typical awards between $500-$3000 USD.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="eligibility"><strong>Eligibility</strong><a href="https://pecanproject.github.io/blog/pecanrfp#eligibility" class="hash-link" aria-label="Direct link to eligibility" title="Direct link to eligibility">​</a></h2>
+<ul>
+<li>Open to all PEcAn community members.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="out-of-scope--excluded-activities"><strong>Out of Scope / Excluded Activities</strong><a href="https://pecanproject.github.io/blog/pecanrfp#out-of-scope--excluded-activities" class="hash-link" aria-label="Direct link to out-of-scope--excluded-activities" title="Direct link to out-of-scope--excluded-activities">​</a></h2>
+<ul>
+<li>Activities that already have funding.</li>
+<li>PEcAn Software Development.</li>
+<li>Travel expenses for PEcAn workshops.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-apply"><strong>How to Apply</strong><a href="https://pecanproject.github.io/blog/pecanrfp#how-to-apply" class="hash-link" aria-label="Direct link to how-to-apply" title="Direct link to how-to-apply">​</a></h2>
+<p>Applicants are encouraged to discuss ideas with the community in the <a href="https://pecanproject.slack.com/archives/C8RD9BRLK" target="_blank" rel="noopener noreferrer">#pecan channel</a> on Slack. Join PEcAn Slack <a href="https://join.slack.com/t/pecanproject/shared_invite/enQtMzkyODUyMjQyNTgzLWEzOTM1ZjhmYWUxNzYwYzkxMWVlODAyZWQwYjliYzA0MDA0MjE4YmMyOTFhMjYyMjYzN2FjODE4N2Y4YWFhZmQ" target="_blank" rel="noopener noreferrer">here</a>.
+Submit a brief proposal (1-2 pages) to <a href="mailto:pecanproj@gmail.com" target="_blank" rel="noopener noreferrer">pecanproj@gmail.com</a> that includes:</p>
+<ol>
+<li><strong>Your Name &amp; Affiliation</strong></li>
+<li><strong>Description of Proposed Activity</strong></li>
+</ol>
+<ul>
+<li>Scope of work</li>
+<li>Deliverables</li>
+<li>How it benefits the PEcAn community</li>
+</ul>
+<ol start="3">
+<li><strong>Estimated Itemized Budget</strong></li>
+<li><strong>Timeline</strong> (when funds will be used)</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="submission"><strong>Submission</strong><a href="https://pecanproject.github.io/blog/pecanrfp#submission" class="hash-link" aria-label="Direct link to submission" title="Direct link to submission">​</a></h2>
+<p>Proposals will be reviewed on a rolling basis. Prior to formal submission, post ideas and ask questions on the #pecan Slack channel.</p>]]></content>
+        <author>
+            <name>David LeBauer</name>
+            <uri>https://davidlebauer.com</uri>
+        </author>
+        <category label="funding" term="funding"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GSoC 2024 Cohort Roundup]]></title>
         <id>https://pecanproject.github.io/blog/2024/08/26/gsoc-2024-wraps-up</id>
