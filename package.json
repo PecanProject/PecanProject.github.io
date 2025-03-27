@@ -16,6 +16,8 @@
   "dependencies": {
     "@docusaurus/core": "^3.5.2",
     "@docusaurus/preset-classic": "^3.5.2",
+    "@dotlottie/player-component": "^2.7.12",
+    "@lottiefiles/dotlottie-wc": "^0.4.6",
     "@mdx-js/react": "^3.0.1",
     "@svgr/webpack": "^8.1.0",
     "clsx": "^1.1.1",
