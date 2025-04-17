@@ -31,6 +31,15 @@ html[data-theme="dark"] {
   border-radius: 15px !important;
 }
 
+html, body {
+  overflow-x: hidden; 
+}
+
+html, body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
 /* Footer */
 
 html[data-theme="dark"] .footer {
@@ -221,3 +230,4 @@ html[data-theme="light"] .footer-logo-text {
   color: rgb(70, 203, 174);
   text-decoration: none !important;
 }
+
