@@ -77,13 +77,25 @@
 }
 .imageContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
 }
 .imageContainer .image {
   width: 5rem;
   height: 5rem;
   margin: 0.254rem;
   object-fit: contain;
+}
+@media (max-width: 600px) {
+  .imageContainer {
+    justify-content: center;
+  }
+  .imageContainer .image {
+    width: 3.5rem; 
+    height: 3.5rem;
+  }
 }
 @media (max-width: 900px) {
   .paragraph {
