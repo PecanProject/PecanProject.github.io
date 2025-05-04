@@ -1,0 +1,22 @@
+
+.lottieContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden !important; 
+}
+
+.lottieContainer dotlottie-player {
+  width: 100vw !important; 
+  height: auto !important; 
+  max-height: 500px !important; 
+}
+
+.footerContainer {
+  --ifm-footer-background-color: #61AE9D;
+}
+
+.footerContainer .footer {
+  --ifm-footer-background-color: #61AE9D; 
+}
