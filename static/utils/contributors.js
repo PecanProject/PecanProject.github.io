@@ -11,7 +11,7 @@ const contributors = [
     email: "dlebauer@gmail.com",
     role: "PEcAn Co-PI",
     profession: "Scientist, The LeBauer Approach LLC and University of Arizona",
-    img: "https://datascience.cct.arizona.edu/sites/datascience.cct.arizona.edu/files/styles/az_medium/public/2023-11/david_lebauer.jpeg",
+    img: "https://datascience.cct.arizona.edu/sites/default/files/styles/az_medium/public/2023-11/david_lebauer.jpeg.webp",
   },
   {
     name: "Dr. Kenton McHenry",
@@ -101,8 +101,7 @@ const contributors = [
     name: "Rohan Sasne",
     email: "rohansasne30@gmail.com",
     role: "GSoC'23 Contributor",
-    profession: "Co-Founder and CEO, Dynalize Technologies",
-    img: "https://media.licdn.com/dms/image/D4D03AQHY70hvxDx1wg/profile-displayphoto-shrink_400_400/0/1718313426682?e=1725494400&v=beta&t=T3SkIPDWUUDAPsjCIuGy07C63BQbaCovWUEHCuzkUbk",
+    profession: "Co-Founder and CEO, Dynalize Technologies"
   },
 ];
 export default contributors;
