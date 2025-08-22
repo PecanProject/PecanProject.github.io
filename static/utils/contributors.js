@@ -97,11 +97,5 @@ const contributors = [
     profession: "Research Associate, IIT Bombay",
     img: "https://koolgax99.github.io/nihar.jpg",
   },
-  {
-    name: "Rohan Sasne",
-    email: "rohansasne30@gmail.com",
-    role: "GSoC'23 Contributor",
-    profession: "Co-Founder and CEO, Dynalize Technologies"
-  },
 ];
 export default contributors;

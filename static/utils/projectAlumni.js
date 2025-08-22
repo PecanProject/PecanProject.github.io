@@ -62,5 +62,11 @@ const ProjectAlumni = [
     profession: "Software Engineer, VMware",
     img: "https://64.media.tumblr.com/d182f286c3cae51ed2736097d2156e7d/da1cd6888f58f511-30/s1280x1920/9ccc75af8e63938b7d4feb080d482ded53ebecd5.jpg",
   },
+  {
+    name: "Rohan Sasne",
+    email: "rohansasne30@gmail.com",
+    role: "GSoC'23 Contributor",
+    profession: "Co-Founder and CEO, Dynalize Technologies"
+  },
 ];
 export default ProjectAlumni;
