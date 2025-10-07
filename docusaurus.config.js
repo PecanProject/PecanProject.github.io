@@ -85,7 +85,7 @@ module.exports = {
               className: "footer-slack-link",
             },
             {
-              label: "Twitter",
+              label: "𝕏",
               href: "https://twitter.com/pecanproject",
               className: "footer-twitter-link",
             },
