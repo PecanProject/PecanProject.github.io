@@ -23,16 +23,20 @@ module.exports = {
           position: "left",
           items: [
             {
-              to: "/documentation", label: "Documentation",
+              to: "/documentation",
+              label: "Documentation",
             },
             {
-              to: "/package-documentation/develop", label: "Package Documentation",
+              to: "/package-documentation/develop",
+              label: "Package Documentation",
             },
             {
-              to: "/tutorials", label: "Tutorials",
+              to: "/tutorials",
+              label: "Tutorials",
             },
             {
-              to: "http://pecan.ncsa.illinois.edu/pecan/01-introduction.php", label: "Demo"
+              to: "http://pecan.ncsa.illinois.edu/pecan/01-introduction.php",
+              label: "Demo",
             },
           ],
         },
@@ -44,7 +48,6 @@ module.exports = {
             { to: "/about", label: "About" },
             { to: "/people", label: "People" },
             { to: "/alumni", label: "Alumni" },
-            { to: "/news", label: "News" },
           ],
         },
         { to: "/publications", label: "Publications", position: "left" },
@@ -59,7 +62,7 @@ module.exports = {
           position: "left",
           items: [
             { to: "/gsoc", label: "Contributor Guidance" },
-            { to: "/gsoc_ideas", label: "Ideas List" }
+            { to: "/gsoc_ideas", label: "Ideas List" },
           ],
         },
       ],
@@ -114,13 +117,13 @@ module.exports = {
               `,
             },
           ],
-        }
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} PEcAn Project.`,
     },
     docs: {
       sidebar: {
-        hideable: true
+        hideable: true,
       },
     },
   },
