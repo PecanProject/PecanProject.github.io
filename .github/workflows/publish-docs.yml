@@ -38,7 +38,7 @@ jobs:
         if: github.event_name == 'pull_request'
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./docusaurus/
+          source-dir: ./build/
           preview-branch: gh-pages-pr-previews
           umbrella-dir: pr-preview
           action: auto
