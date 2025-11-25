@@ -63,8 +63,8 @@ jobs:
             🚀 **Preview Ready!**
             Your docs preview for this PR is available here:
 
-            **https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/**
-
+            **https://pecanproject.github.io/pr-${{ github.event.pull_request.number }}/**
+            
   deploy-production:
     # Runs ONLY on push to master
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
