@@ -5,47 +5,81 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
-    types: [opened, synchronize, reopened, closed]
 
 permissions:
   contents: write
   pull-requests: write
-  statuses: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
 
-      - name: Install and Build 🔧
-        run: |
-          npm ci
-          npm run build
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Deploy Preview deploy-preview 🚀
-        if: github.event_name == 'pull_request'
-        uses: rossjrw/pr-preview-action@v1
+      - name: Build
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          source-dir: ./build/
-          preview-branch: gh-pages-pr-previews
-          umbrella-dir: pr-preview
-          action: auto
+          name: site
+          path: build/
 
-      - name: Deploy to GitHub Pages 🚀
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+  deploy-pr-preview:
+    # Runs ONLY for PRs
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+
+      - name: Deploy PR Preview
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages-pr-previews
+          folder: site
+          target-folder: pr-${{ github.event.pull_request.number }}
+
+      - name: Comment Preview URL
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          recreate: true
+          message: |
+            🚀 **Preview Ready!**
+            Your docs preview for this PR is available here:
+
+            **https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/**
+
+  deploy-production:
+    # Runs ONLY on push to master
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build
+          folder: site
