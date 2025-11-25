@@ -54,6 +54,7 @@ jobs:
           branch: gh-pages-pr-previews
           folder: site
           target-folder: pr-${{ github.event.pull_request.number }}
+          workspace: /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}
 
       - name: Comment Preview URL
         uses: marocchino/sticky-pull-request-comment@v2
@@ -64,7 +65,7 @@ jobs:
             Your docs preview for this PR is available here:
 
             **https://pecanproject.github.io/pr-${{ github.event.pull_request.number }}/**
-            
+
   deploy-production:
     # Runs ONLY on push to master
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
