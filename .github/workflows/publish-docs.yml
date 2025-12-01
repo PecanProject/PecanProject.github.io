@@ -1,4 +1,4 @@
-name: Build, Deploy to GitHub Pages and Deploy PR Preview
+name: Publish Docs
 
 on:
   push:
@@ -14,14 +14,76 @@ permissions:
   contents: write
   pull-requests: write
 
-concurrency: ci-${{ github.ref }}
+concurrency: preview-${{ github.ref }}
+
+env:
+  PREVIEW_BRANCH: gh-pages
 
 jobs:
-  build-deploy-and-preview:
-    name: Build, Deploy to GitHub Pages and Deploy PR Preview
+  deploy-preview:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
     steps:
-      - name: Build, Deploy to GitHub Pages and Deploy PR Preview
-        uses: chvmvd/build-deploy-and-preview-action@v1.2.0
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          type: docusaurus
+          node-version: 20
+
+      - name: Calculate BASE_URL
+        run: echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+
+      - run: npm ci && npm run build
+        env:
+          BASE_URL: ${{ env.BASE_URL }}
+
+      - uses: rossjrw/pr-preview-action@v1
+        id: preview-step
+        with:
+          source-dir: ./build/
+          preview-branch: ${{ env.PREVIEW_BRANCH }}
+          comment: false
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: steps.preview-step.outputs.deployment-action == 'deploy' && env.deployment_status == 'success'
+        with:
+          header: pr-preview
+          message: |
+            [PR Preview Action](https://github.com/rossjrw/pr-preview-action) ${{ steps.preview-step.outputs.action-version }}
+            :---:
+            | <p></p> :rocket: View preview at <br> ${{ steps.preview-step.outputs.preview-url }} <br><br>
+            | <h6>Built to branch [`${{ env.PREVIEW_BRANCH }}`](${{ github.server_url }}/${{ github.repository }}/tree/${{ env.PREVIEW_BRANCH }}) at ${{ steps.preview-step.outputs.action-start-time }}. <br> Preview will be ready when the [GitHub Pages deployment](${{ github.server_url }}/${{ github.repository }}/deployments) is complete. <br><br> </h6>
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: steps.preview-step.outputs.deployment-action == 'remove' && env.deployment_status == 'success'
+        with:
+          header: pr-preview
+          message: |
+            [PR Preview Action](https://github.com/rossjrw/pr-preview-action) ${{ steps.preview-step.outputs.action-version }}
+            :---:
+            Preview removed because the pull request was closed.
+            ${{ steps.preview-step.outputs.action-start-time }}
+
+  build-production:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with: { name: site, path: build/ }
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: build-production
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: site, path: site }
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: site
+          clean-exclude: pr-preview
