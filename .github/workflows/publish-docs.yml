@@ -32,8 +32,18 @@ jobs:
         with:
           node-version: 20
 
+      - name: Calculate BASE_URL
+        run: |
+          if [[ "${{ github.event.repository.name }}" == "${{ github.repository_owner }}.github.io" ]]; then
+            echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+          else
+            echo "BASE_URL=/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+          fi
+
       - name: Install and Build
         run: npm ci && npm run build
+        env:
+          BASE_URL: ${{ env.BASE_URL }}
 
       - name: Deploy Preview
         uses: rossjrw/pr-preview-action@v1
