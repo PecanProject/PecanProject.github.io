@@ -17,7 +17,7 @@ permissions:
 concurrency: preview-${{ github.ref }}
 
 env:
-  PREVIEW_BRANCH: gh-pages-pr-previews
+  PREVIEW_BRANCH: gh-pages
 
 jobs:
   deploy-preview:
@@ -105,3 +105,4 @@ jobs:
         with:
           branch: gh-pages
           folder: site
+          clean-exclude: pr-preview
