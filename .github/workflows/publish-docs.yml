@@ -44,7 +44,7 @@ jobs:
           else
             # Normal project repo (fork or upstream)
             echo "BASE_URL=/$REPO/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
-            echo "URL=https://$OWNER.github.io/$REPO" >> $GITHUB_ENV
+            echo "URL=https://$OWNER.github.io" >> $GITHUB_ENV
           fi
 
 
