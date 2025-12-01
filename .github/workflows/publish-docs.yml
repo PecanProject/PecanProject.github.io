@@ -32,18 +32,27 @@ jobs:
         with:
           node-version: 20
 
-      - name: Calculate BASE_URL
+      - name: Calculate URLs
         run: |
-          if [[ "${{ github.event.repository.name }}" == "${{ github.repository_owner }}.github.io" ]]; then
+          REPO="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
+
+          if [[ "$REPO" == "$OWNER.github.io" ]]; then
+            # User/org GitHub Pages repo
             echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+            echo "URL=https://$OWNER.github.io" >> $GITHUB_ENV
           else
-            echo "BASE_URL=/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+            # Normal project repo (fork or upstream)
+            echo "BASE_URL=/$REPO/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
+            echo "URL=https://$OWNER.github.io/$REPO" >> $GITHUB_ENV
           fi
+
 
       - name: Install and Build
         run: npm ci && npm run build
         env:
           BASE_URL: ${{ env.BASE_URL }}
+          URL: ${{ env.URL }}
 
       - name: Deploy Preview
         uses: rossjrw/pr-preview-action@v1

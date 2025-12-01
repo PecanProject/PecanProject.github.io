@@ -3,13 +3,13 @@ module.exports = {
   title: "PEcAn Project",
   tagline:
     "Ecosystem science, policy, and management informed by the best available data and models",
-  url: "https://pecanproject.github.io",
+  url: process.env.URL || "https://pecanproject.github.io",
   baseUrl: process.env.BASE_URL || "/",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "PecanProject", // Usually your GitHub org/user name.
-  projectName: "PecanProject.github.io", // Usually your repo name.
+  organizationName: process.env.GITHUB_OWNER || "PecanProject", // Usually your GitHub org/user name.
+  projectName: process.env.GITHUB_REPOSITORY || "PecanProject.github.io", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "PEcAn",
