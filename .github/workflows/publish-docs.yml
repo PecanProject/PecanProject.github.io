@@ -38,14 +38,13 @@ jobs:
           OWNER="${{ github.repository_owner }}"
 
           if [[ "$REPO" == "$OWNER.github.io" ]]; then
-            # User/org GitHub Pages repo
             echo "BASE_URL=/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
             echo "URL=https://$OWNER.github.io" >> $GITHUB_ENV
           else
-            # Normal project repo (fork or upstream)
             echo "BASE_URL=/$REPO/pr-preview/pr-${{ github.event.pull_request.number }}/" >> $GITHUB_ENV
-            echo "URL=https://$OWNER.github.io" >> $GITHUB_ENV
+            echo "URL=https://$OWNER.github.io/$REPO" >> $GITHUB_ENV
           fi
+
 
 
       - name: Install and Build
