@@ -27,4 +27,4 @@ function V1_8_0() {
   );
 }
 
-export default V_1_8_0;
+export default V1_8_0;

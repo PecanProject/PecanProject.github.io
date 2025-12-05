@@ -27,4 +27,4 @@ function V1_10_0() {
   );
 }
 
-export default V_1_10_0;
+export default V1_10_0;
