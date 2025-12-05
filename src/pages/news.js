@@ -1475,7 +1475,7 @@ function News() {
                                         A few functions have already been added to the <a
                                             href="https://github.com/ropensci/traits/">rOpensci traits
                                             package</a> that can be found in the file <a
-                                                href="https://github.com/ropensci/traits/blob/master/R/betydb.R">R/betydb.R</a>.
+                                                href="https://github.com/ropensci/traits/blob/main/R/betydb.R">R/betydb.R</a>.
                                     </p>
                                     If you can help resolve open issues, implement new functionality, and
                                     write vignettes please contact betydb@gmail.com, submit a pull request

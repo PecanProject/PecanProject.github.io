@@ -97,25 +97,25 @@ function Tutorials() {
 
                     <h3 class="text-size-20  text-m-size-16 text-center">R Packages</h3>
 
-                    <div><a href="https://github.com/PecanProject/pecan/blob/master/modules/allometry/vignettes/AllomVignette.Rmd">Allometries</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/blob/main/modules/allometry/vignettes/AllomVignette.Rmd">Allometries</a></div>
 
-                    <div><a href="https://github.com/PecanProject/pecan/blob/master/modules/assim.batch/vignettes/AssimBatchVignette.Rmd">MCMC </a> - in development</div>
+                    <div><a href="https://github.com/PecanProject/pecan/blob/main/modules/assim.batch/vignettes/AssimBatchVignette.Rmd">MCMC </a> - in development</div>
 
-                    <div><a href="https://github.com/PecanProject/pecan/tree/master/modules/data.atmosphere/vignettes">Meteorology Data</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/tree/main/modules/data.atmosphere/vignettes">Meteorology Data</a></div>
 
-                    <div><a href="https://github.com/PecanProject/pecan/blob/master/modules/meta.analysis/vignettes/single.MA_demo.Rmd">Meta-Analysis</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/blob/main/modules/meta.analysis/vignettes/single.MA_demo.Rmd">Meta-Analysis</a></div>
 
-                    <div><a href="https://github.com/PecanProject/pecan/blob/master/modules/photosynthesis/vignettes/ResponseCurves.Rmd">Photosynthetic response curves</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/blob/main/modules/photosynthesis/vignettes/ResponseCurves.Rmd">Photosynthetic response curves</a></div>
 
-                    <div><a href="https://github.com/PecanProject/pecan/blob/master/modules/priors/vignettes/priors_demo.Rmd">Priors</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/blob/main/modules/priors/vignettes/priors_demo.Rmd">Priors</a></div>
 
-                    <div><a href="https://github.com/PecanProject/pecan/blob/master/modules/rtm/vignettes/pecanrtm.vignette.Rmd">Leaf spectra: PROSPECT inversion</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/blob/main/modules/rtm/vignettes/pecanrtm.vignette.Rmd">Leaf spectra: PROSPECT inversion</a></div>
 
                     <h3>Concepts</h3>
 
-                    <div><a href="https://github.com/PecanProject/pecan/tree/master/documentation/tutorials/sensitivity/PEcAn_sensitivity_tutorial_v1.0.Rmd">Model-Data Fusion: Univariate calibration 'by hand'</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/tree/main/documentation/tutorials/sensitivity/PEcAn_sensitivity_tutorial_v1.0.Rmd">Model-Data Fusion: Univariate calibration 'by hand'</a></div>
 
-                    <div><a href="https://github.com/PecanProject/pecan/blob/master/documentation/tutorials/MCMC/MCMC_Concepts.Rmd">Model-Data Fusion: MCMC</a></div>
+                    <div><a href="https://github.com/PecanProject/pecan/blob/main/documentation/tutorials/MCMC/MCMC_Concepts.Rmd">Model-Data Fusion: MCMC</a></div>
 
                     <h1>
                         <a name="pecans-approach" class="anchor" href="#pecans-approach"><span class="octicon octicon-link"></span></a>Video:</h1>
