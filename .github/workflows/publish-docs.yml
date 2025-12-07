@@ -11,10 +11,6 @@ on:
         description: 'PR number to deploy preview for'
         required: true
         type: number
-      run_id:
-        description: 'Run ID of the build workflow (from the PR checks)'
-        required: true
-        type: string
 
 permissions:
   contents: write
@@ -51,12 +47,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Find latest run ID
+        id: find-run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH=$(gh pr view ${{ inputs.pr_number }} --json headRefName --jq .headRefName)
+          echo "Found branch: $BRANCH"
+          RUN_ID=$(gh run list --workflow "Publish Docs" --branch "$BRANCH" --event pull_request --status success --limit 1 --json databaseId --jq '.[0].databaseId')
+          echo "Found run ID: $RUN_ID"
+          if [ -z "$RUN_ID" ]; then
+            echo "::error::No successful 'Publish Docs' run found for PR #${{ inputs.pr_number }} (branch: $BRANCH)"
+            exit 1
+          fi
+          echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: site
           path: site
-          run-id: ${{ inputs.run_id }}
+          run-id: ${{ steps.find-run.outputs.run_id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy PR Preview
