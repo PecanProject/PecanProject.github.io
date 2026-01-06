@@ -85,7 +85,7 @@ This describes how to add or modify the Website's content.
 This is an open source project and contributions are what make an open source community.
 Everyone is welcome to contribute to this project.
 
-All involved are expected to follow the [PEcAn code of conduct](https://pecanproject.github.io/pecan-documentation/master/contributor-covenant-code-of-conduct.html) and contribute to a positive and inclusive environment.
+All involved are expected to follow the [PEcAn code of conduct](https://pecanproject.github.io/pecan-documentation/develop/contributor-covenant-code-of-conduct.html) and contribute to a positive and inclusive environment.
 
 First time contributors are welcome. Contributions can be very simple, make sure to check out issues labeled ['good first issue'](https://github.com/PecanProject/PecanProject.github.io/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22). If you have an idea, the best place to start a discussion is on the PEcAn project Slack channel, or by opening an issue in this repository.
 
@@ -209,7 +209,7 @@ This section contains future plans for the website. New contributors can use thi
 
 ### Optimising Documentation
 
-At present the PEcAn's documentation is being served from (<https://pecanproject.github.io/pecan-documentation/master/>) using an iframe. While this saves a lot of overhead in converting Rmd files in (<https://github.com/PecanProject/pecan/tree/develop/book_source>) to md files so that docusaurus could render them, it also increases the loading time for documentation, it also looks less consistent.
+At present the PEcAn's documentation is being served from (<https://pecanproject.github.io/pecan-documentation/latest/>) using an iframe. While this saves a lot of overhead in converting Rmd files in (<https://github.com/PecanProject/pecan/tree/develop/book_source>) to md files so that docusaurus could render them, it also increases the loading time for documentation, it also looks less consistent.
 In future, it is suggested to find an optimised way to convert rmd files to md and integrate them via docusaurus's native documentation parser.
 
 ### Adding tutorials section

@@ -2,15 +2,15 @@ import React from "react";
 import Layout from "@theme/Layout";
 import "./documentation.css";
 import Foot from "@docusaurus/Head";
-function Master() {
+function Latest() {
   return (
     <>
-      <Layout title="Master" >
+      <Layout title="Latest" >
         <Foot>
           <body className="documentation"></body>
         </Foot>
         <iframe
-          src="https://pecanproject.github.io/pecan-documentation/master/"
+          src="https://pecanproject.github.io/pecan-documentation/latest/"
           style={{ border: "none" }}
           width="100%"
           height="100%"
@@ -29,4 +29,4 @@ function Master() {
   );
 }
 
-export default Master;
+export default Latest;

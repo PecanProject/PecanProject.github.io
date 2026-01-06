@@ -71,7 +71,7 @@ module.exports = {
           items: [
             {
               label: "Tutorial",
-              to: "/documentation/master",
+              to: "/documentation/latest",
               className: "footer-docs-link",
             },
           ],

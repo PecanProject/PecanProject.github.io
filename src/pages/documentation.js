@@ -12,11 +12,12 @@ function Documentation() {
                         <div class="card">
                             <div class="card__header" style={{ textAlign: "center" }}>
 
-                                <h3 class="text-dark margin-bottom-30 margin-top-60 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">Latest Release Documentation</h3>
+                                <h3 class="text-dark margin-bottom-30 margin-top-30 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">Latest Code Documentation</h3>
+
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="documentation/master" class="text-size-20 text-m-size-16" ><u>Documentation consistent with latest release (MASTER BRANCH).</u></a>
+                                    <a href="documentation/develop" class="text-size-20 text-m-size-16" ><u>Documentation consistent with latest stable code (DEVELOP BRANCH).</u></a>
                                 </p>
                             </div>
                         </div>
@@ -28,12 +29,59 @@ function Documentation() {
                         <div class="card">
                             <div class="card__header" style={{ textAlign: "center" }}>
 
-                                <h3 class="text-dark margin-bottom-30 margin-top-30 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">Latest Code Documentation</h3>
-
+                                <h3 class="text-dark margin-bottom-30 margin-top-60 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">Latest Release Documentation</h3>
                             </div>
                             <div class="card__body">
                                 <p>
-                                    <a href="documentation/develop" class="text-size-20 text-m-size-16" ><u>Documentation consistent with latest stable code (DEVELOP BRANCH).</u></a>
+                                    <a href="documentation/latest" class="text-size-20 text-m-size-16" ><u>Documentation consistent with latest release (MAIN BRANCH).</u></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={clsx(styles.cardContainer)}>
+                    {" "}
+                    <div class={clsx("card-demo", styles.aboutCard)}>
+                        <div class="card">
+                            <div class="card__header" style={{ textAlign: "center" }}>
+
+                                <h3 class="text-dark margin-bottom-30 margin-top-60 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">Release 1.10.0</h3>
+                            </div>
+                            <div class="card__body">
+                                <p>
+                                    <a href="documentation/v1_10_0" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.10.0.</u></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={clsx(styles.cardContainer)}>
+                    {" "}
+                    <div class={clsx("card-demo", styles.aboutCard)}>
+                        <div class="card">
+                            <div class="card__header" style={{ textAlign: "center" }}>
+
+                                <h3 class="text-dark margin-bottom-30 margin-top-60 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">Release 1.9.0</h3>
+                            </div>
+                            <div class="card__body">
+                                <p>
+                                    <a href="documentation/v1_9_0" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.9.0.</u></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={clsx(styles.cardContainer)}>
+                    {" "}
+                    <div class={clsx("card-demo", styles.aboutCard)}>
+                        <div class="card">
+                            <div class="card__header" style={{ textAlign: "center" }}>
+
+                                <h3 class="text-dark margin-bottom-30 margin-top-60 margin-m-top-30 text-size-20 text-m-size-16 text-line-height-1">Release 1.8.0</h3>
+                            </div>
+                            <div class="card__body">
+                                <p>
+                                    <a href="documentation/v1_8_0" class="text-size-20 text-m-size-16" ><u>Documentation consistent with release 1.8.0.</u></a>
                                 </p>
                             </div>
                         </div>
