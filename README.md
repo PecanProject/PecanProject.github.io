@@ -1,6 +1,6 @@
 # PEcAn Project Website
 
-This repository contains the content of the PEcAn Project website.
+This repository contains the contents of the PEcAn Project website.
 
 This README is written for members of the PEcAn Project community who wish to add content to or otherwise modify the website.
 The website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
