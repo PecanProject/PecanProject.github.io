@@ -1,3 +1,5 @@
+# Q: "Why do we need a build job when we already have a build-and-deploy job?"
+# A: This one runs to test PRs; build-and-deploy runs to deploy the site after merging.
 name: build
 on:
   pull_request:
