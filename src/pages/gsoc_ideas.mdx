@@ -1,10 +1,10 @@
 ---
-title: 'GSoC 2025 - PEcAn Project Ideas'
+title: 'GSoC 2026 - PEcAn Project Ideas'
 ---
 
 # GSoC - PEcAn Project Ideas{#background}
 
-PEcAn is an open-source ecosystem modeling framework integrating data, models, and uncertainty quantification. Below is a list of potential ideas where contributors can help improve and expand PEcAn. To get started contributing to PEcAn, check out [this guide](https://github.com/PecanProject/pecan/discussions/3469). Come find us on Slack to discuss. If you have questions or would like to propose your own idea, contact @kooper in or join our **[#gsoc-2025](https://pecanproject.slack.com/archives/C0853U6GF71)** channel in Slack!
+PEcAn is an open-source ecosystem modeling framework integrating data, models, and uncertainty quantification. Below is a list of potential ideas where contributors can help improve and expand PEcAn. To get started contributing to PEcAn, check out [this guide](https://github.com/PecanProject/pecan/discussions/3469). Come find us on Slack to discuss. If you have questions or would like to propose your own idea, contact @kooper in or join our **[#gsoc](https://pecanproject.slack.com/archives/C0853U6GF71)** channel in Slack!
 
 ---
 
@@ -12,104 +12,83 @@ PEcAn is an open-source ecosystem modeling framework integrating data, models, a
 
 Below is a list of project ideas. Feel free to contact the listed mentors on Slack to discuss further or contact @kooper with new ideas and he can help connect you with mentors.
 
-1. [Global Sensitivity Analysis / Uncertainty Partitioning](#sa)  
-2. [Parallelization of Model Runs on HPC](#hpc)  
-3. [Database and Data Improvements](#db)  
-4. [Development of Notebook-based PEcAn Workflows](#notebook)  
-5. [Refactoring Compile-time Flags to Runtime Flags in SIPNET](#sipnet) 
+1. [Refactor and Parallelize Input Processing Pipelines](#input)  
+2. [Benchmarking and Validation Framework](#validation)  
+3. [Increase PEcAn modularity](#module)   
 
 ---
 
-### 1. Global Sensitivity Analysis / Uncertainty Partitioning{#sa}
+### 1. Refactor and Parallelize Input Processing Pipelines{#input}
 
-This project would extend PEcAn's existing uncertainty partitioning routines, which are primarily one-at-a-time and focused on model parameters, to also consider ensemble-based uncertainties in other model inputs (meteorology, soils, vegetation, phenology, etc). This project would employ Sobol' methods and some uncommitted code exists that manually prototyped how this would be done in PEcAn. The goal would be to refactor/reimplement this prototype into a reliable, automated system and apply it to some key test cases in both natural and managed ecosystems.
+Input-processing code in PEcAn (e.g., meteorological preparation) is currently centered around monolithic orchestration functions such as `do.conversions` and `met.process`. These functions mix low-level data transformations with sequential control flow, implicit dependencies, and caching behavior, making them difficult to test, debug, scale, or parallelize across sites and ensemble members.
 
+This project will deprecate `do.conversions` as currently implemented and replace it with input preprocessing workflows that are explicitly structured around data dependencies and are naturally parallelizable across data streams, sites, and ensemble members. The work will refactor or deprecate `met.process` to remove monolithic orchestration and reduce or eliminate opaque caching, while retaining and strengthening existing low-level transformation functions.
+
+As part of the refactor, orchestration logic should be rebuilt to make inputs, outputs, and dependencies explicit. A workflow tool such as {targets} may be used to help define and validate the dependency graph and caching behavior, but must not become a required or exclusive execution path for PEcAn.
+
+This refactoring should also reduce or eliminate implicit dependencies on the global settings object (see Project 3), enabling clearer APIs and improved testability.
 
 **Expected outcomes:**
 
 A successful project would complete the following tasks:
 
-* Reliable, automated Sobol sensitivity analyss and uncertainty partitioning across multiple model inputs.
-* Applications to test case(s) in natural and / or managed ecosystems.
+* Deprecation plan for do.conversions, with a replacement that provides a modular suite of preprocessing tools that
+   * explicitly defines inputs and outputs, and 
+   * supports parallel execution across products, sites, and ensemble members. 
+Key here is a high-level plan for development that will continue beyond what is accomplished this summer.
+
+* Refactor and/or deprecation plan for met.process that:
+   * removes monolithic orchestration and hidden control flow,
+   * reduces or eliminates over-engineered caching,
+   * retains and documents low-level transformation functions.
+
+* Demonstration of parallel execution on a multi-site or multi-ensemble example.
+
+* Basic correctness and performance benchmarks, including unit and integration tests and validation of PEcAn-standard inputs (formats and units).
+
+* Updated developer documentation covering:
+   * the new input-processing architecture,
+   * how to add a new preprocessing step,
+   * migration guidance from legacy entry points.
+
 
 **Prerequisites:**
 
 - Required: R (existing workflow and prototype is in R)
-- Helpful: familiarity with sensitivity analyses
+- Helpful: familiarity with parallel computing, workflow refactoring
 
 **Contact person:**
 
-Mike @Dietze
+David LeBauer (@dlebaur), @Henry Priest
 
 **Duration:**
 
-Flexible to work as either a Medium (175hr) or Large (350 hr)
+Large (350 hr)
 
 **Difficulty:**
 
-Medium
+High
 
 ---
 
-### 2. Parallelization of Model Runs on HPC{#hpc}
+### 2. Benchmarking and Validation Framework{#validation}
 
-This project would extend PEcAn's existing run mechanisms to be able to run on a High Performance Compute cluster (HPC) using [Apptainer](https://apptainer.org). For uncertaintity analysis, PEcAn will run the same model 1000s of times with small permutations. This is a perfect use for an HPC run. The goal is to not submit 1000s of jobs, but have a single job with multiple nodes that will run all of the ensembles efficiently. Running can be orchistrated using RabbitMQ, but other methods are also encouraged. The end goal should be for the PEcAn system to be launched, and run the full workflow on the HPC from start to finish leveraging as many nodes as it is given during the submission.
+A key task in any modeling workflow is the validation of model outputs against held out observations. When a validation dataset is used repeatedly and agreed upon by a broad community to have particular value in assessing model performance it often gets elevated to the status of a persistent "benchmark" dataset. In PEcAn, there is a need to replace our earlier benchmarking module, whose design was never fully implemented, with a simpler framework. In designing this framework we'd encourage participants to build upon the existing low-level infrastructure in the existing benchmarking module for model-data alignment tools and comparison metrics like RMSE, MAE, and R2. Work should also build upon and generalize existing examples of "one off" validation scripts (e.g., CARB cropland validations, North American data assimilation validations). 
 
 **Expected outcomes:**
 
 A successful project would complete the following tasks:
 
-* Show different ways to launch jobs (rabbitmq, lock files, simple round robin, etc)
-* Report of different options and how they can be enabled.
+* A high-level design and plan for development that will continue beyond what is accomplished this summer
+* Unit and integration tests
+* A generalized example of a validation workflow and/or notebook using California cropland datasets spanning multiple sites and crop types.
+* Documentation
+
 
 **Prerequisites:**
 
-- Required: R (existing workflow and prototype is in R), Docker
-- Helpful: Familiarity with HPC and Apptainer
-
-**Contact person:**
-
-Rob @Kooper
-
-**Duration:**
-
-Flexible to work as either a Medium (175hr) or Large (350 hr)
-
-**Difficulty:**
-
-Medium
-
----
-### 3. Database and Data Improvements{#db}
-
-PEcAn relies on the BETYdb database to store trait and yield data as well as model provenance information. This project aims to separate trait data from provenance tracking, ensure that PEcAn is able to run without the server currently required to run the Postgres database used by BETYdb, and enable flexible data sharing in place of a server-reliant sync mechanism. The goal is to make PEcAn workflows easier to test, deploy, and use while also making data more accessible.
-
-
-**Potential Directions**
-
-- **Minimal BETYdb Database:** Create a simplified version of BETYdb for demonstrations and Integration tests, which might include:
-   - Review the provenance information we currently log, identify components that no longer need to be tracked or that should be temporary rather than permanent records, and build tools to clean unneeded records from the database.
-   - Design and create a freestanding version of the trait data, including choosing the format and distribution method, implementing whatever pipelines are needed to move the data over, and documenting how to use and update the result.
-   - Review the information we currently log, identify components that no longer need to be tracked or that should be temporary rather than permanent, and build tools to clean unneeded/expired records from the database.
-
-- **Non-Database Setup:** Enable workflows that do not require PostgreSQL or a web front-end, potentially including:
-   - Identify PEcAn modules that are still DB-dependent and refactor them to allow freestanding use
-   - Implement mechanisms for decoupling the DB from the model pipelines in time and space while still tracking provenance. Perhaps this could involve separate prep/execution/post-logging phases, but we encourage your creative suggestions.
-   - Create tools that maximize interoperability with data from other sources, including from external databases or the user's own observations.
-   - Identify functionality from the "BETYdb network" sync system that is out of date and replace or remove it as needed.
-
-**Expected outcomes**:
-
-A successful project would complete a subset of the following tasks:
-- A lightweight, distributable demo Postgres database.
-- A distributable dataset of the existing trait and yield records in a maximally reusable format (i.e. maybe _not_ Postgres)
-- A workflow that is independent of the Postgres database.
-
-**Skills Required**:
-
-- Familiarity with database concepts required
-- Postgres experience helpful (and required if proposing DB cleanup tasks)
-- R experience helpful (and required if proposing PEcAn code changes)
+- Required: R (existing workflow and prototype is in R), familiarity with statistical methods for model validation
+- Helpful: Familiarity with existing benchmarking workflow systems
 
 **Contact person:**
 
@@ -117,11 +96,60 @@ Chris Black (@infotroph)
 
 **Duration:**
 
+Flexible to work as either a Medium (175hr) or Large (350 hr)
+
+**Difficulty:**
+
+Medium
+
+---
+### 3. Increase PEcAn modularity{#module}
+
+Existing PEcAn workflows rely heavily on reading a large `settings` object and writing .RData files or other opaque artifacts to disk to pass state between steps. This behavior reduces transparency, testability, and user understanding. The high-level goal of this project is to make PEcAn’s core functionality more modular and transparent, so that users can more easily build, maintain, and expand PEcAn workflows.
+
+This project refactors a single, well-defined workflow so that functions return explicit R objects (e.g., data frames or lists) instead of relying on hidden on-disk side effects. 
+
+To minimize disruption with existing workflows, the preferred approach would be: 
+* To begin by documenting existing functionality
+* Where needed, write tests for existing functionality
+* Document new functionality
+* Write tests for new functionality (TDD)
+* Refactoring of functions to return objects
+* Then refactor downstream functions use those objects
+* Only after that’s working, stop writing out the files.
+* If time permits, analyze how PEcAn's high-level modules are using the `settings` object and, where possible, refactor function inputs to only pass the required subset of variables or variable lists.
+* Along the way, it would also be beneficial to reassess which functions need to be exported, with the idea that fewer exported functions would make it easier for new users to see what PEcAn’s core modules actually are, and better documenting the core functions and modules we expect users to need to learn/use
+
+**Expected outcomes**:
+
+* Refactored functions that return explicit R objects instead of writing .RData
+* Clear definition and doucmentation of object structures passed between steps
+* Backward-compatible wrappers where needed to avoid breaking existing workflows
+* Unit tests that no longer depend on on-disk state or output_dir
+* Documentation describing .RData deprecation, migration guidance, and examples
+
+
+**Skills Required**:
+
+- Required: R (existing workflow and prototype is in R) and R package development
+- Helpful: familiarity with code refactoring
+
+**Contact person:**
+
+Mike @Dietze
+
+**Duration:**
+
 Suitable for a Medium (175hr) or Large (350 hr) project.
 
 **Difficulty:**
 
-Intermediate to hard
+Medium
+
+<!--
+
+
+# This comment section for ideas that may be potentially viable in future (with revision)
 
 
 ---
@@ -150,43 +178,6 @@ Medium (175hr)
 
 **Difficulty:**
 Medium
-
-
-### 5. Refactoring Compile-time Flags to Runtime Flags in SIPNET{#sipnet}
-
-**Project Overview**
-
-The ecosystem SIPNET is a core component of many PEcAn analyses. SIPNET is compiled with multiple compile-time flags that control whether different features are turned on and off. Thus, as currently configured, each model structure requires a separate compiled binary. 
-
-This project will refactor these flags to be runtime-configurable via command-line arguments or a configuration file, improving usability and testing efficiency.
-
-**Expected Outcomes**
-
-- Convert selected SIPNET compile-time flags to runtime options.
-- Develop a global configuration object for managing runtime flags.
-- Improve testability by enabling different configurations without recompiling.
-
-**Prerequisites**
-
-- Required: C, experience with compilers and build systems.
-- Helpful: Understanding of simulation models.
-
-**Mentor(s)**
-
-- David LeBauer (@dlebauer)
-- Mike Longfritz
-
-**Duration**
-- Medium (175hr) or Large (350hr)
-
-**Difficulty**
-- Medium to Hard
-
-
-<!--
-
-
-# This comment section for ideas that may be potentially viable in future (with revision)
 
 
 #### BETYdb R data package
