@@ -146,6 +146,33 @@ Suitable for a Medium (175hr) or Large (350 hr) project.
 
 Medium
 
+---
+### 4. Standardizing Model Couplers Across Models{#couplertools}
+
+PEcAn models frequently duplicate similar logic for writing configuration files, translating meteorological inputs, and handling model-specific I/O. This copy–paste pattern increases maintenance cost and makes it harder to integrate new models consistently.
+
+This project identifies a small set of shared configuration and I/O patterns and refactors them into documented helper functions with well-defined interfaces. Possible examples include netCDF reading/writing, parsing standardized input files,  test fixtures, settings validation, and others. The approach should be demonstrated across a limited number of models coupler packages under active development.
+
+**Expected outcomes:**
+A successful project will deliver an inventory of duplicated configuration and I/O patterns along with one or more of the following steps toward deduplication:
+
+* Shared helper functions with explicit inputs, outputs, and unit conventions
+* Refactored model code using standardized helpers
+* Unit tests ensuring consistent behavior across models
+* Updated developer documentation describing standard interfaces and recommended usage
+
+**Prerequisites:**
+Required: Proficiency in R
+Helpful: experience with unit testing
+
+**Contact person:**
+Chris Black, @infotroph
+
+**Duration:**: 
+Medium (175hr) or Large (350 hr) depending on number of deliverables
+
+**Difficulty:**
+Medium
 <!--
 
 
