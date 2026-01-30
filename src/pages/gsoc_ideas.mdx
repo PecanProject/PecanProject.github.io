@@ -24,7 +24,7 @@ Input-processing code in PEcAn (e.g., meteorological preparation) is currently c
 
 This project will deprecate `do.conversions` as currently implemented and replace it with input preprocessing workflows that are explicitly structured around data dependencies and are naturally parallelizable across data streams, sites, and ensemble members. The work will refactor or deprecate `met.process` to remove monolithic orchestration and reduce or eliminate opaque caching, while retaining and strengthening existing low-level transformation functions.
 
-As part of the refactor, orchestration logic should be rebuilt to make inputs, outputs, and dependencies explicit. A workflow tool such as {targets} may be used to help define and validate the dependency graph and caching behavior, but must not become a required or exclusive execution path for PEcAn.
+As part of the refactor, orchestration logic should be rebuilt to make inputs, outputs, and dependencies explicit. A workflow tool such as `targets` may be used to help define and validate the dependency graph and caching behavior, but must not become a required or exclusive execution path for PEcAn.
 
 This refactoring should also reduce or eliminate implicit dependencies on the global settings object (see Project 3), enabling clearer APIs and improved testability.
 
