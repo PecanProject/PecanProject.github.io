@@ -2,11 +2,37 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pecanproject.github.io/blog</id>
     <title>PEcAn Project Blog</title>
-    <updated>2025-02-10T00:00:00.000Z</updated>
+    <updated>2025-09-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pecanproject.github.io/blog"/>
     <subtitle>PEcAn Project Blog</subtitle>
     <icon>https://pecanproject.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[GSoC '25 Project Roundup]]></title>
+        <id>https://pecanproject.github.io/blog/2025/09/05/gsoc-roundup</id>
+        <link href="https://pecanproject.github.io/blog/2025/09/05/gsoc-roundup"/>
+        <updated>2025-09-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This summer marked the ninth consecutive year that the PEcAn Project participated in Google Summer of Code (GSoC). Over that time, 30 student-led projects have made significant contributions to PEcAn’s mission of advancing open, reproducible ecosystem modeling.]]></summary>
+        <content type="html"><![CDATA[<p>This summer marked the <strong>ninth consecutive year</strong> that the PEcAn Project participated in <strong>Google Summer of Code (GSoC)</strong>. Over that time, <strong>30 student-led projects</strong> have made significant contributions to PEcAn’s mission of advancing open, reproducible ecosystem modeling.</p>
+<p>The 2025 cohort continued this tradition with three contributions that improve functionality and user experience.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2025-gsoc-projects">2025 GSoC Projects<a href="https://pecanproject.github.io/blog/2025/09/05/gsoc-roundup#2025-gsoc-projects" class="hash-link" aria-label="Direct link to 2025 GSoC Projects" title="Direct link to 2025 GSoC Projects" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="akash-b-v-ensemble-based-uncertainty-propagation-workflows">Akash B V: Ensemble-based Uncertainty Propagation Workflows<a href="https://pecanproject.github.io/blog/2025/09/05/gsoc-roundup#akash-b-v-ensemble-based-uncertainty-propagation-workflows" class="hash-link" aria-label="Direct link to Akash B V: Ensemble-based Uncertainty Propagation Workflows" title="Direct link to Akash B V: Ensemble-based Uncertainty Propagation Workflows" translate="no">​</a></h3>
+<p>Akash developed ensemble-based data preparation workflows for soils, weather, and vegetation initial conditions. This work enables PEcAn’s ability to represent uncertainty in ecosystem models and directly supports applications in NASA CMS and California Air Resources Board (CARB) carbon monitoring efforts.</p>
+<p><a href="https://substack.com/home/post/p-172403311" target="_blank" rel="noopener noreferrer">Read Akash’s report →</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aritra-dey-interactive-quarto-notebooks-for-pecan-workflows">Aritra Dey: Interactive Quarto Notebooks for PEcAn Workflows<a href="https://pecanproject.github.io/blog/2025/09/05/gsoc-roundup#aritra-dey-interactive-quarto-notebooks-for-pecan-workflows" class="hash-link" aria-label="Direct link to Aritra Dey: Interactive Quarto Notebooks for PEcAn Workflows" title="Direct link to Aritra Dey: Interactive Quarto Notebooks for PEcAn Workflows" translate="no">​</a></h3>
+<p>Aritra created interactive Quarto notebooks that provide lightweight, reproducible introductions to PEcAn, replacing the previous introductory workflows that relied heavily on databases and the web User Interface. As more scientists become familiar with notebooks, these offer more flexible, direct, and extensible introductions to PEcAn workflows. These notebooks lower the barrier to entry for students and researchers, making it easier to run PEcAn models, explore uncertainty, and learn ecological forecasting through hands-on examples.</p>
+<p><a href="https://medium.com/@aritradey.nitt/my-gsoc-experience-pecan-project-cd4b2922e49f" target="_blank" rel="noopener noreferrer">Read Aritra’s post →</a></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="harsh-agrawal-decoupling-pecan-workflows-from-betydb">Harsh Agrawal: Decoupling PEcAn Workflows from BETYdb<a href="https://pecanproject.github.io/blog/2025/09/05/gsoc-roundup#harsh-agrawal-decoupling-pecan-workflows-from-betydb" class="hash-link" aria-label="Direct link to Harsh Agrawal: Decoupling PEcAn Workflows from BETYdb" title="Direct link to Harsh Agrawal: Decoupling PEcAn Workflows from BETYdb" translate="no">​</a></h3>
+<p>Harsh addressed a long-standing architectural challenge by reducing PEcAn’s reliance on its central database. By decoupling key workflows from BETYdb, his work improves portability, simplifies development, and makes the system more accessible to new users and contributors.</p>
+<p><a href="https://medium.com/@harshagr838/breaking-free-from-the-database-my-google-summer-of-code-2025-journey-with-pecan-9820d21d9afa" target="_blank" rel="noopener noreferrer">Read Harsh’s post →</a></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="beyond-software-community-and-mentorship">Beyond Software: Community and Mentorship<a href="https://pecanproject.github.io/blog/2025/09/05/gsoc-roundup#beyond-software-community-and-mentorship" class="hash-link" aria-label="Direct link to Beyond Software: Community and Mentorship" title="Direct link to Beyond Software: Community and Mentorship" translate="no">​</a></h2>
+<p>GSoC projects reflect more than individual effort. They are the result of sustained mentorship, active code review, and an engaged open-source community. We thank the mentors and contributors who guided students, reviewed pull requests, and helped shape these projects into lasting improvements. And we thank Google for supporting open-source software <strong>and community</strong> development through GSoC.</p>]]></content>
+        <author>
+            <name>david_lebauer</name>
+        </author>
+        <category label="gsoc" term="gsoc"/>
+        <category label="gsoc25" term="gsoc25"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[PEcAn Request for Proposals]]></title>
         <id>https://pecanproject.github.io/blog/pecanrfp</id>
