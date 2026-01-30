@@ -12,19 +12,19 @@ The 2025 cohort continued this tradition with three contributions that improve f
 
 ## 2025 GSoC Projects
 
-### Akash B V
+### Akash B V: Ensemble-based Uncertainty Propagation Workflows
 
 Akash developed ensemble-based data preparation workflows for soils, weather, and vegetation initial conditions. This work enables PEcAn’s ability to represent uncertainty in ecosystem models and directly supports applications in NASA CMS and California Air Resources Board (CARB) carbon monitoring efforts.
 
 [Read Akash’s report →](https://substack.com/home/post/p-172403311)
 
-### Aritra Dey
+### Aritra Dey: Interactive Quarto Notebooks for PEcAn Workflows
 
 Aritra created interactive Quarto notebooks that provide lightweight, reproducible introductions to PEcAn, replacing the previous introductory workflows that relied heavily on databases and the web User Interface. As more scientists become familiar with notebooks, these offer more flexible, direct, and extensible introductions to PEcAn workflows. These notebooks lower the barrier to entry for students and researchers, making it easier to run PEcAn models, explore uncertainty, and learn ecological forecasting through hands-on examples.
 
 [Read Aritra’s post →](https://medium.com/@aritradey.nitt/my-gsoc-experience-pecan-project-cd4b2922e49f)
 
-### Harsh Agrawal
+### Harsh Agrawal: Decoupling PEcAn Workflows from BETYdb
 
 Harsh addressed a long-standing architectural challenge by reducing PEcAn’s reliance on its central database. By decoupling key workflows from BETYdb, his work improves portability, simplifies development, and makes the system more accessible to new users and contributors.
 
