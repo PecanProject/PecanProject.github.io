@@ -16,6 +16,7 @@ Below is a list of project ideas. Feel free to contact the listed mentors on Sla
 2. [Benchmarking and Validation Framework](#validation)  
 3. [Increase PEcAn modularity](#module)
 4. [Standardizing Model Couplers Across Models](#couplertools)
+5. [LLM-Assisted Extraction of Agronomic Experiments into BETYdb](#llm-betydb)
 
 ---
 
@@ -174,6 +175,45 @@ Medium (175hr) or Large (350 hr) depending on number of deliverables
 
 **Difficulty:**
 Medium
+
+---
+### 5. LLM-Assisted Extraction of Agronomic Experiments into BETYdb{#llm-betydb}
+
+Manual extraction of agronomic and ecological experiments from scientific literature into BETYdb is slow, error-prone, and labor-intensive. Researchers must interpret complex experimental designs, reconstruct management timelines, identify treatments and controls, handle factorial structures, and link outcomes with correct covariates and uncertainty estimates—tasks that require scientific judgment beyond simple text extraction. Current manual workflows can take hours per paper and introduce inconsistencies that compromise downstream data quality and meta-analyses.
+
+This project proposes a human-supervised, LLM-based system to accelerate BETYdb data entry while preserving scientific rigor and traceability. The system will ingest PDFs of scientific papers and produce upload-ready BETYdb entries (sites, treatments, management time series, traits, and yields) with every field labeled as extracted, inferred, or unresolved and linked to provenance evidence in the source document. The system leverages existing labeled training data (scientific papers with ground-truth BETYdb entries).
+
+The architecture follows a two-layer design: (1) a schema-validated intermediate representation (IR) preserving evidence links, confidence scores, and flagged conflicts, and (2) a BETYdb materialization layer that enforces BETYdb semantics, validation rules, and generates upload-ready CSVs or API payloads with full audit trails. Implementation is flexible—ranging from agentic LLM workflows to fine-tuned specialist models to an adaptive hybrid—and should be informed by empirical evaluation during the project.
+
+**Expected outcomes:**
+
+A successful project would complete the following tasks:
+
+* IR schema definition with validation rules and documented field semantics covering sites, treatments, managements, and traits/yields
+* Modular extraction pipeline for document parsing, information extraction, and IR generation with clear separation between extraction and validation logic
+* Independent validators for BETYdb semantics, unit consistency, temporal logic, and required fields
+* BETYdb export module producing upload-ready management CSVs and bulk trait upload formats with full provenance preservation
+* Scientist-in-the-loop review interface for approving, correcting, or rejecting extracted entries with inline evidence and confidence scores
+* Evaluation harness with automated metrics for extraction accuracy, inference quality, coverage, and time savings on held-out test papers
+* Documentation covering IR schema specification, developer guidance for adding new extraction components, and user guidance for the review interface
+
+**Prerequisites:**
+
+- Required: R Shiny, Python (familiarity with scientific literature and experimental design concepts)
+- Helpful: experience with LLM APIs (Anthropic, OpenAI) or fine-tuning frameworks, knowledge of BETYdb schema and workflows, familiarity with agronomic or ecological experimental designs
+
+**Contact person:**
+
+Nihar Sanda (@koolgax99), David LeBauer (@dlebauer)
+
+**Duration:**
+
+Large (350 hr)
+
+**Difficulty:**
+
+Medium to High
+
 <!--
 
 
