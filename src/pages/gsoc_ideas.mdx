@@ -177,13 +177,19 @@ Medium (175hr) or Large (350 hr) depending on number of deliverables
 Medium
 
 ---
-### 5. LLM-Assisted Extraction of Agronomic Experiments into BETYdb{#llm-betydb}
 
-Manual extraction of agronomic and ecological experiments from scientific literature into BETYdb is slow, error-prone, and labor-intensive. Researchers must interpret complex experimental designs, reconstruct management timelines, identify treatments and controls, handle factorial structures, and link outcomes with correct covariates and uncertainty estimates—tasks that require scientific judgment beyond simple text extraction. Current manual workflows can take hours per paper and introduce inconsistencies that compromise downstream data quality and meta-analyses.
+### 5. LLM-Assisted Extraction of Agronomic and Ecological Experiments into Structured Data {#llm-betydb}
 
-This project proposes a human-supervised, LLM-based system to accelerate BETYdb data entry while preserving scientific rigor and traceability. The system will ingest PDFs of scientific papers and produce upload-ready BETYdb entries (sites, treatments, management time series, traits, and yields) with every field labeled as extracted, inferred, or unresolved and linked to provenance evidence in the source document. The system leverages existing labeled training data (scientific papers with ground-truth BETYdb entries).
+Manual extraction of agronomic and ecological experiments from scientific literature into a structured format that can be used to calibrate and validate models is slow, error-prone, and labor-intensive. Researchers must interpret complex experimental designs, reconstruct management timelines, identify treatments and controls, handle factorial structures, and link outcomes with correct covariates and uncertainty estimates. Data are often reported as summary statistics (for example mean and standard error) in text, tables, or figures and require additional context from disturbance or management time series. These tasks require scientific judgment beyond simple text extraction.
+Current manual workflows can take hours per paper and introduce inconsistencies that compromise downstream data quality and meta-analyses.
 
-The architecture follows a two-layer design: (1) a schema-validated intermediate representation (IR) preserving evidence links, confidence scores, and flagged conflicts, and (2) a BETYdb materialization layer that enforces BETYdb semantics, validation rules, and generates upload-ready CSVs or API payloads with full audit trails. Implementation is flexible—ranging from agentic LLM workflows to fine-tuned specialist models to an adaptive hybrid—and should be informed by empirical evaluation during the project.
+This project proposes a human-supervised, LLM-based system to accelerate data extraction while preserving scientific rigor and traceability. It will leverage existing labeled training data (scientific papers with ground‑truth entries), including aligned PDF‑to‑structured‑data records from BETYdb and ForC, which represent expert‑curated, production‑quality datasets. Combined, these resources include over 80,000 plant and ecosystem observations from more than 1,000 sources and provide high-quality supervision for extraction from text, tables, and figures. Evaluation should include held-out, out-of-sample papers. The system will ingest PDFs of scientific papers and produce tables compatible with the [spreadsheet used to upload data to BETYdb](https://docs.google.com/spreadsheets/d/e/2PACX-1vSAa7jBHSaas-bH0ARxQjVLKhz3Iq03t97wrxMZrgVVi98L5bYQi5ZUC0b57xIZBlHEkPH9qYf22xQS/pubhtml) (sites, treatments, management time series, traits+yields bulk upload table) with every field labeled as extracted, inferred, or unresolved and linked to provenance evidence in the source document.
+
+The architecture follows a two-layer design: (1) a schema-validated intermediate representation (IR) preserving evidence links, confidence scores, and flagged conflicts, and (2) a materialization layer that enforces semantics, validation rules, and generates upload-ready CSVs or API payloads with full audit trails. Implementation is flexible—ranging from agentic LLM workflows to fine-tuned specialist models to an adaptive hybrid—and should be informed by empirical evaluation during the project.
+
+The architecture follows a two‑layer design: (1) a schema‑validated intermediate representation (IR) preserving evidence links, confidence scores, and flagged conflicts, and (2) a BETYdb materialization layer that enforces BETYdb semantics and validation rules and generates upload‑ready CSVs or API payloads with full audit trails.
+
+Implementation is flexible—ranging from agentic LLM workflows to fine‑tuned specialist models to an adaptive hybrid—and should be informed by empirical evaluation during the project.
 
 **Expected outcomes:**
 
@@ -194,15 +200,15 @@ A successful project would complete the following tasks:
 * Independent validators for BETYdb semantics, unit consistency, temporal logic, and required fields
 * BETYdb export module producing upload-ready management CSVs and bulk trait upload formats with full provenance preservation
 * Scientist-in-the-loop review interface for approving, correcting, or rejecting extracted entries with inline evidence and confidence scores
-* Evaluation harness with automated metrics for extraction accuracy, inference quality, coverage, and time savings on held-out test papers
+* Evaluation harness with automated metrics for extraction accuracy, inference quality, coverage, and time savings relative to manual curation on held‑out test papers
 * Documentation covering IR schema specification, developer guidance for adding new extraction components, and user guidance for the review interface
 
 **Prerequisites:**
 
-- Required: R Shiny, Python (familiarity with scientific literature and experimental design concepts)
-- Helpful: experience with LLM APIs (Anthropic, OpenAI) or fine-tuning frameworks, knowledge of BETYdb schema and workflows, familiarity with agronomic or ecological experimental designs
+- Required: Python; familiarity with natural language processing, information extraction, and machine learning
+- Helpful: experience with LLM APIs and fine-tuning frameworks, knowledge of BETYdb schema and workflows, familiarity with scientific writing and agronomic or ecological experimental design/analysis
 
-**Contact person:**
+**Contact persons:**
 
 Nihar Sanda (@koolgax99), David LeBauer (@dlebauer)
 
@@ -212,7 +218,8 @@ Large (350 hr)
 
 **Difficulty:**
 
-Medium to High
+High
+
 
 <!--
 
