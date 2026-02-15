@@ -1,4 +1,5 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+require('dotenv').config();
 module.exports = {
   title: "PEcAn Project",
   tagline:
@@ -122,6 +123,12 @@ module.exports = {
       sidebar: {
         hideable: true
       },
+    },
+    algolia: {
+      appId: process.env.ALGOLIA_APP_ID, 
+      apiKey: process.env.ALGOLIA_API_KEY, 
+      indexName: process.env.ALGOLIA_INDEX_NAME,
+      contextualSearch: false,
     },
   },
   presets: [
