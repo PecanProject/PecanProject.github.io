@@ -20,7 +20,7 @@ function News() {
                                     <p>
 
                                         This release has a number of bug fixes and added functionality. All can be seen
-                                        <a href=" https://github.com/PecanProject/pecan/releases/tag/v1.6.0"> listed here</a>. The VM
+                                        <a href="https://github.com/PecanProject/pecan/releases/tag/v1.6.0"> listed here</a>. The VM
                                         can be downloaded at (note: VM has been deprecated, so the following link may no longer work)
                                         https://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN`
                                         <p>Major additions include:
@@ -200,7 +200,7 @@ function News() {
 
                                         <p>The PEcAn project has been selected to participate in Google Summer of Code(GSoC) once again for
                                             2018. We are excited to work with more great developers. Information about our project and how
-                                            to apply can be found on our <a href="gsoc.html">GSoC</a> page.</p>
+                                            to apply can be found on our <a href="/gsoc/">GSoC</a> page.</p>
 
                                         <p>The application period is from March 12th-27th, but we welcome all interested developers to
                                             contact us to discuss projects and/or the application process and start coding! </p>
@@ -1007,7 +1007,7 @@ function News() {
                                         This release has the beta release of MAESPA and LPJ-GUESS models, an
                                         upgrade to parameter calibration (emulator tools and bayesian sampler
                                         tools), and beta release of EnKF generalization. (You can find the VM <a
-                                            href=" http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN&version=1.4.6">here</a>
+                                            href="http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN&version=1.4.6">here</a>
                                         and release notes on <a
                                             href="https://github.com/PecanProject/pecan/releases/tag/1.4.6">Github</a>)
 
@@ -1073,7 +1073,7 @@ function News() {
                                         (PRELES) model comes from our friends at the Natural Resources Institute
                                         Finland. The global CRUNCEP met product gives gives us the capability to
                                         run any model anywhere around the world! (You can find the VM <a
-                                            href=" http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">here</a>
+                                            href="http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">here</a>
                                         and release notes on <a
                                             href="https://github.com/PecanProject/pecan/releases/tag/v1.4.5">Github</a>)
 
@@ -1283,7 +1283,7 @@ function News() {
                                         conference, we're bringing in a key new feature: the ability to
                                         launch workflows from the web interface and have them executed on
                                         remote machines ! (You can find the VM <a
-                                            href=" http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">here</a>
+                                            href="http://opensource.ncsa.illinois.edu/projects/artifacts.php?key=PECAN">here</a>
                                         and release notes on <a
                                             href="https://github.com/PecanProject/pecan/releases/tag/v1.4.4">Github</a>)
 
@@ -2047,7 +2047,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/agu2014" dir="ltr">Presentations at AGU
+                    <h4><a href="/site/pecanworkflow/pecan_news/agu2014/" dir="ltr">Presentations at AGU
                         Fall Meeting 2014</a></h4>
                     <span class="timestamp">
 
@@ -2114,7 +2114,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecan140" dir="ltr">Release of PEcAN
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecan140/" dir="ltr">Release of PEcAN
                         v1.4.0</a></h4>
                     <span class="timestamp">
                         posted <span dir="ltr">Dec 12, 2014, 5:00 PM</span> by Michael Dietze
@@ -2720,7 +2720,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/lebauerhostsforecastingsoftwareworkshop"
+                    <h4><a href="/site/pecanworkflow/pecan_news/lebauerhostsforecastingsoftwareworkshop/"
                         dir="ltr">LeBauer hosts forecasting software workshop</a></h4>
                     <span class="timestamp">
 
@@ -2758,7 +2758,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecansynthesispaperacrossnorthamerica"
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecansynthesispaperacrossnorthamerica/"
                         dir="ltr">PEcAn synthesis paper across North America</a></h4>
                     <span class="timestamp">
 
@@ -2789,7 +2789,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/dietzepaperonmodelingphotosynthesis"
+                    <h4><a href="/site/pecanworkflow/pecan_news/dietzepaperonmodelingphotosynthesis/"
                         dir="ltr">Dietze paper on modeling photosynthesis</a></h4>
                     <span class="timestamp">
 
@@ -2841,7 +2841,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/serbinnasaprojectrecommendedassimilatinghyperspectraldata"
+                    <h4><a href="/site/pecanworkflow/pecan_news/serbinnasaprojectrecommendedassimilatinghyperspectraldata/"
                         dir="ltr">Serbin NASA project recommended: Assimilating hyperspectral data</a></h4>
                     <span class="timestamp">
                         <span dir="ltr">December 2013</span> by Michael Dietze
@@ -2869,7 +2869,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/presentationsatagu2013" dir="ltr">Presentations at AGU
+                    <h4><a href="/site/pecanworkflow/pecan_news/presentationsatagu2013/" dir="ltr">Presentations at AGU
                         2013</a></h4>
                     <span class="timestamp">
                         <span dir="ltr">December 2013</span> by Michael Dietze
@@ -2899,7 +2899,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/fengpaperonphotosynthesismodule" dir="ltr">Feng paper on
+                    <h4><a href="/site/pecanworkflow/pecan_news/fengpaperonphotosynthesismodule/" dir="ltr">Feng paper on
                         photosynthesis module</a></h4>
                     <span class="timestamp">
                         <span dir="ltr">December 2013</span> by Michael Dietze
@@ -2926,7 +2926,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/dietzeteachescourseinecologicalforecasting" dir="ltr">Dietze teaches
+                    <h4><a href="/site/pecanworkflow/pecan_news/dietzeteachescourseinecologicalforecasting/" dir="ltr">Dietze teaches
                         course in Ecological Forecasting</a></h4>
                     <span class="timestamp">
                         <span dir="ltr">Fall 2013</span> by Michael Dietze
@@ -2955,7 +2955,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/presentationsatesa2013" dir="ltr">Presentations at ESA 2013</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/presentationsatesa2013/" dir="ltr">Presentations at ESA 2013</a></h4>
                     <span class="timestamp">
                         <span dir="ltr">August 2013</span> by Michael Dietze
                     </span>
@@ -2990,7 +2990,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/kooperpresentspecanatxsede13" dir="ltr">Kooper presents PEcAn at
+                    <h4><a href="/site/pecanworkflow/pecan_news/kooperpresentspecanatxsede13/" dir="ltr">Kooper presents PEcAn at
                         XSEDE13</a></h4>
                     <span class="timestamp">
                         <span dir="ltr">July 2013</span> by Michael Dietze
@@ -3019,7 +3019,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/lebauerarticleinrjournal" dir="ltr">LeBauer article in R Journal</a>
+                    <h4><a href="/site/pecanworkflow/pecan_news/lebauerarticleinrjournal/" dir="ltr">LeBauer article in R Journal</a>
                     </h4>
                     <span class="timestamp">
                         <span dir="ltr">June 2013</span> by Michael Dietze
@@ -3041,7 +3041,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanhighlightedinfacultyof1000review" dir="ltr">PEcAn highlighted in
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanhighlightedinfacultyof1000review/" dir="ltr">PEcAn highlighted in
                         Faculty of 1000 review</a></h4>
                     <span class="timestamp">
 
@@ -3074,7 +3074,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/undergradsexposedtomodel-datafusion" dir="ltr">Undergrads exposed to
+                    <h4><a href="/site/pecanworkflow/pecan_news/undergradsexposedtomodel-datafusion/" dir="ltr">Undergrads exposed to
                         model-data fusion</a></h4>
                     <span class="timestamp">
 
@@ -3131,7 +3131,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/springsemester2013talks" dir="ltr">Spring Semester 2013 Talks</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/springsemester2013talks/" dir="ltr">Spring Semester 2013 Talks</a></h4>
                     <span class="timestamp">
 
 
@@ -3160,7 +3160,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/studentpecanprogrammingpositions" dir="ltr">Student PEcAn Programming
+                    <h4><a href="/site/pecanworkflow/pecan_news/studentpecanprogrammingpositions/" dir="ltr">Student PEcAn Programming
                         Positions</a></h4>
                     <span class="timestamp">
 
@@ -3202,7 +3202,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatnacpaim4" dir="ltr">PEcAn at NACP AIM4</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatnacpaim4/" dir="ltr">PEcAn at NACP AIM4</a></h4>
                     <span class="timestamp">
 
 
@@ -3241,7 +3241,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/toniviskarijoinspecanteam" dir="ltr">Toni Viskari joins PEcAn team</a>
+                    <h4><a href="/site/pecanworkflow/pecan_news/toniviskarijoinspecanteam/" dir="ltr">Toni Viskari joins PEcAn team</a>
                     </h4>
                     <span class="timestamp">
 
@@ -3271,7 +3271,7 @@ function News() {
 
                 </div>
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatagu2012" dir="ltr">PEcAn at AGU 2012</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatagu2012/" dir="ltr">PEcAn at AGU 2012</a></h4>
                     <span class="timestamp">
 
 
@@ -3322,7 +3322,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanusedtoassessbiofuelpotentialofhybridpoplar" dir="ltr">PEcAn used to
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanusedtoassessbiofuelpotentialofhybridpoplar/" dir="ltr">PEcAn used to
                         assess biofuel potential of hybrid Poplar</a></h4>
                     <span class="timestamp">
 
@@ -3373,7 +3373,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecan126released" dir="ltr">PEcAn 1.2.6 Released</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecan126released/" dir="ltr">PEcAn 1.2.6 Released</a></h4>
                     <span class="timestamp">
 
 
@@ -3414,7 +3414,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecan11sourcecodereleased" dir="ltr">PEcAn 1.1 Source Code Released</a>
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecan11sourcecodereleased/" dir="ltr">PEcAn 1.1 Source Code Released</a>
                     </h4>
                     <span class="timestamp">
 
@@ -3462,7 +3462,7 @@ function News() {
 
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatforecastrcn2012" dir="ltr">PEcAn at FORECAST RCN 2012</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatforecastrcn2012/" dir="ltr">PEcAn at FORECAST RCN 2012</a></h4>
                     <span class="timestamp">
 
 
@@ -3495,7 +3495,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatforestsat2012" dir="ltr">PEcAn at ForestSAT 2012</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatforestsat2012/" dir="ltr">PEcAn at ForestSAT 2012</a></h4>
                     <span class="timestamp">
 
 
@@ -3530,7 +3530,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanmanuscriptecologicalmonographs" dir="ltr">PEcAn manuscript:
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanmanuscriptecologicalmonographs/" dir="ltr">PEcAn manuscript:
                         Ecological Monographs</a></h4>
                     <span class="timestamp">
 
@@ -3583,7 +3583,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatcheasmeeting2012" dir="ltr">PEcAn at ChEAS meeting 2012</a></h4>
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatcheasmeeting2012/" dir="ltr">PEcAn at ChEAS meeting 2012</a></h4>
                     <span class="timestamp">
 
 
@@ -3622,7 +3622,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/carldavidsondefendsmastersthesisapplyingpecantoalaskantundra"
+                    <h4><a href="/site/pecanworkflow/pecan_news/carldavidsondefendsmastersthesisapplyingpecantoalaskantundra/"
                         dir="ltr">Carl Davidson defends Master's Thesis applying PEcAn to Alaskan Tundra</a></h4>
                     <span class="timestamp">
 
@@ -3668,7 +3668,7 @@ function News() {
                 </div>
 
                 <div class="news-container">
-                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatpaleonsummercourse2012" dir="ltr">PEcAn at PalEON summer course
+                    <h4><a href="/site/pecanworkflow/pecan_news/pecanatpaleonsummercourse2012/" dir="ltr">PEcAn at PalEON summer course
                         2012</a></h4>
                     <span class="timestamp">
 

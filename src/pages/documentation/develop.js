@@ -19,7 +19,7 @@ function Develop() {
           // sandbox=""
         >
           <p>
-            <a href="/en-US/docs/Glossary">
+            <a href="/en-US/docs/Glossary/">
               Fallback link for browsers that don't support iframes
             </a>
           </p>

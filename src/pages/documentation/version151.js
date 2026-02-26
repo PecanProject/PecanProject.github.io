@@ -17,7 +17,7 @@ function Versioin151() {
           id="iFrame7"
         >
           <p>
-            <a href="/en-US/docs/Glossary">
+            <a href="/en-US/docs/Glossary/">
               Fallback link for browsers that don't support iframes
             </a>
           </p>
