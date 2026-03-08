@@ -60,6 +60,7 @@ module.exports = {
           items: [
             { to: "/gsoc/", label: "Contributor Guidance" },
             { to: "/gsoc_ideas/", label: "Ideas List" },
+            { to: "/open-contributions/", label: "Open Contributions" },
           ],
         },
       ],
