@@ -4,7 +4,7 @@ const ProjectAlumni = [
     email: "hamzed@illinois.edu",
     role: "",
     profession: "Staff Scientist, Indigo Ag",
-    img: "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=91lPlxQAAAAJ&citpid=7",
+    img: "https://i.postimg.cc/x8n2kh73/image.png",
   },
   {
     name: "Tony Gardella",
@@ -66,7 +66,15 @@ const ProjectAlumni = [
     name: "Rohan Sasne",
     email: "rohansasne30@gmail.com",
     role: "GSoC'23 Contributor",
-    profession: "Co-Founder and CEO, Dynalize Technologies"
+    profession: "Co-Founder and CEO, Dynalize Technologies",
+    img: "https://i.postimg.cc/fbmpx5Y8/image.png",
+  },
+  {
+    name: "Akash B V",
+    email: "akbv23cs@cmrit.ac.in",
+    role: "GSoC'25 Contributor & GSoC '26 Mentor",
+    profession: "The Lebauar Approch,LLC,USA",
+    img: "https://i.postimg.cc/j22rQPxR/172599013.png",
   },
 ];
 export default ProjectAlumni;
