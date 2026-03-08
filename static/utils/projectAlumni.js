@@ -68,5 +68,12 @@ const ProjectAlumni = [
     role: "GSoC'23 Contributor",
     profession: "Co-Founder and CEO, Dynalize Technologies"
   },
+  {
+    name: "Akash B V",
+    email: "akbv23cs@cmrit.ac.in",
+    role: "GSoC'25 Contributor & GSoC '26 Mentor",
+    profession: "The Lebauar Approch,LLC,USA",
+    img: "https://i.postimg.cc/j22rQPxR/172599013.png",
+  },
 ];
 export default ProjectAlumni;
