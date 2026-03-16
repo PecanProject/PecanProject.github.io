@@ -4,7 +4,7 @@ const ProjectAlumni = [
     email: "hamzed@illinois.edu",
     role: "",
     profession: "Staff Scientist, Indigo Ag",
-    img: "https://i.postimg.cc/x8n2kh73/image.png",
+    img: "/img/people/Hamze Dokoohaki.png", // Updated to local image
   },
   {
     name: "Tony Gardella",
@@ -18,7 +18,7 @@ const ProjectAlumni = [
     email: "tanishqjain010@gmail.com",
     role: "GSoC'22 Contributor",
     profession: "Software Engineer, Bosch",
-    img: "https://avatars.githubusercontent.com/u/83662210?v=4",
+    img: "/img/people/Tanishq Jain.jpg", // Updated to local image
   },
   {
     name: "Akhil Jha",
@@ -67,14 +67,14 @@ const ProjectAlumni = [
     email: "rohansasne30@gmail.com",
     role: "GSoC'23 Contributor",
     profession: "Co-Founder and CEO, Dynalize Technologies",
-    img: "https://i.postimg.cc/fbmpx5Y8/image.png",
+    img: "/img/people/Rohan Sasne.png", // Updated to local image
   },
   {
     name: "Akash B V",
     email: "akbv23cs@cmrit.ac.in",
     role: "GSoC'25 Contributor & GSoC '26 Mentor",
     profession: "The Lebauar Approch,LLC,USA",
-    img: "https://i.postimg.cc/j22rQPxR/172599013.png",
+    img: "/img/people/Akash B V.png", // Updated to local image
   },
 ];
 export default ProjectAlumni;
