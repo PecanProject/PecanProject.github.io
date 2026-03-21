@@ -22,9 +22,9 @@ function gsoc() {
                             <p> </p>
                             &nbsp;
 
-                            <h2><a href="gsoc_ideas">Project Ideas</a></h2>
+                            <h2><a href="/gsoc_ideas/">Project Ideas</a></h2>
 
-                            Ecosystem science has many components, so does PEcAn! Some Project ideas can be found here on our <a href="gsoc_ideas.html">project ideas list.</a>
+                            Ecosystem science has many components, so does PEcAn! Some Project ideas can be found here on our <a href="/gsoc_ideas/">project ideas list.</a>
 
                             <p>&nbsp;</p>
 
@@ -48,7 +48,7 @@ function gsoc() {
                             <p>&nbsp;</p>
 
                             <ul>
-                                <li>Choose a project from our <a href="gsoc_ideas.html">project ideas list</a> or come up with your own.</li>
+                                <li>Choose a project from our <a href="/gsoc_ideas/">project ideas list</a> or come up with your own.</li>
                                 <li>Join the <a href="https://pecanproject.slack.com/archives/C0853U6GF71" target="_blank" rel="noopener noreferrer">#gsoc-2025</a> channel in our slack workspace and introduce yourself</li>
                                 <li>Send message to your project-specific mentors indicating that you are interested in their idea and how you plan to implement the idea</li>
                             </ul>

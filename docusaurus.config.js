@@ -4,7 +4,7 @@ module.exports = {
   tagline:
     "Ecosystem science, policy, and management informed by the best available data and models",
   url: "https://pecanproject.github.io",
-  baseUrl: "/",
+  baseUrl: process.env.BASE_URL || "/",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -23,16 +23,13 @@ module.exports = {
           position: "left",
           items: [
             {
-              to: "/documentation",
-              label: "Documentation",
+              to: "/documentation/", label: "Documentation",
             },
             {
-              to: "/package-documentation/develop",
-              label: "Package Documentation",
+              to: "/package-documentation/", label: "Package Documentation",
             },
             {
-              to: "/tutorials",
-              label: "Tutorials",
+              to: "/tutorials/", label: "Tutorials",
             },
             {
               to: "http://pecan.ncsa.illinois.edu/pecan/01-introduction.php",
@@ -40,17 +37,18 @@ module.exports = {
             },
           ],
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog/", label: "Blog", position: "left" },
         {
           label: "About",
           position: "left",
           items: [
-            { to: "/about", label: "About" },
-            { to: "/people", label: "People" },
-            { to: "/alumni", label: "Alumni" },
+            { to: "/about/", label: "About" },
+            { to: "/people/", label: "People" },
+            { to: "/alumni/", label: "Alumni" },
+            { to: "/news/", label: "News" },
           ],
         },
-        { to: "/publications", label: "Publications", position: "left" },
+        { to: "/publications/", label: "Publications", position: "left" },
         {
           href: "https://github.com/PecanProject",
           position: "right",
@@ -61,8 +59,8 @@ module.exports = {
           label: "GSoC",
           position: "left",
           items: [
-            { to: "/gsoc", label: "Contributor Guidance" },
-            { to: "/gsoc_ideas", label: "Ideas List" },
+            { to: "/gsoc/", label: "Contributor Guidance" },
+            { to: "/gsoc_ideas/", label: "Ideas List" },
           ],
         },
       ],
@@ -74,7 +72,7 @@ module.exports = {
           items: [
             {
               label: "Tutorial",
-              to: "/documentation/master",
+              to: "/documentation/latest/",
               className: "footer-docs-link",
             },
           ],
