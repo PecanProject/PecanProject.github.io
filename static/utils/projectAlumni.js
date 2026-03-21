@@ -73,7 +73,7 @@ const ProjectAlumni = [
     name: "Akash B V",
     email: "akbv23cs@cmrit.ac.in",
     role: "GSoC'25 Contributor & GSoC '26 Mentor",
-    profession: "The Lebauar Approch,LLC,USA",
+    profession: "The Lebauar Approch, LLC, USA",
     img: "/img/people/Akash B V.png", // Updated to local image
   },
 ];
