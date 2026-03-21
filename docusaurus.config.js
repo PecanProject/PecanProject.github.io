@@ -7,7 +7,11 @@ module.exports = {
   baseUrl: process.env.BASE_URL || "/",
   trailingSlash: true,
   onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   favicon: "img/favicon.ico",
   organizationName: "PecanProject", // Usually your GitHub org/user name.
   projectName: "PecanProject.github.io", // Usually your repo name.
