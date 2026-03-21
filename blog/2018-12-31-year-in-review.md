@@ -1,10 +1,12 @@
 ---
 title: 2018 Year in Review
-authors: [david_lebauer]
+authors: [mike_dietze]
 tags: [news, conferences, talks]
 ---
 
 A roundup of PEcAn project activities and highlights from 2018.
+
+The year featured conference presentations, invited talks, and another round of community-building through Google Summer of Code and related outreach.
 
 <!--truncate-->
 

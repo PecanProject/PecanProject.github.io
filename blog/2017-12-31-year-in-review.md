@@ -1,10 +1,12 @@
 ---
 title: 2017 Year in Review
-authors: [david_lebauer]
+authors: [mike_dietze]
 tags: [news, conferences, workshops, agu]
 ---
 
 A roundup of PEcAn project activities and highlights from 2017.
+
+This was a year of visible community engagement, from AGU and ESA events to training activities, student projects, and continued development of forecasting and data-assimilation workflows.
 
 <!--truncate-->
 

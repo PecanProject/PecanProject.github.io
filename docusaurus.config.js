@@ -5,6 +5,7 @@ module.exports = {
     "Ecosystem science, policy, and management informed by the best available data and models",
   url: "https://pecanproject.github.io",
   baseUrl: process.env.BASE_URL || "/",
+  trailingSlash: true,
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -132,6 +133,7 @@ module.exports = {
         docs: false,
         blog: {
           showReadingTime: true,
+          blogSidebarCount: 10,
           // Please change this to your repo.
           editUrl: "https://github.com/PecanProject/web/edit/main",
         },

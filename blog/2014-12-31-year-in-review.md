@@ -1,10 +1,12 @@
 ---
 title: 2014 Year in Review
-authors: [david_lebauer]
+authors: [mike_dietze]
 tags: [news, conferences, publications, brown-dog]
 ---
 
 A roundup of PEcAn project activities and highlights from 2014.
+
+The project continued to grow through major conference activity, software development, publications, and related cyberinfrastructure efforts such as Brown Dog.
 
 <!--truncate-->
 

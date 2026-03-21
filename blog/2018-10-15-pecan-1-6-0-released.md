@@ -6,6 +6,8 @@ tags: [release, pecan]
 
 This release has a number of bug fixes and added functionality. All can be seen [listed here](https://github.com/PecanProject/pecan/releases/tag/v1.6.0).
 
+Key additions included new tools for data ingest, preliminary containerized modules, and early support for automated daily forecasting workflows.
+
 <!--truncate-->
 
 ## Major additions include:

@@ -1,6 +1,6 @@
 ---
 title: GSoC '25 Project Roundup
-author: david_lebauer
+authors: david_lebauer
 tags: [gsoc, gsoc25]
 ---
 
@@ -9,6 +9,8 @@ tags: [gsoc, gsoc25]
 This summer marked the **ninth consecutive year** that the PEcAn Project participated in **Google Summer of Code (GSoC)**. Over that time, **30 student-led projects** have made significant contributions to PEcAn’s mission of advancing open, reproducible ecosystem modeling.
 
 The 2025 cohort continued this tradition with three contributions that improve functionality and user experience.
+
+<!-- truncate -->
 
 ## 2025 GSoC Projects
 

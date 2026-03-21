@@ -1,10 +1,12 @@
 ---
 title: 2013 Year in Review
-authors: [david_lebauer]
+authors: [mike_dietze]
 tags: [news, conferences, publications]
 ---
 
 A roundup of PEcAn project activities and highlights from 2013.
+
+Highlights from the year include conference presentations, new collaborations, and continued progress in connecting ecosystem models with observations and data synthesis workflows.
 
 <!--truncate-->
 

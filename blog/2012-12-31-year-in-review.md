@@ -1,10 +1,12 @@
 ---
 title: 2012 Year in Review
-authors: [david_lebauer]
+authors: [mike_dietze]
 tags: [news, conferences, publications, releases]
 ---
 
 A roundup of PEcAn project activities and highlights from 2012.
+
+This year included foundational publications, software releases, training activities, and conference presentations that helped establish PEcAn's early scientific and community footprint.
 
 <!--truncate-->
 

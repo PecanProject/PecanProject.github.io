@@ -6,6 +6,8 @@ tags: [release, pecan, dalec]
 
 PEcAn version 1.3.7 has been released with better support for new model types and the addition of the DALEC model.
 
+This release expanded the platform's flexibility for model integration and made it easier to configure the inputs needed for different workflows.
+
 <!--truncate-->
 
 ## Overview

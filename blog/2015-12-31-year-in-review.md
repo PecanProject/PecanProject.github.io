@@ -1,10 +1,12 @@
 ---
 title: 2015 Year in Review
-authors: [david_lebauer]
+authors: [mike_dietze]
 tags: [news, conferences, publications, grants]
 ---
 
 A roundup of PEcAn project activities and highlights from 2015.
+
+The year brought new team members, community-building efforts, and steady advances in releases, grants, and research applications across the PEcAn ecosystem.
 
 <!--truncate-->
 

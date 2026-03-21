@@ -6,6 +6,8 @@ tags: [release, pecan]
 
 PEcAn version 1.4.0 has been released with major new meteorological data handling capabilities.
 
+The update focused on making met forcing data easier to download, standardize, gap fill, and convert into model-ready formats for PEcAn runs.
+
 <!--truncate-->
 
 ## Overview

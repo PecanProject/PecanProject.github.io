@@ -6,6 +6,8 @@ tags: [release, pecan]
 
 PEcAn version 1.5.0 has been released with several new features and improvements.
 
+The release bundled updates across data ingest, Docker-based workflows, configuration editing, and meteorological processing to make the platform easier to operate and extend.
+
 <!--truncate-->
 
 ## Added

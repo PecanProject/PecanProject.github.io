@@ -1,10 +1,12 @@
 ---
 title: 2016 Year in Review
-authors: [david_lebauer]
+authors: [mike_dietze]
 tags: [news, workshops, releases]
 ---
 
 A roundup of PEcAn project activities and highlights from 2016.
+
+Across the year, the project combined regular software releases with workshops, invited talks, and hands-on collaborations that broadened both the platform and its user community.
 
 <!--truncate-->
 
