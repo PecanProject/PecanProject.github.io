@@ -7,6 +7,11 @@ david_lebauer:
     github: dlebauer
     linkedin: dlebauer
 
+mike_dietze:
+  name: Mike Dietze
+  title: PEcAn Project PI
+  image_url: /img/people/michael_dietze.jpg
+
 rohan_sasne:
   name: Rohan Sasne
   title: GSoC'23 participant @PEcAn Project

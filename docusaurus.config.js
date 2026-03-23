@@ -5,8 +5,13 @@ module.exports = {
     "Ecosystem science, policy, and management informed by the best available data and models",
   url: "https://pecanproject.github.io",
   baseUrl: process.env.BASE_URL || "/",
+  trailingSlash: true,
   onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   favicon: "img/favicon.ico",
   organizationName: "PecanProject", // Usually your GitHub org/user name.
   projectName: "PecanProject.github.io", // Usually your repo name.
@@ -32,7 +37,8 @@ module.exports = {
               to: "/tutorials/", label: "Tutorials",
             },
             {
-              to: "http://pecan.ncsa.illinois.edu/pecan/01-introduction.php", label: "Demo"
+              to: "http://pecan.ncsa.illinois.edu/pecan/01-introduction.php",
+              label: "Demo",
             },
           ],
         },
@@ -114,13 +120,13 @@ module.exports = {
               `,
             },
           ],
-        }
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} PEcAn Project.`,
     },
     docs: {
       sidebar: {
-        hideable: true
+        hideable: true,
       },
     },
   },
@@ -131,6 +137,7 @@ module.exports = {
         docs: false,
         blog: {
           showReadingTime: true,
+          blogSidebarCount: 10,
           // Please change this to your repo.
           editUrl: "https://github.com/PecanProject/web/edit/main",
         },
