@@ -8,8 +8,8 @@ function gsoc() {
         <Layout title="Google Summer of Code (GSoC)">
             <div className={styles.aboutContainer}>
                 <h1>
-                    <a name="background" className="anchor" href="#background">
-                        <span className="octicon octicon-link"></span>
+                    <a id="background" className="anchor" href="#background" aria-label="Background">
+                        <span className="octicon octicon-link" aria-hidden="true"></span>
                     </a>
                     <a href="https://summerofcode.withgoogle.com/">
                         Google Summer of Code (GSoC)
