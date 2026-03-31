@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
 import styles from "./about.module.css";
 import clsx from "clsx";
 
@@ -31,13 +32,13 @@ function gsoc() {
                             <p>&nbsp;</p>
 
                             <h2>
-                                <a href="/gsoc_ideas/">Project Ideas</a>
+                                <Link to="/gsoc_ideas/">Project Ideas</Link>
                             </h2>
 
                             <p>
                                 Ecosystem science has many components, so does PEcAn. Some project
                                 ideas can be found on our{" "}
-                                <a href="/gsoc_ideas/">project ideas list</a>.
+                                <Link to="/gsoc_ideas/">project ideas list</Link>.
                                 Contributors are also welcome to develop new ideas with feedback from 
                                 the community. 
                             </p>
@@ -75,7 +76,7 @@ function gsoc() {
                                     </a>.
                                 </li>
                                 <li>
-                                    Review our <a href="/gsoc_ideas/">project ideas list</a> and
+                                    Review our <Link to="/gsoc_ideas/">project ideas list</Link> and
                                     identify one or two ideas that interest you.
                                 </li>
                                 <li>
