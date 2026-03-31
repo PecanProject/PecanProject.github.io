@@ -97,7 +97,7 @@ function gsoc() {
                                 </li>
                                 <li>
                                     Look for a{" "}
-                                    <a href="https://github.com/search?q=org%3APecanProject+tag%3A%22good+first+issue%22+&type=issues">
+                                    <a href="https://github.com/search?q=org%3APecanProject+label%3A%22good+first+issue%22+&type=issues">
                                         good first issue
                                     </a>{" "}
                                     when you are ready to start contributing code.
