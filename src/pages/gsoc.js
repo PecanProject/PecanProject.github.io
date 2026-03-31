@@ -18,8 +18,6 @@ function gsoc() {
                 <div className={clsx(styles.cardContainer)}>
                     {" "}
                     <div className="card">
-                        <div className="card__header" style={{ textAlign: "center" }}>
-                        </div>
                         <div className="card__body">
                             <h2>What is GSoC?</h2>
                             <p>
