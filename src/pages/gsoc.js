@@ -1,95 +1,145 @@
 import React from "react";
 import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
 import styles from "./about.module.css";
 import clsx from "clsx";
+
 function gsoc() {
     return (
-        <Layout title="About">
+        <Layout title="Google Summer of Code (GSoC)">
             <div className={styles.aboutContainer}>
-                <h1><a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a><a href="https://summerofcode.withgoogle.com/">Google Summer of Code (GSoC)</a></h1>
+                <h1>
+                    <a id="background" className="anchor" href="#background" aria-label="Background">
+                        <span className="octicon octicon-link" aria-hidden="true"></span>
+                    </a>
+                    <a href="https://summerofcode.withgoogle.com/">
+                        Google Summer of Code (GSoC)
+                    </a>
+                </h1>
                 <div className={clsx(styles.cardContainer)}>
                     {" "}
-
-                    <div class="card">
-                        <div class="card__header" style={{ textAlign: "center" }}>
-
-                        </div>
-                        <div class="card__body">
-
-
+                    <div className="card">
+                        <div className="card__body">
                             <h2>What is GSoC?</h2>
-                            For over 10 years Google has sponsored a global program that pairs students with open source software development projects. For three months over the summer students receive real world experience contributing to software development and guidance from mentors. On the other hand, participating organizations are able to bring in new developers to grow their code base. Overall, GSoC helps open source communities grow and thrive. Thousands of student and organization from around the world have participated and now you can too!
-                            <p> </p>
-                            &nbsp;
-
-                            <h2><a href="/gsoc_ideas/">Project Ideas</a></h2>
-
-                            Ecosystem science has many components, so does PEcAn! Some Project ideas can be found here on our <a href="/gsoc_ideas/">project ideas list.</a>
-
-                            <p>&nbsp;</p>
-
-                            <h2><a href="#how-to-apply" onClick={(e) => e.preventDefault()}>How to apply?</a></h2>
-
-                            There are two steps to the application process:
-
-                            <ol>
-                                <li>Getting acquainted with the project, mentors and ideas</li>
-                                <li>Writing a good proposal</li>
-                            </ol>
+                            <p>
+                                Google Summer of Code is a global program that pairs contributors
+                                with open source software projects. Over the summer, contributors
+                                gain real-world experience contributing to software development and
+                                working with mentors, while participating organizations grow their
+                                communities and codebases.
+                            </p>
 
                             <p>&nbsp;</p>
 
-                            <h3>Getting acquainted with the project, mentors and ideas</h3>
+                            <h2>
+                                <Link to="/gsoc_ideas/">Project Ideas</Link>
+                            </h2>
 
-                            The first step is for you to get acquainted with the PEcAn project, the ideas and to introuduce
-                            yourself with the mentors. This will help you get a significantly better proposal, and will
-                            make it more like for us to rate your propsal higher.
+                            <p>
+                                Ecosystem science has many components, so does PEcAn. Some project
+                                ideas can be found on our{" "}
+                                <Link to="/gsoc_ideas/">project ideas list</Link>.
+                                Contributors are also welcome to develop new ideas with feedback from 
+                                the community. 
+                            </p>
 
                             <p>&nbsp;</p>
+
+                            <h2>Getting Started</h2>
+
+                            <p>
+                                If you are interested in contributing to PEcAn through GSoC, the
+                                best place to start is our{" "}
+                                <a href="https://github.com/PecanProject/pecan/discussions/3469">
+                                    getting started discussion
+                                </a>.
+                                {" "}Please read that page first and follow the instructions there.
+                            </p>
+
+                            <p>&nbsp;</p>
+
+                            <h3>A few good places to start</h3>
 
                             <ul>
-                                <li>Choose a project from our <a href="/gsoc_ideas/">project ideas list</a> or come up with your own.</li>
-                                <li>Join the <a href="https://pecanproject.slack.com/archives/C0853U6GF71" target="_blank" rel="noopener noreferrer">#gsoc-2025</a> channel in our slack workspace and introduce yourself</li>
-                                <li>Send message to your project-specific mentors indicating that you are interested in their idea and how you plan to implement the idea</li>
+                                <li>
+                                    Read the{" "}
+                                    <a href="https://github.com/PecanProject/pecan/discussions/3469">
+                                        getting started discussion
+                                    </a>
+                                    , along with our{" "}
+                                    <a href="https://github.com/PecanProject/pecan/blob/develop/CONTRIBUTING.md">
+                                        contributing guide
+                                    </a>{" "}
+                                    and{" "}
+                                    <a href="https://github.com/PecanProject/pecan/blob/develop/CODE_OF_CONDUCT.md">
+                                        code of conduct
+                                    </a>.
+                                </li>
+                                <li>
+                                    Review our <Link to="/gsoc_ideas/">project ideas list</Link> and
+                                    identify one or two ideas that interest you.
+                                </li>
+                                <li>
+                                    Join the{" "}
+                                    <a
+                                        href="https://pecanproject.slack.com/archives/C0853U6GF71"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        #gsoc
+                                    </a>{" "}
+                                    channel in Slack and introduce yourself.
+                                </li>
+                                <li>
+                                    Improve documentation, work on tests, or help triage open pull
+                                    requests and issues.
+                                </li>
+                                <li>
+                                    Look for a{" "}
+                                    <a href="https://github.com/search?q=org%3APecanProject+label%3A%22good+first+issue%22+&type=issues">
+                                        good first issue
+                                    </a>{" "}
+                                    when you are ready to start contributing code.
+                                </li>
                             </ul>
 
                             <p>&nbsp;</p>
 
-                            <h3>When talking to the mentors, use the following questions to introuduce yourself:</h3>
+                            <h2>Applying to GSoC</h2>
 
-                            <ul>
-                                <li>What interests you most about our project?</li>
-                                <li>What is your background, and what made you pick the specific idea?</li>
-                                <li>What is your familiarity with the recommended technologies?</li>
-                                <li>As mentors and project coordinators, how can we get the best out of you?</li>
-                                <li>Is there anything that you’ll be studying or working on whilst working alongside us?</li>
-                            </ul>
+                            <p>
+                                After reviewing the project ideas and getting started guidance, reach out
+                                in Slack. Contact the project mentor(s) if you have questions about a
+                                specific project idea.
 
-                            <p>&nbsp;</p>
+                                If multiple mentors are listed, create a thread with all mentors. This
+                                helps us give more efficient and consistent feedback.
 
-                            <h3>Writing a good proposal</h3>
+                                Becoming part of the community before submitting a proposal is important.
+                                Proposals submitted at the last minute, without prior engagement with the
+                                project or mentors, are much less likely to be competitive.
 
-                            Next, write and submit your GSoC proposal after discussing this with the mentor. In the proposal make sure to
-                            include a well-defined, weekly schedule with clear milestones and deliverables around it. Make sure to include
-                            in your schedule any time you need to learn new technologies, as well as make sure that before the
-                            evaluations dates, you have a deliverable that we can use to evaluate. We understand that schedules change, but it
-                            would be good to add some must haves to your list of deliverables that will make your project a success as well
-                            as some extra goals in case you have additional time at the end.
-
-                            <p>&nbsp;</p>
-
-                            See also <a href="https://google.github.io/gsocguides/student/writing-a-proposal.html">Google's proposal guidelines</a>
+                                Once you have gotten acquainted with the project and discussed your
+                                interests with potential mentors, you can begin drafting your proposal.
+                                A strong proposal should include a realistic timeline, clear milestones,
+                                and concrete deliverables.
+                            </p>
 
                             <p>&nbsp;</p>
 
-                            Good Luck
+                            <p>
+                                See also{" "}
+                                <a href="https://google.github.io/gsocguides/student/writing-a-proposal.html">
+                                    Google&apos;s proposal guidelines
+                                </a>.
+                            </p>
 
+                            <p>&nbsp;</p>
 
-
+                            <p>Good luck</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </Layout>
     );
