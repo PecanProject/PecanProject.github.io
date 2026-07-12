@@ -192,7 +192,6 @@ tags: [gsoc, gsoc21]
 ---
 ```
 
-
 <!-- These screenshots are large and don't appear to be in the right place, if necessary
 ## Screenshots
 
