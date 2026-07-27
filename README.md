@@ -51,21 +51,21 @@ This section will help one to setup the project for local development.
 ### Requirements
 
 - Node version >= 12.13.0
-- yarn
+- npm
 
 This project has been built using [Docusaurus 2](https://docusaurus.io/), which requires Node version >=12.13.0, you can check this using `node -v`. [Install node](https://nodejs.org/en/download/).
-Make sure yarn is installed. [Install yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable).
+Make sure npm is installed. npm is included with Node.js.
 
 ### Installation
 
 ```console
-yarn install
+npm ci
 ```
 
 ### Local Development
 
 ```console
-yarn start
+npm start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
@@ -73,7 +73,7 @@ This command starts a local development server and opens up a browser window. Mo
 ### Build
 
 ```console
-yarn build
+npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
@@ -89,7 +89,7 @@ All involved are expected to follow the [PEcAn code of conduct](https://pecanpro
 
 First time contributors are welcome. Contributions can be very simple, make sure to check out issues labeled ['good first issue'](https://github.com/PecanProject/PecanProject.github.io/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22). If you have an idea, the best place to start a discussion is on the PEcAn project Slack channel, or by opening an issue in this repository.
 
-Changes to `package-lock.json` and `yarn.lock` files should only be committed when:
+Changes to `package-lock.json` should only be committed when:
 
 - Adding a new dependency: Installing a new package will modify these lock files to ensure the exact version is documented.
 - Updating an existing dependency: Running an update for a package will adjust these files to reflect the new versions.
@@ -179,7 +179,7 @@ Steps to add a blog post:
    - If the author is not already listed in `blog/authors.yml` add them as a new entry. 
 4. write your blog and save the file.
 5. any images can be put in `static/img/` and referenced using a relative path `static/img/myimage.png`
-6. build the website to make sure the blog shows up as expected (`yarn build` and `yarn start`
+6. build the website to make sure the blog shows up as expected (`npm run build` and `npm start`)
 7. After the new changes are merged into the main branch, the new blog post will appear on the website.
 
 Here is an example of the blog header:
