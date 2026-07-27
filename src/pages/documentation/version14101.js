@@ -17,7 +17,7 @@ function Versioin14101() {
           id="iFrame9"
         >
           <p>
-            <a href="/en-US/docs/Glossary">
+            <a href="https://pecanproject.github.io/pecan-documentation/1.4.10.1/">
               Fallback link for browsers that don't support iframes
             </a>
           </p>
