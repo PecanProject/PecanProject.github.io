@@ -17,7 +17,7 @@ function V1_10_0() {
           id="iFrame3"
         >
           <p>
-            <a href="/en-US/docs/Glossary">
+            <a href="https://pecanproject.github.io/pecan-documentation/v1.10.0">
               Fallback link for browsers that don't support iframes
             </a>
           </p>
