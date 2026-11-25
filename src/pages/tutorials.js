@@ -22,93 +22,72 @@ function Tutorials() {
 
                     <h4>Flux Course 2012: PEcAn Tutorial</h4>
 
-                    <section id="main_content" class="inner">
-
-                        <iframe width="560" height="315" src="//www.youtube.com/embed/S_y6SnO7Hbw" frameborder="0" allowfullscreen></iframe>
-
+                    <section id="main_content" className="inner" style={{ width: "100%", maxWidth: 560 }}>
+                        <iframe
+                            title="Flux Course 2012: PEcAn Tutorial"
+                            width="100%"
+                            style={{ aspectRatio: "16 / 9" }}
+                            src="//www.youtube.com/embed/S_y6SnO7Hbw"
+                            frameBorder="0"
+                            allowFullScreen
+                        />
                     </section>
 
                     <div><br /></div>
 
                     <h1>Tutorials from previous Releases</h1>
 
-                    <div>PEcAn Tutorial v1.5.2
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="https://pecanproject.github.io/pecan-documentation/tutorials/Demo01.html" target="_blank" rel="nofollow">Tutorial 1</a>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="https://pecanproject.github.io/pecan-documentation/tutorials/Demo02.html" target="_blank" rel="nofollow">Tutorial 2</a>
-                    </div>
+                    <p>
+                        For PEcAn v1.4.10 and later, choose the <a href="https://github.com/PecanProject/pecan/tags">release tag</a> that
+                        matches your installation and open <code>documentation/tutorials</code>. For example, see
+                        the <a href="https://github.com/PecanProject/pecan/tree/v1.4.10/documentation/tutorials">v1.4.10 tutorials</a>.
+                        Older tutorials may require the software environment used for that release.
+                    </p>
+
+                    <p>
+                        PEcAn Tutorial v1.5.2<br />
+                        <a href="https://raw.githubusercontent.com/PecanProject/pecan/v1.5.2/documentation/tutorials/01_Demo_Basic_Run/Demo01.Rmd" target="_blank" rel="noopener noreferrer">Basic Run (R Markdown)</a>
+                        {" · "}
+                        <a href="https://raw.githubusercontent.com/PecanProject/pecan/v1.5.2/documentation/tutorials/02_Demo_Uncertainty_Analysis/Demo02.Rmd" target="_blank" rel="noopener noreferrer">Sensitivity and Uncertainty Analysis (R Markdown)</a>
+                    </p>
+
+                    <p>
+                        PEcAn Tutorial v1.5.0<br />
+                        <a href="https://raw.githubusercontent.com/PecanProject/pecan/v1.5.0/documentation/tutorials/01_Demo_Basic_Run/Demo01.Rmd" target="_blank" rel="noopener noreferrer">Basic Run (R Markdown)</a>
+                        {" · "}
+                        <a href="https://raw.githubusercontent.com/PecanProject/pecan/v1.5.0/documentation/tutorials/02_Demo_Uncertainty_Analysis/Demo02.Rmd" target="_blank" rel="noopener noreferrer">Sensitivity and Uncertainty Analysis (R Markdown)</a>
+                    </p>
+
+                    <div><a href="https://github.com/PecanProject/pecan/tree/v1.4.10.1/documentation/tutorials">PEcAn Tutorials v1.4.10.1</a></div>
                     <div><br /></div>
 
-
-                    <div>PEcAn Tutorial v1.5.0
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="https://pecanproject.github.io/pecan-documentation/tutorials/Demo01.html" target="_blank" rel="nofollow">Tutorial 1</a>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="https://pecanproject.github.io/pecan-documentation/tutorials/Demo02.html" target="_blank" rel="nofollow">Tutorial 2</a>
-                    </div>
-                    <div><br /></div>
-
-                    <div><a href="https://github.com/PecanProject/pecan/tree/v1.4.10.1/documentation/tutorials">PEcAn Tutorials v1.4.10</a></div>
-                    <div><br /></div>
-
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.8.1.pdf" target="_blank" rel="nofollow">PEcAn Tutorial v1.4.8</a>&nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.8.1.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.4.8</a>&nbsp;  &nbsp;  &nbsp;  &nbsp;
                         <a href="https://github.com/PecanProject/pecan/tree/v1.4.8/documentation/tutorials" target="_blank" rel="nofollow">Additional Tutorials</a>
                     </div>
                     <div><br /></div>
 
-
-
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.7.pdf" target="_blank" rel="nofollow">PEcAn Tutorial v1.4.7</a>&nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="http://people.bu.edu/dietze/documents/ParameterAssimilation.1.4.7.v2.pdf" target="_blank" rel="nofollow">Param DA</a>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.7.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.4.7</a>&nbsp;  &nbsp;  &nbsp;  &nbsp;
+                        <a href="https://people.bu.edu/dietze/documents/ParameterAssimilation.1.4.7.v2.pdf" target="_blank" rel="nofollow noopener noreferrer">Param DA</a>
                     </div>
                     <div><br /></div>
 
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.6.docx" target="_blank" rel="nofollow">PEcAn Tutorial v1.4.6</a>
-                    </div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.5.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.4.5</a></div>
                     <div><br /></div>
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.5.docx" target="_blank" rel="nofollow">PEcAn Tutorial v1.4.5</a>
-                    </div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.3.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.4.3</a></div>
                     <div><br /></div>
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.3.pdf" target="_blank" rel="nofollow">PEcAn Tutorial v1.4.3</a>&nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="http://people.bu.edu/dietze/documents/ParameterAssimilation.1.4.3.pdf" target="_blank" rel="nofollow">Param DA</a>
-                    </div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.2.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.4.2</a></div>
                     <div><br /></div>
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.2.docx" target="_blank" rel="nofollow">PEcAn Tutorial v1.4.2</a>
-                    </div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.0.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.4.0</a></div>
                     <div><br /></div>
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.4.0.pdf" target="_blank" rel="nofollow">PEcAn Tutorial v1.4.0</a>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="http://people.bu.edu/dietze/documents/PEcAn_New_User_Survey.v2.docx" target="_blank" rel="nofollow">Survey</a>
-                    </div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.1.3.7.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.3.7</a></div>
                     <div><br /></div>
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v8.pdf" target="_blank" rel="nofollow">PEcAn Tutorial v1.3.7</a>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="http://people.bu.edu/dietze/documents/PEcAn_New_User_Survey.v2.docx" target="_blank" rel="nofollow">Survey</a>
-                    </div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v8.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.3.6</a></div>
                     <div><br /></div>
-
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v8.pdf" target="_blank" rel="nofollow">PEcAn Tutorial v1.3.6</a>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="http://people.bu.edu/dietze/documents/PEcAn_New_User_Survey.v2.docx" target="_blank" rel="nofollow">Survey</a>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="http://people.bu.edu/dietze/documents/ParameterAssimilation.1.3.6.pdf" target="_blank" rel="nofollow">Param DA</a>
-                        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-                        <a href="http://people.bu.edu/dietze/documents/StateAssimilation.1.3.6.pdf" target="_blank" rel="nofollow">State DA</a>
-                    </div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v7.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial v1.3.4</a></div>
                     <div><br /></div>
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v7.pdf" target="_blank" rel="nofollow">PEcAn Tutorial v1.3.4</a></div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v6.pdf" rel="nofollow">PEcAn Tutorial v1.3.2</a><br /></div>
                     <div><br /></div>
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v6.pdf" rel="nofollow">PEcAn Tutorial v1.3.2</a><br /></div>
-                    <div><br /></div>
-                    <div><a href="http://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v5.pdf" target="_blank" rel="nofollow">PEcAn Tutorial</a> v1.3.0</div>
+                    <div><a href="https://people.bu.edu/dietze/documents/PEcAn_Demo_Handout.v5.pdf" target="_blank" rel="nofollow noopener noreferrer">PEcAn Tutorial</a> v1.3.0</div>
                     <div><br /></div>
                     <div><div></div><a href="https://docs.google.com/file/d/0BwrHpgWSpMHeOUZUZDNiSFoxSk0/edit">PEcAn Tutorial</a> v1.2.6<br /></div>
 
